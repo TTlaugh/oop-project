@@ -46,7 +46,7 @@ public abstract class Account {
 	}
 	@Override
 	public String toString() {
-		return "Account [username=" + username + ", password=" + password + ", role=" + role + ", info=" + info + "]";
+		return "AccountInfo [username:" + username + ", password:" + password + ", role:" + role + "]"+ "\n" + info;
 	}
 	
 }

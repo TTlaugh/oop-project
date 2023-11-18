@@ -20,7 +20,7 @@ public class Professor extends Account {
 		 */
 		this.faculty = username.replaceAll("[^A-Za-z]+", "");
 		char tmp[] = (username.replaceAll("[^0-9]", "")).toCharArray();
-		this.subject = new Subject(Integer.parseInt(String.copyValueOf(tmp, 0, 3)));
+		this.subject = new Subject(String.copyValueOf(tmp, 0, 3));
 		this.ornum = Integer.parseInt(String.copyValueOf(tmp, 3, 3));
 	}
 	public Professor(Professor professor) {
@@ -56,9 +56,7 @@ public class Professor extends Account {
 
 	@Override
 	public String toString() {
-		return "Professor [faculty=" + faculty + ", subject=" + subject + ", ornum=" + ornum + ", getUsername()="
-				+ getUsername() + ", getPassword()=" + getPassword() + ", getRole()=" + getRole() + ", getInfo()="
-				+ getInfo() + "]";
+		return super.toString() + "ProfessorInfo [faculty=" + faculty + ", subject=" + subject + ", ornum=" + ornum;
 	}
 
 }

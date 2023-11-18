@@ -7,15 +7,15 @@ public class AccountList {
 	private ArrayList<Account> arr;
 	
 	public AccountList() {
-		this.arr = null;
+		this.arr = new ArrayList<Account>();
 	}
 	public AccountList(ArrayList<Account> acclist) {
 		this.arr = acclist;
 	}
-	public ArrayList<Account> getAccls() {
+	public ArrayList<Account> getAccList() {
 		return arr;
 	}
-	public void setAccls(ArrayList<Account> acclist) {
+	public void setAccList(ArrayList<Account> acclist) {
 		this.arr = acclist;
 	}
 	
@@ -47,6 +47,6 @@ public class AccountList {
 		return -1; 	
 	}
 	public boolean isAccountRegistered(Account acc) {
-		return findIndex(acc)!=-1;
+		return this.arr.contains(acc);
 	}
 }

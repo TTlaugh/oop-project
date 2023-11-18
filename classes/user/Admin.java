@@ -11,10 +11,4 @@ public class Admin extends Account {
 	public Admin(Admin admin) {
 		super(admin.getUsername(), admin.getPassword(), admin.getRole(), admin.getInfo());
 	}
-	@Override
-	public String toString() {
-		return "Admin [getUsername()=" + getUsername() + ", getPassword()=" + getPassword() + ", getRole()=" + getRole()
-				+ ", getInfo()=" + getInfo() + "]";
-	}
-
 }

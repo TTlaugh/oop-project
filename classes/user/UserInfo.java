@@ -46,8 +46,8 @@ public class UserInfo {
 	}
 	@Override
 	public String toString() {
-		return "UserData [fullName=" + fullName + ", yearOfBirth=" + yearOfBirth + ", gender=" + gender
-				+ ", phoneNumber=" + phoneNumber + "]";
+		return "UserInfo [fullName:" + fullName + ", yearOfBirth:" + yearOfBirth + ", gender:" + gender
+				+ ", phoneNumber:" + phoneNumber + "]";
 	}
 
 }

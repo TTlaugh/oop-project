@@ -66,9 +66,7 @@ public class Student extends Account {
 
 	@Override
 	public String toString() {
-		return "Student [faculty=" + faculty + ", yearCourse=" + yearCourse + ", clazz=" + clazz + ", ornum=" + ornum
-				+ ", getUsername()=" + getUsername() + ", getPassword()=" + getPassword() + ", getRole()=" + getRole()
-				+ ", getInfo()=" + getInfo() + "]";
+		return super.toString() + "StudentInfo [faculty=" + faculty + ", yearCourse=" + yearCourse + ", class=" + clazz + ", ornum=" + ornum;
 	}
 
 }

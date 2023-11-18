@@ -4,27 +4,33 @@ import java.util.Arrays;
 
 public class Question {
 
-	private String id;
+	private int chapter;
 	private int difficulty;
 	private String content;
 	private String answer[];
 	private int correctAnswer;
-
-	public Question(String id, int difficulty, String content, String[] answer, int correctAnswer) {
-		super();
-		this.id = id;
+	
+	public Question() {
+		this.chapter = 0;
+		this.difficulty = 0;
+		this.content = null;
+		this.answer = new String[4];
+		this.correctAnswer = 0;
+	}
+	public Question(int chapter, int difficulty, String content, String[] answer, int correctAnswer) {
+		this.chapter = chapter;
 		this.difficulty = difficulty;
 		this.content = content;
 		this.answer = answer;
 		this.correctAnswer = correctAnswer;
 	}
 
-	public String getId() {
-		return id;
+	public int getChapter() {
+		return chapter;
 	}
 
-	public void setId(String id) {
-		this.id = id;
+	public void setChapter(int chapter) {
+		this.chapter = chapter;
 	}
 
 	public int getDifficulty() {
@@ -61,8 +67,8 @@ public class Question {
 
 	@Override
 	public String toString() {
-		return "Question [id=" + id + ", difficulty=" + difficulty + ", content=" + content + ", answer="
+		return "Question [chapter=" + chapter + ", difficulty=" + difficulty + ", content=" + content + ", answer="
 				+ Arrays.toString(answer) + ", correctAnswer=" + correctAnswer + "]";
 	}
-	
+
 }

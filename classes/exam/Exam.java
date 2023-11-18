@@ -1,5 +1,7 @@
 package classes.exam;
 
+import classes.question.*;
+
 import classes.util.*;
 
 public class Exam {
