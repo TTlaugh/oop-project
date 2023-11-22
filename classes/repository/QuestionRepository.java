@@ -98,12 +98,63 @@ public class QuestionRepository {
 		quesbank.set(index, acc);
 		return true;
 	}
-	public ArrayList<Integer> searchQuestion(String questionContent) {
+
+	public ArrayList<Integer> indexSearchQuestionByContent(String questionContent) {
 		ArrayList<Integer> arrOfIndex = new ArrayList<Integer>();
 		for (Question ques : this.quesbank.getQuesList())
 			if (ques.getContent().contains(questionContent))
 				arrOfIndex.add(this.quesbank.findIndex(ques));
 		return arrOfIndex;
 	}
+	public ArrayList<Integer> indexSearchQuestionByChapter(int chapter) {
+		ArrayList<Integer> arrOfIndex = new ArrayList<Integer>();
+		for (Question ques : this.quesbank.getQuesList())
+			if (ques.getChapter()==chapter)
+				arrOfIndex.add(this.quesbank.findIndex(ques));
+		return arrOfIndex;
+	}
+	public ArrayList<Integer> indexSearchQuestionByDiffi(int difficulty) {
+		ArrayList<Integer> arrOfIndex = new ArrayList<Integer>();
+		for (Question ques : this.quesbank.getQuesList())
+			if (ques.getDifficulty()==difficulty)
+				arrOfIndex.add(this.quesbank.findIndex(ques));
+		return arrOfIndex;
+	}
 
+	public ArrayList<Question> searchQuestionByContent(String questionContent) {
+		ArrayList<Question> arrOfQuestion = new ArrayList<Question>();
+		for (Question ques : this.quesbank.getQuesList())
+			if (ques.getContent().contains(questionContent))
+				arrOfQuestion.add(ques);
+		return arrOfQuestion;
+	}
+	public ArrayList<Question> searchQuestionByChapter(int chapter) {
+		ArrayList<Question> arrOfQuestion = new ArrayList<Question>();
+		for (Question ques : this.quesbank.getQuesList())
+			if (ques.getChapter()==chapter)
+				arrOfQuestion.add(ques);
+		return arrOfQuestion;
+	}
+	public ArrayList<Question> searchQuestionByDiffi(int difficulty) {
+		ArrayList<Question> arrOfQuestion = new ArrayList<Question>();
+		for (Question ques : this.quesbank.getQuesList())
+			if (ques.getDifficulty()==difficulty)
+				arrOfQuestion.add(ques);
+		return arrOfQuestion;
+	}
+
+	public static ArrayList<Question> searchQuestionByDiffi(ArrayList<Question> quesList, int difficulty) {
+		ArrayList<Question> arrOfQuestion = new ArrayList<Question>();
+		for (Question ques : quesList)
+			if (ques.getDifficulty()==difficulty)
+				arrOfQuestion.add(ques);
+		return arrOfQuestion;
+	}
+
+	public QuestionBank getQuesbank() {
+		return quesbank;
+	}
+	public void setQuesbank(QuestionBank quesbank) {
+		this.quesbank = quesbank;
+	}
 }

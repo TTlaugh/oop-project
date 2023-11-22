@@ -114,4 +114,11 @@ public class AccountRepository {
 		return acclist.get(index);
 	}
 
+	public AccountList getAcclist() {
+		return acclist;
+	}
+	public void setAcclist(AccountList acclist) {
+		this.acclist = acclist;
+	}
+
 }
