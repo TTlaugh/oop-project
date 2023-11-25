@@ -63,7 +63,7 @@ public class AccountRepository {
 	private void writefile() {
 		try {
 			FileWriter writer = new FileWriter(this.filepath);
-			for (Account acc : this.acclist.getAccList()) {
+			for (Account acc : this.acclist.getArr()) {
 				writer.write(
 					acc.getUsername()             +" "+
 					acc.getPassword()             +" "+
@@ -100,12 +100,14 @@ public class AccountRepository {
 		int index = acclist.findIndex(username);
 		if (index == -1) return false;
 		acclist.remove(index);
+		saveList();
 		return true;
 	}
-	public boolean changeUserInfo(String username, Account acc) {
+	public boolean changeAccountInfo(String username, Account acc) {
 		int index = acclist.findIndex(username);
 		if (index == -1) return false;
 		acclist.set(index, acc);
+		saveList();
 		return true;
 	}
 	public Account findUserByUserName(String username) {

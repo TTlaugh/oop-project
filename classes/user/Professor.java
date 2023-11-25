@@ -56,7 +56,7 @@ public class Professor extends Account {
 
 	@Override
 	public String toString() {
-		return super.toString() + "ProfessorInfo [faculty=" + faculty + ", subject=" + subject + ", ornum=" + ornum;
+		return super.toString() + "\nProfessorInfo [faculty=" + faculty + ", subject=" + subject + ", ornum=" + ornum;
 	}
 
 }

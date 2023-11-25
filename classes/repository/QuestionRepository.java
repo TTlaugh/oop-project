@@ -92,10 +92,12 @@ public class QuestionRepository {
 	}
 	public boolean removeQuestion(int index) {
 		quesbank.remove(index);
+		saveList();
 		return true;
 	}
 	public boolean modifyQuestion(int index, Question acc) {
 		quesbank.set(index, acc);
+		saveList();
 		return true;
 	}
 

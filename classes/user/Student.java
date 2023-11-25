@@ -5,7 +5,7 @@ public class Student extends Account {
 	private String faculty;
 	private int yearCourse;
 	private int clazz;
-	private int ornum;
+	private String ornum;
 	
 	public Student() {
 		super();
@@ -23,7 +23,7 @@ public class Student extends Account {
 		char tmp[] = (username.replaceAll("[^0-9]", "")).toCharArray();
 		this.yearCourse = Integer.parseInt(String.copyValueOf(tmp, 0, 4));
 		this.clazz = Integer.parseInt(String.valueOf(tmp[4]));
-		this.ornum = Integer.parseInt(String.copyValueOf(tmp, 5, 8));
+		this.ornum = String.copyValueOf(tmp, 5, 4);
 	}
 	public Student(Student student) {
 		super(student.getUsername(), student.getPassword(), student.getRole(), student.getInfo());
@@ -56,17 +56,17 @@ public class Student extends Account {
 		this.clazz = clazz;
 	}
 
-	public int getOrnum() {
+	public String getOrnum() {
 		return ornum;
 	}
 
-	public void setOrnum(int ornum) {
+	public void setOrnum(String ornum) {
 		this.ornum = ornum;
 	}
 
 	@Override
 	public String toString() {
-		return super.toString() + "StudentInfo [faculty=" + faculty + ", yearCourse=" + yearCourse + ", class=" + clazz + ", ornum=" + ornum;
+		return super.toString() + "\nStudentInfo [faculty=" + faculty + ", yearCourse=" + yearCourse + ", class=" + clazz + ", ornum=" + ornum;
 	}
 
 }
