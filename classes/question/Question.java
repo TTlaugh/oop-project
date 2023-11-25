@@ -64,6 +64,16 @@ public class Question {
 	public void setCorrectAnswer(int correctAnswer) {
 		this.correctAnswer = correctAnswer;
 	}
+	
+	public String questionDetail() {
+		return
+				this.content+"\n"+
+				this.answer[0]+"\n"+
+				this.answer[1]+"\n"+
+				this.answer[2]+"\n"+
+				this.answer[3]+"\n"
+		;
+	}
 
 	@Override
 	public String toString() {

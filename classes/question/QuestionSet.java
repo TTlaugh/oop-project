@@ -28,8 +28,8 @@ public class QuestionSet {
 				ArrayList<Question> questionsOfDifficulty = QuestionRepository.searchQuestionByDiffi(questionsOfChapter, i);
 				Random randNum = new Random();
 				Set<Integer> set = new LinkedHashSet<Integer>();
-				int quesCount = detail.getDifficultyCountDetail().get(i);
-				while (set.size() < quesCount) {
+				int quesCountOfDiffi = detail.getDifficultyCountDetail().get(i);
+				while (set.size() < quesCountOfDiffi) {
 					int next = randNum.nextInt(questionsOfDifficulty.size());
 					if (set.add(next))
 						quesSet.add(questionsOfDifficulty.get(next));

@@ -67,7 +67,8 @@ public class QuestionRepository {
 					ques.getContent()+"\n"+
 					ques.getAnswer()[0]+"\n"+
 					ques.getAnswer()[1]+"\n"+
-					ques.getAnswer()[2]+"\n"
+					ques.getAnswer()[2]+"\n"+
+					ques.getAnswer()[3]+"\n"
 				);
 			}
 			writer.close();
