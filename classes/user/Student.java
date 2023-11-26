@@ -16,8 +16,8 @@ public class Student extends Account {
 	public Student(String username, String password, String role, UserInfo info) {
 		super(username, password, role, info);
 		/*
-		 * Student: <faculty><year><class><count>
-		 * Example: IT202240001
+		 * Student: <faculty><year><class><orderNumberInClass>
+		 * Example: IT20224001
 		 */
 		this.faculty = username.replaceAll("[^A-Za-z]+", "");
 		char tmp[] = (username.replaceAll("[^0-9]", "")).toCharArray();

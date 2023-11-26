@@ -11,6 +11,11 @@ public class Date {
 		this.month = month;
 		this.year = year;
 	}
+	public Date() {
+		this.day = null;
+		this.month = null;
+		this.year = null;
+	}
 
 	public String getDay() {
 		return day;
@@ -38,7 +43,7 @@ public class Date {
 
 	@Override
 	public String toString() {
-        return day + "/" + month + "/" + year;
+        return day + "-" + month + "-" + year;
 	}
 
 }

@@ -65,9 +65,9 @@ public class Question {
 		this.correctAnswer = correctAnswer;
 	}
 	
-	public String questionDetail() {
+	public String questionDisplay() {
 		return
-				this.content+"\n"+
+				this.content  +"\n"+
 				this.answer[0]+"\n"+
 				this.answer[1]+"\n"+
 				this.answer[2]+"\n"+

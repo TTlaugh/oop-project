@@ -18,10 +18,10 @@ public class QuestionSet {
 		this.quesCount = quesCount;
 		this.questionCountDetail = questionCountDetail;
 		this.quesRepo = new QuestionRepository(subject.getId());
-		getQuestionSet();
+		createQuestionSet();
 	}
 
-	private void getQuestionSet() {
+	private void createQuestionSet() {
 		for (QuestionCountDetail detail : questionCountDetail) {
 			ArrayList<Question> questionsOfChapter = quesRepo.searchQuestionByChapter(detail.getChapter());
 			for (int i = 0; i < detail.getDifficultyCountDetail().size(); i++) {

@@ -4,8 +4,6 @@ import classes.question.*;
 import classes.subject.Subject;
 import classes.util.*;
 
-import java.util.ArrayList;
-
 public class Exam {
 
 	private String id;
@@ -15,10 +13,10 @@ public class Exam {
 	private Date date;
 	private int time;
 	private int passingScore;
-	private ArrayList<Question> questions;
+	private QuestionSet questions;
 
 	public Exam(String id, String name, Subject subject, String description, Date date, int time, int passingScore,
-			ArrayList<Question> questions) {
+			QuestionSet questions) {
 		this.id = id;
 		this.name = name;
 		this.subject = subject;
@@ -71,23 +69,22 @@ public class Exam {
 	public void setPassingScore(int passingScore) {
 		this.passingScore = passingScore;
 	}
-	public ArrayList<Question> getQuestions() {
+	public QuestionSet getQuestions() {
 		return questions;
 	}
-	public void setQuestions(ArrayList<Question> questions) {
+	public void setQuestions(QuestionSet questions) {
 		this.questions = questions;
 	}
 
 	public String examHeader() {
 		return
-				"Ma_De: "+id+"\n"+
-				""+name+"\n"+
-				"Mon: "+subject.getName()+"\n"+
-				"Ngay_thi: "+date.toString()+"\n"+
-				"Thoi_gian_lam_bai: "+time+"\n"+
-				"Diem_thong_qua: "+passingScore+"\n"+
-				"Ghi_Chu: "+note+"\n"
-		;
+				id                +"\n"+
+				name              +"\n"+
+				subject.getName() +"\n"+
+				date.toString()   +"\n"+
+				time              +"\n"+
+				passingScore      +"\n"+
+				note              +"\n";
 	}
 
 }

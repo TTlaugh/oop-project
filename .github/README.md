@@ -8,7 +8,8 @@
                     │   ├── AcountRepository.java [v]
                     │   ├── QuestionRepository.java [x]
                     │   ├── ExamRepository.java
-                    │   └── ExamRecordRepository.java
+                    │   ├── ExamRecordRepository.java
+                    │   └── ResultRepository.java
                     ├── user [v]
                     │   ├── Admin.java
                     │   ├── Professor.java
@@ -28,8 +29,7 @@
                     │   ├── Subject.java [v]
                     │   └── SubjectList.java
                     ├── result
-                    │   ├── Result.java
-                    │   └── Grade.java
+                    │   └── Result.java
                     └── util
                         └── Date.java [v]
 
@@ -40,7 +40,7 @@ package: classes.
                 ├── exam
                 │   └── Exam.java
                 ├── function
-                │   └── login.java
+                │   └── Login.java
                 ├── menu
                 ├── question
                 │   ├── QuestionBank.java
@@ -62,9 +62,31 @@ package: classes.
                 │   ├── Student.java
                 │   └── UserInfo.java
                 └── util
+                    ├── Constant.java
                     └── Date.java
 ```
-#### Describtion
+#### Project date structure
+```
+base.
+    ├── accounts [f]
+    ├── ExamRecords
+    │   └── IT001
+    │       └── class1
+    │           └── 01-01-2022
+    │               └── exam001 [f]
+    ├── Exams
+    │   └── IT001
+    │       └── class1
+    │           └── 01-01-2022
+    │               └── exam001 [f]
+    ├── QuestionBanks
+    │   ├── IT001 [f]
+    │   └── IT002 [f]
+    └── Results
+        └── IT001
+            └── class1 [f]
+```
+#### Description
 
 - classes.repository: bao gom cac class thao tac truc tiep den du lieu (file)
 - classes.user: gom cac class mo ta nguoi dung (Userinfo, Admin, Professor, Student) va class danh sach nguoi dung (AccountList)
