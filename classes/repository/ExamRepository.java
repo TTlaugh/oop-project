@@ -13,16 +13,18 @@ import classes.util.Date;
 
 public class ExamRepository {
 
+	private String baseDir;
 	private Subject subject;
 	private String clazz;
 	private Date date;
 	private String path;
 
-	public ExamRepository(Subject subject, String clazz, Date date) {
+	public ExamRepository(String baseDir, Subject subject, String clazz, Date date) {
+		this.baseDir = baseDir;
 		this.subject = subject;
 		this.clazz = clazz;
 		this.date = date;
-		this.path = subject.getId() + "/" + clazz + "/" + date;
+		this.path = baseDir + "/" + subject.getId() + "/" + clazz + "/" + date + "/";
 		createDir();
 	}
 
@@ -53,9 +55,9 @@ public class ExamRepository {
 	}
 
 	public void addExam(Exam exam, String examFileName) {
-		createFile(examFileName);
+		createFile(this.path + examFileName);
 		try {
-			FileWriter writer = new FileWriter(examFileName);
+			FileWriter writer = new FileWriter(this.path + examFileName);
 			writer.write(exam.examHeader());
 			for (Question ques : exam.getQuestions().getQuesSet()) {
 				writer.write(ques.questionDisplay());
@@ -68,7 +70,7 @@ public class ExamRepository {
 	}
 
 	public boolean removeExam(String examFileName) {
-		return new File(examFileName).delete();
+		return new File(this.path + examFileName).delete();
 	}
 
 	public void listAllExamsCreated() {
@@ -80,7 +82,7 @@ public class ExamRepository {
 
 	public void previewExam(String examFileName) {
 		try {
-			final File file = new File(examFileName);
+			final File file = new File(this.path + examFileName);
 			Scanner scanner = new Scanner(file);
 			while (scanner.hasNextLine()) {
 				String data = scanner.nextLine();
@@ -114,6 +116,14 @@ public class ExamRepository {
 			e.printStackTrace();
 		}
 		return false;
+	}
+
+	public String getBaseDir() {
+		return baseDir;
+	}
+
+	public void setBaseDir(String baseDir) {
+		this.baseDir = baseDir;
 	}
 
 	public Subject getSubject() {
