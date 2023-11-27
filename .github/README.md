@@ -38,7 +38,8 @@
 ```
 package: classes.
                 ├── exam
-                │   └── Exam.java
+                │   ├── Exam.java
+                │   └── ExamRecord.java
                 ├── function
                 │   └── Login.java
                 ├── menu
@@ -49,6 +50,7 @@ package: classes.
                 │   └── QuestionSet.java
                 ├── repository
                 │   ├── AccountRepository.java
+                │   ├── ExamRecordRepository.java
                 │   ├── ExamRepository.java
                 │   └── QuestionRepository.java
                 ├── subject
