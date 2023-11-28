@@ -1,14 +1,19 @@
 package classes.function;
 
-import classes.repository.*;
-import classes.user.*;
-
 import java.util.Scanner;
 
+import classes.repository.AccountRepository;
+import classes.user.Account;
+import classes.user.Admin;
+import classes.user.Professor;
+import classes.user.Student;
+import classes.user.UserInfo;
+
 public class Login {
-	public static void loginScreen() {
+
+	public static void loginScreen(String filename) {
 		try (Scanner sc = new Scanner(System.in)) {
-			AccountRepository accountRepository = new AccountRepository("acclist.txt");
+			AccountRepository accountRepository = new AccountRepository(filename);
 
 			while (true) {
 				System.out.println("[1].DANG NHAP");
@@ -16,7 +21,7 @@ public class Login {
 				System.out.println("[3].EXIT");
 				System.out.println("NHAP LUA CHON: ");
 				int choice = sc.nextInt();
-				sc.nextLine(); 
+				sc.nextLine();
 
 				switch (choice) {
 				case 1:
@@ -29,7 +34,7 @@ public class Login {
 
 					if (loggedInAccount != null && loggedInAccount.getPassword().equals(loginPassword)) {
 						System.out.println("Login successful!");
-						if (loggedInAccount.getRole().equalsIgnoreCase("admin")) { 
+						if (loggedInAccount.getRole().equalsIgnoreCase("admin")) {
 							System.out.println("Đăng nhập thành công với tài khoản admin!");
 						}
 					}
@@ -61,7 +66,7 @@ public class Login {
 					System.out.println("Nhap nam sinh: ");
 					int yearOfBirth = sc.nextInt();
 
-					sc.nextLine(); 
+					sc.nextLine();
 
 					System.out.println("Nhap gioi tinh: ");
 					String gender = sc.nextLine();
@@ -72,16 +77,20 @@ public class Login {
 					Account acc = null;
 					UserInfo info = new UserInfo(fullName, yearOfBirth, gender, phoneNumber);
 					if (role.equalsIgnoreCase("professor")) {
-						acc = new Professor() {}; 
+						acc = new Professor() {
+						};
 					} else if (role.equalsIgnoreCase("student")) {
-						acc = new Student() {}; 
-					} if (role.equalsIgnoreCase("admin")) {
-						acc = new Admin() {}; 
+						acc = new Student() {
+						};
+					}
+					if (role.equalsIgnoreCase("admin")) {
+						acc = new Admin() {
+						};
 					}
 
-					acc.setUsername(username); 
-					acc.setPassword(password); 
-					acc.setRole(role); 
+					acc.setUsername(username);
+					acc.setPassword(password);
+					acc.setRole(role);
 					acc.setInfo(info);
 
 					System.out.println(acc);
