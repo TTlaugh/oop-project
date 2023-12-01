@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 import classes.repository.ExamRecordRepository;
@@ -23,7 +24,7 @@ public class Session {
 		try {
 			String examId;
 			double score = 0;
-			int timeTaken = 0, numOfQuestions = 1;
+			int timeLimit = 0, timeTaken = 0, numOfQuestions = 1;
 			ArrayList<Integer> correctAnswer = new ArrayList<Integer>();
 			ArrayList<Double> marks = new ArrayList<Double>();
 
@@ -33,7 +34,7 @@ public class Session {
 			System.out.println(scFile.nextLine());
 			System.out.println("Subject: " + scFile.nextLine());
 			System.out.println("Date: " + scFile.nextLine());
-			System.out.println("Time: " + scFile.nextLine());
+			System.out.println("Time: " + (timeLimit = Integer.parseInt(scFile.nextLine())));
 			System.out.println(scFile.nextLine());
 			System.out.println("=( Question List )=====================================");
 			while (scFile.hasNextLine()) {
@@ -54,7 +55,8 @@ public class Session {
 			do {
 				score = 0;
 				marks.clear();
-				System.out.println("STUDENT ANSWERS\n(Please enter answers in the correct question order)\n Type here ");
+				System.out.println(
+						"STUDENT ANSWERS\n(Please enter answers in the correct question order)\n Type here ");
 
 				for (int i = 0; i < numOfQuestions; i++) {
 					String studentChoice = CheckInput.toStrNumberic(scStdin.next());
@@ -71,6 +73,13 @@ public class Session {
 
 			long endTime = System.nanoTime();
 			timeTaken = (int) ((endTime - startTime) / 1000000000);
+
+			if (timeTaken > timeLimit) {
+				System.out.println("The time for submitting your exam has expired.\nYour exam will not be scored.");
+				score = 0;
+				marks = null;
+				marks = new ArrayList<Double>(Collections.nCopies(numOfQuestions, 0.0));
+			}
 
 			resultDestination.addExamRecord(new ExamRecord(examId, studentId, score, timeTaken, marks), examName);
 

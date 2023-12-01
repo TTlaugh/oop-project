@@ -16,17 +16,11 @@ public class QuestionRepository {
 	private String filepath;
 	private File repofile;
 
-	public QuestionRepository() {
-		this.quesbank = new QuestionBank();
-		this.filepath = null;
-		this.repofile = null;
-	}
-
 	public QuestionRepository(String filepath) {
 		this.quesbank = new QuestionBank(filepath);
 		this.filepath = filepath;
 		this.repofile = new File(this.filepath);
-		if (!createfile() && !loadList()) {
+		if (!createfile() || !loadList()) {
 			this.quesbank = null;
 			this.filepath = null;
 			this.repofile = null;

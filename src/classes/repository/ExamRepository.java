@@ -25,7 +25,7 @@ public class ExamRepository {
 		this.clazz = clazz;
 		this.date = date;
 		this.path = baseDir + "/" + subject.getId() + "/" + clazz + "/" + date + "/";
-		if (createDir()) {
+		if (!createDir()) {
 			this.baseDir = null;
 			this.subject = null;
 			this.clazz = null;

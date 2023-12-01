@@ -19,17 +19,11 @@ public class AccountRepository {
 	private String filepath;
 	private File repofile;
 
-	public AccountRepository() {
-		this.acclist = new AccountList();
-		this.filepath = null;
-		this.repofile = null;
-	}
-
 	public AccountRepository(String filepath) {
 		this.acclist = new AccountList();
 		this.filepath = filepath;
 		this.repofile = new File(this.filepath);
-		if (!createfile() && !loadList()) {
+		if (!createfile() || !loadList()) {
 			this.acclist = null;
 			this.filepath = null;
 			this.repofile = null;
@@ -51,26 +45,27 @@ public class AccountRepository {
 		try {
 			this.repofile = new File(this.filepath);
 			if (this.repofile.canRead()) {
-				Scanner scanner = new Scanner(this.repofile);
-				while (scanner.hasNext()) {
+				try (Scanner scanner = new Scanner(this.repofile)) {
+					while (scanner.hasNextLine()) {
 
-					String username = scanner.next();
-					String password = scanner.next();
-					String role = scanner.next();
-					String fullName = scanner.next();
-					int yearOfbirth = scanner.nextInt();
-					String gender = scanner.next();
-					String phoneNumber = scanner.next();
-					UserInfo info = new UserInfo(fullName, yearOfbirth, gender, phoneNumber);
+						String username = scanner.next();
+						String password = scanner.next();
+						String role = scanner.next();
+						String fullName = scanner.next();
+						int yearOfbirth = scanner.nextInt();
+						String gender = scanner.next();
+						String phoneNumber = scanner.next();
+						scanner.nextLine();
+						UserInfo info = new UserInfo(fullName, yearOfbirth, gender, phoneNumber);
 
-					if (role.equalsIgnoreCase("admin"))
-						this.acclist.add(new Admin(username, password, role, info));
-					else if (role.equalsIgnoreCase("professor"))
-						this.acclist.add(new Professor(username, password, role, info));
-					else if (role.equalsIgnoreCase("student"))
-						this.acclist.add(new Student(username, password, role, info));
+						if (role.equalsIgnoreCase("admin"))
+							this.acclist.add(new Admin(username, password, role, info));
+						else if (role.equalsIgnoreCase("professor"))
+							this.acclist.add(new Professor(username, password, role, info));
+						else if (role.equalsIgnoreCase("student"))
+							this.acclist.add(new Student(username, password, role, info));
+					}
 				}
-				scanner.close();
 			}
 		} catch (FileNotFoundException e) {
 			return false;

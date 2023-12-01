@@ -28,8 +28,7 @@ public class Subject {
 		File file = new File(Constant.dataPath.SubjectList_File);
 		if (!file.exists())
 			return false;
-		try {
-			Scanner sc = new Scanner(file);
+		try (Scanner sc = new Scanner(file)) {
 			while (sc.hasNextLine()) {
 				String id = sc.next();
 				String name = sc.next();
