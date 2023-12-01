@@ -18,7 +18,7 @@ public class Subject {
 
 	public Subject(String id) {
 		this.id = id;
-		if (findSubjectName()) {
+		if (!findSubjectName()) {
 			this.id = null;
 			this.name = null;
 		}
