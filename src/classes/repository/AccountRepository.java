@@ -12,40 +12,29 @@ import classes.user.Admin;
 import classes.user.Professor;
 import classes.user.Student;
 import classes.user.UserInfo;
+import classes.util.FileHandling;
+import classes.util.FileListHandling;
 
-public class AccountRepository {
+public class AccountRepository implements FileListHandling {
 
 	private AccountList acclist;
 	private String filepath;
-	private File repofile;
 
 	public AccountRepository(String filepath) {
 		this.acclist = new AccountList();
 		this.filepath = filepath;
-		this.repofile = new File(this.filepath);
-		if (!createfile() || !loadList()) {
+		if (!FileHandling.createFile(filepath) || !loadList()) {
 			this.acclist = null;
 			this.filepath = null;
-			this.repofile = null;
 		}
 	}
 
-	private boolean createfile() {
+	@Override
+	public boolean readFile() {
 		try {
-			this.repofile = new File(this.filepath);
-			if (!this.repofile.exists())
-				this.repofile.createNewFile();
-		} catch (IOException e) {
-			return false;
-		}
-		return true;
-	}
-
-	private boolean readfile() {
-		try {
-			this.repofile = new File(this.filepath);
-			if (this.repofile.canRead()) {
-				try (Scanner scanner = new Scanner(this.repofile)) {
+			File repofile = new File(this.filepath);
+			if (repofile.canRead()) {
+				try (Scanner scanner = new Scanner(repofile)) {
 					while (scanner.hasNextLine()) {
 
 						String username = scanner.next();
@@ -73,7 +62,8 @@ public class AccountRepository {
 		return true;
 	}
 
-	private boolean writefile() {
+	@Override
+	public boolean writeFile() {
 		try {
 			FileWriter writer = new FileWriter(this.filepath);
 			for (Account acc : this.acclist.getArr()) {
@@ -88,12 +78,14 @@ public class AccountRepository {
 		return true;
 	}
 
+	@Override
 	public boolean loadList() {
-		return readfile();
+		return readFile();
 	}
 
+	@Override
 	public boolean saveList() {
-		return writefile();
+		return writeFile();
 	}
 
 	public boolean addUser(Account acc) {

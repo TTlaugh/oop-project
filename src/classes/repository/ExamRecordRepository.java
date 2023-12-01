@@ -9,35 +9,35 @@ import java.util.Scanner;
 import classes.exam.ExamRecord;
 import classes.subject.Subject;
 import classes.util.Date;
+import classes.util.FileHandling;
 
-public class ExamRecordRepository {
+public class ExamRecordRepository extends FileHandling {
 
 	private String baseDir;
 	private Subject subject;
 	private String clazz;
 	private Date date;
-	private String path;
 
 	public ExamRecordRepository(String baseDir, Subject subject, String clazz, Date date) {
+		super(baseDir + "/" + subject.getId() + "/" + clazz + "/" + date);
 		this.baseDir = baseDir;
 		this.subject = subject;
 		this.clazz = clazz;
 		this.date = date;
-		this.path = baseDir + "/" + subject.getId() + "/" + clazz + "/" + date;
 		if (!createDir()) {
 			this.baseDir = null;
 			this.subject = null;
 			this.clazz = null;
 			this.date = null;
-			this.path = null;
+			super.setPath(null);
 		}
 	}
 
 	public boolean addExamRecord(ExamRecord examRecord, String examRecordFileName) {
-		createFile(this.path + examRecordFileName);
+		createFile(getPath() + examRecordFileName, getPath() + examRecordFileName + "_old");
 		try {
-			FileWriter writer = new FileWriter(this.path + examRecordFileName);
-			writer.write(examRecord.examRecordHeader());
+			FileWriter writer = new FileWriter(getPath() + examRecordFileName);
+			writer.write(examRecord.header());
 			for (int i = 0; i < examRecord.getMarks().size(); i++) {
 				writer.write((i + 1) + "\t" + examRecord.getMarks().get(i) + "\n");
 			}
@@ -49,40 +49,42 @@ public class ExamRecordRepository {
 	}
 
 	public boolean removeExamRecord(String examRecordFileName) {
-		return new File(this.path + examRecordFileName).delete();
+		return removeFile(examRecordFileName);
 	}
 
 	public void listAllExamRecordsCreated() {
-		final File folder = new File(this.path);
-		for (final File fileEntry : folder.listFiles()) {
-			System.out.println(fileEntry.getName());
-		}
+		listFileInDir();
 	}
 
-	public boolean displayExamRecord(String examRecordFileName) {
+	@Override
+	protected boolean displayContent(String fileName) {
 		try {
-			final File file = new File(this.path + examRecordFileName);
+			final File file = new File(getPath() + fileName);
 			if (!file.exists())
 				return false;
-			Scanner scanner = new Scanner(file);
-			System.out.println("Exam ID: " + scanner.nextLine());
-			System.out.println("Student ID: " + scanner.nextLine());
-			System.out.println("Score: " + scanner.nextLine());
-			System.out.println("Time taken: " + scanner.nextLine());
-			System.out.println("Question\tMark");
-			while (scanner.hasNextLine()) {
-				String data = scanner.nextLine();
-				System.out.println(data);
+			try (Scanner scanner = new Scanner(file)) {
+				System.out.println("Exam ID: " + scanner.nextLine());
+				System.out.println("Student ID: " + scanner.nextLine());
+				System.out.println("Score: " + scanner.nextLine());
+				System.out.println("Time taken: " + scanner.nextLine());
+				System.out.println("Question\tMark");
+				while (scanner.hasNextLine()) {
+					String data = scanner.nextLine();
+					System.out.println(data);
+				}
 			}
-			scanner.close();
 		} catch (FileNotFoundException e) {
 			return false;
 		}
 		return true;
 	}
 
+	public boolean displayExamRecord(String examRecordFileName) {
+		return displayContent(examRecordFileName);
+	}
+
 	public boolean displaySummaryResults() {
-		final File folder = new File(this.path);
+		final File folder = new File(getPath());
 		for (final File fileEntry : folder.listFiles()) {
 			try {
 				Scanner scanner = new Scanner(fileEntry);
@@ -97,24 +99,6 @@ public class ExamRecordRepository {
 			}
 		}
 		return true;
-	}
-
-	private boolean createDir() {
-		File dir = new File(this.path);
-		if (!dir.exists())
-			return dir.mkdirs();
-		return false;
-	}
-
-	private boolean createFile(String fileName) {
-		try {
-			File file = new File(fileName);
-			if (!file.exists())
-				return file.createNewFile();
-		} catch (IOException e) {
-			return false;
-		}
-		return false;
 	}
 
 	public String getBaseDir() {
@@ -147,14 +131,6 @@ public class ExamRecordRepository {
 
 	public void setDate(Date date) {
 		this.date = date;
-	}
-
-	public String getPath() {
-		return path;
-	}
-
-	public void setPath(String path) {
-		this.path = path;
 	}
 
 }

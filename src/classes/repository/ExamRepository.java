@@ -1,36 +1,33 @@
 package classes.repository;
 
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.Scanner;
 
 import classes.exam.Exam;
 import classes.question.Question;
 import classes.subject.Subject;
 import classes.util.Date;
+import classes.util.FileHandling;
 
-public class ExamRepository {
+public class ExamRepository extends FileHandling {
 
 	private String baseDir;
 	private Subject subject;
 	private String clazz;
 	private Date date;
-	private String path;
 
 	public ExamRepository(String baseDir, Subject subject, String clazz, Date date) {
+		super(baseDir + "/" + subject.getId() + "/" + clazz + "/" + date + "/");
 		this.baseDir = baseDir;
 		this.subject = subject;
 		this.clazz = clazz;
 		this.date = date;
-		this.path = baseDir + "/" + subject.getId() + "/" + clazz + "/" + date + "/";
 		if (!createDir()) {
 			this.baseDir = null;
 			this.subject = null;
 			this.clazz = null;
 			this.date = null;
-			this.path = null;
+			super.setPath(null);
 		}
 	}
 
@@ -43,11 +40,11 @@ public class ExamRepository {
 			for (int j = 0; j < examsPerId; j++) {
 				exam.setId(String.valueOf(i));
 				exam.getQuestions().shuffleQuestionSet();
-				String fileName = this.path + "exam" + String.format("%03d", count++);
-				createFile(fileName);
+				String fileName = getPath() + "exam" + String.format("%03d", count++);
+				createFile(fileName, fileName + "_old");
 				try {
 					FileWriter writer = new FileWriter(fileName);
-					writer.write(exam.examHeader());
+					writer.write(exam.header());
 					for (Question ques : exam.getQuestions().getQuesSet()) {
 						writer.write(ques.questionDetail());
 					}
@@ -61,10 +58,10 @@ public class ExamRepository {
 	}
 
 	public boolean addExam(Exam exam, String examFileName) {
-		createFile(this.path + examFileName);
+		createFile(getPath() + examFileName, getPath() + examFileName + "_old");
 		try {
-			FileWriter writer = new FileWriter(this.path + examFileName);
-			writer.write(exam.examHeader());
+			FileWriter writer = new FileWriter(getPath() + examFileName);
+			writer.write(exam.header());
 			for (Question ques : exam.getQuestions().getQuesSet()) {
 				writer.write(ques.questionDetail());
 			}
@@ -76,47 +73,15 @@ public class ExamRepository {
 	}
 
 	public boolean removeExam(String examFileName) {
-		return new File(this.path + examFileName).delete();
+		return removeFile(examFileName);
 	}
 
 	public void listAllExamsCreated() {
-		final File folder = new File(this.path);
-		for (final File fileEntry : folder.listFiles()) {
-			System.out.println(fileEntry.getName());
-		}
+		listFileInDir();
 	}
 
 	public boolean previewExam(String examFileName) {
-		try {
-			final File file = new File(this.path + examFileName);
-			Scanner scanner = new Scanner(file);
-			while (scanner.hasNextLine()) {
-				String data = scanner.nextLine();
-				System.out.println(data);
-			}
-			scanner.close();
-		} catch (FileNotFoundException e) {
-			return false;
-		}
-		return true;
-	}
-
-	private boolean createDir() {
-		File dir = new File(this.path);
-		if (!dir.exists())
-			return dir.mkdirs();
-		return false;
-	}
-
-	private boolean createFile(String fileName) {
-		try {
-			File file = new File(fileName);
-			if (!file.exists())
-				return file.createNewFile();
-		} catch (IOException e) {
-			return false;
-		}
-		return false;
+		return displayContent(examFileName);
 	}
 
 	public String getBaseDir() {
@@ -149,14 +114,6 @@ public class ExamRepository {
 
 	public void setDate(Date date) {
 		this.date = date;
-	}
-
-	public String getPath() {
-		return path;
-	}
-
-	public void setPath(String path) {
-		this.path = path;
 	}
 
 }

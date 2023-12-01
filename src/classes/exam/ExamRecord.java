@@ -58,14 +58,8 @@ public class ExamRecord {
 		this.marks = marks;
 	}
 
-	public String examRecordHeader() {
+	public String header() {
 		return examId + "\n" + studentId + "\n" + score + "\n" + timeTaken + "\n";
-	}
-
-	@Override
-	public String toString() {
-		return "ExamRecord [examId=" + examId + ", studentId=" + studentId + ", score=" + score + ", timeTaken="
-				+ timeTaken + ", marks=" + marks + "]";
 	}
 
 }

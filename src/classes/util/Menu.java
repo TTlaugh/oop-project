@@ -15,9 +15,10 @@ public class Menu {
 				    + "Please choose 1 of the 2 options above or enter other content to exit\n"
 				    + " ";
 		System.out.print(text);
-		return CheckInput.toStrNumberic(input.nextLine(), 1, 2);
+		String chosen = CheckInput.toStrNumberic(input.nextLine(), 1, 2);
+		return chosen != null ? chosen : "exit";
 	}
-	
+
 	public static void signIn() {
 		String text = ""
 				+ "Sign in to QMS\n";

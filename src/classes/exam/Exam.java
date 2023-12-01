@@ -80,7 +80,7 @@ public class Exam {
 		this.questions = questions;
 	}
 
-	public String examHeader() {
+	public String header() {
 		return id + "\n" + name + "\n" + subject.getName() + "\n" + date.toString() + "\n" + time + "\n" + note + "\n";
 	}
 

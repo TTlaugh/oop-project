@@ -22,6 +22,7 @@ public class Main {
 			role = GeneralFunction.signUp(userInput);
 			break;
 		default:
+			System.out.println("Exiting...");
 			break;
 		}
 

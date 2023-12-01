@@ -79,7 +79,7 @@ public class GeneralFunction {
 		do {
 			System.out.println("Enter your year of birth");
 			System.out.print(" ");
-			String year = CheckInput.toStrNumberic(userInput.nextLine(), 1950, Year.now().getValue());
+			String year = CheckInput.toStrNumberic(userInput.nextLine(), 1950, Year.now().getValue() - 6);
 			info.setYearOfBirth(year == null ? -1 : Integer.parseInt(year));
 			if (info.getYearOfBirth() == -1)
 				System.out.println("Invalid year");

@@ -9,54 +9,43 @@ import java.util.Scanner;
 
 import classes.question.Question;
 import classes.question.QuestionBank;
+import classes.util.FileHandling;
+import classes.util.FileListHandling;
 
-public class QuestionRepository {
+public class QuestionRepository implements FileListHandling {
 
 	private QuestionBank quesbank;
 	private String filepath;
-	private File repofile;
 
 	public QuestionRepository(String filepath) {
 		this.quesbank = new QuestionBank(filepath);
 		this.filepath = filepath;
-		this.repofile = new File(this.filepath);
-		if (!createfile() || !loadList()) {
+		if (!FileHandling.createFile(filepath) || !loadList()) {
 			this.quesbank = null;
 			this.filepath = null;
-			this.repofile = null;
 		}
 	}
 
-	private boolean createfile() {
+	@Override
+	public boolean readFile() {
 		try {
-			this.repofile = new File(this.filepath);
-			if (!this.repofile.exists())
-				this.repofile.createNewFile();
-		} catch (IOException e) {
-			return false;
-		}
-		return true;
-	}
+			File repofile = new File(this.filepath);
+			if (repofile.canRead()) {
+				try (Scanner scanner = new Scanner(repofile)) {
+					while (scanner.hasNext()) {
 
-	private boolean readfile() {
-		try {
-			this.repofile = new File(this.filepath);
-			if (this.repofile.canRead()) {
-				Scanner scanner = new Scanner(this.repofile);
-				while (scanner.hasNext()) {
+						int chapter = scanner.nextInt();
+						int difficulty = scanner.nextInt();
+						int correctAnswer = scanner.nextInt();
+						scanner.nextLine();
+						String content = scanner.nextLine();
+						String answer[] = new String[4];
+						for (int i = 0; i < answer.length; i++)
+							answer[i] = scanner.nextLine();
 
-					int chapter = scanner.nextInt();
-					int difficulty = scanner.nextInt();
-					int correctAnswer = scanner.nextInt();
-					scanner.nextLine();
-					String content = scanner.nextLine();
-					String answer[] = new String[4];
-					for (int i = 0; i < answer.length; i++)
-						answer[i] = scanner.nextLine();
-
-					this.quesbank.add(new Question(chapter, difficulty, content, answer, correctAnswer));
+						this.quesbank.add(new Question(chapter, difficulty, content, answer, correctAnswer));
+					}
 				}
-				scanner.close();
 			}
 		} catch (FileNotFoundException e) {
 			return false;
@@ -64,7 +53,8 @@ public class QuestionRepository {
 		return true;
 	}
 
-	private boolean writefile() {
+	@Override
+	public boolean writeFile() {
 		try {
 			FileWriter writer = new FileWriter(this.filepath);
 			for (Question ques : this.quesbank.getQuesList()) {
@@ -79,12 +69,14 @@ public class QuestionRepository {
 		return true;
 	}
 
+	@Override
 	public boolean loadList() {
-		return readfile();
+		return readFile();
 	}
 
+	@Override
 	public boolean saveList() {
-		return writefile();
+		return writeFile();
 	}
 
 	public boolean addQuestion(Question ques) {
