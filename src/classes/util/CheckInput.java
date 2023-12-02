@@ -4,6 +4,13 @@ import java.util.regex.Pattern;
 
 public class CheckInput {
 
+	public static String toStrInteger(String str) {
+		Pattern pattern = Pattern.compile("-?\\d+");
+		if (pattern.matcher(str).matches())
+			return str;
+		return null;
+	}
+
 	public static String toStrNumberic(String str) {
 		Pattern pattern = Pattern.compile("-?\\d+(\\.\\d+)?");
 		if (pattern.matcher(str).matches())
