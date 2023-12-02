@@ -28,6 +28,34 @@ public class Main {
 			break;
 		}
 
+//		if (currentAccount instanceof Admin) {
+//			switch (Menu.adminDashboard()) {
+//			case "plapla":
+//				AdminFunction.AccountManagement();
+//				break;
+//			case "haha":
+//				// Other functions
+//				break;
+//			}
+//		} else if (currentAccount instanceof Professor) {
+//			switch (Menu.professorDashboard()) {
+//			case "hehe":
+//				ProfessorFunction.QuestionManagement();
+//				break;
+//			case "hihi":
+//				ProfessorFunction.ExamManagement();
+//				break;
+//			}
+//		} else {
+//			switch (Menu.studentDashboard()) {
+//			case "huhu":
+//				StudenFunction.takeExam();
+//				break;
+//			case "hihi":
+//				ProfessorFunction.viewResult();
+//				break;
+//			}
+//		}
 	}
 
 }
