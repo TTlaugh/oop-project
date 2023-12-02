@@ -5,18 +5,28 @@ import java.io.FileNotFoundException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Date;
 import java.util.Scanner;
 
 import classes.repository.ExamRecordRepository;
 import classes.repository.ExamRepository;
 import classes.util.CheckInput;
-import classes.util.Date;
+import classes.util.CustomDate;
 
 public class Session {
 
-	public static boolean checkDate(Date examDate) {
+	public static boolean checkDate(CustomDate examDate) {
 		String currentDate = new SimpleDateFormat("dd-MM-yyyy").format(new Date());
 		return currentDate.equalsIgnoreCase(examDate.toString());
+	}
+
+	private static void printResult(double score, int timeTaken) {
+		String text = ""
+			+ "\t╔════════════════════════╗\n"
+			+ "\t║     SCORE: %.2f        ║\n"
+			+ "\t║     Time taken: %d     ║\n"
+			+ "\t╚════════════════════════╝\n";
+		System.out.printf(text, score, timeTaken);
 	}
 
 	public static boolean run(Scanner userInput, ExamRepository examSource, ExamRecordRepository resultDestination,
@@ -24,7 +34,7 @@ public class Session {
 		try {
 			String examId = null;
 			double score = 0;
-			int timeLimit = 0, timeTaken = 0, numOfQuestions = 1;
+			int timeLimit = 0, timeTaken = 0, numOfQuestions = 0;
 			ArrayList<Integer> correctAnswer = new ArrayList<Integer>();
 			ArrayList<Double> marks = new ArrayList<Double>();
 
@@ -39,7 +49,7 @@ public class Session {
 				System.out.println("=( Question List )=====================================");
 				while (scFile.hasNextLine()) {
 					correctAnswer.add(Integer.parseInt(scFile.nextLine()));
-					System.out.println("Question " + (numOfQuestions++) + ":" + scFile.nextLine());
+					System.out.println("Question " + 1 + (numOfQuestions++) + ":" + scFile.nextLine());
 					System.out.println("[1]. " + scFile.nextLine());
 					System.out.println("[2]. " + scFile.nextLine());
 					System.out.println("[3]. " + scFile.nextLine());
@@ -81,6 +91,8 @@ public class Session {
 				marks = null;
 				marks = new ArrayList<Double>(Collections.nCopies(numOfQuestions, 0.0));
 			}
+			
+			printResult(score, timeTaken);
 
 			resultDestination.addExamRecord(new ExamRecord(examId, studentId, score, timeTaken, marks), examName);
 

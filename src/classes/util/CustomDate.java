@@ -1,25 +1,25 @@
 package classes.util;
 
-public class Date {
+public class CustomDate {
 
 	private String day;
 	private String month;
 	private String year;
 
-	public Date(String day, String month, String year) {
+	public CustomDate(String day, String month, String year) {
 		this.day = day;
 		this.month = month;
 		this.year = year;
 	}
 
-	public Date(String ddmmyyyy) {
+	public CustomDate(String ddmmyyyy) {
 		String arrOfStr[] = ddmmyyyy.split("-");
 		this.day = arrOfStr[0];
 		this.month = arrOfStr[1];
 		this.year = arrOfStr[2];
 	}
 
-	public Date() {
+	public CustomDate() {
 		this.day = null;
 		this.month = null;
 		this.year = null;

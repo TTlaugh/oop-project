@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 import classes.exam.ExamRecord;
 import classes.subject.Subject;
-import classes.util.Date;
+import classes.util.CustomDate;
 import classes.util.FileHandling;
 
 public class ExamRecordRepository extends FileHandling {
@@ -16,9 +16,9 @@ public class ExamRecordRepository extends FileHandling {
 	private String baseDir;
 	private Subject subject;
 	private String clazz;
-	private Date date;
+	private CustomDate date;
 
-	public ExamRecordRepository(String baseDir, Subject subject, String clazz, Date date) {
+	public ExamRecordRepository(String baseDir, Subject subject, String clazz, CustomDate date) {
 		super(baseDir + "/" + subject.getId() + "/" + clazz + "/" + date + "/");
 		this.baseDir = baseDir;
 		this.subject = subject;
@@ -125,11 +125,11 @@ public class ExamRecordRepository extends FileHandling {
 		this.clazz = clazz;
 	}
 
-	public Date getDate() {
+	public CustomDate getDate() {
 		return date;
 	}
 
-	public void setDate(Date date) {
+	public void setDate(CustomDate date) {
 		this.date = date;
 	}
 

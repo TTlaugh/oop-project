@@ -2,7 +2,7 @@ package classes.exam;
 
 import classes.question.QuestionSet;
 import classes.subject.Subject;
-import classes.util.Date;
+import classes.util.CustomDate;
 
 public class Exam {
 
@@ -10,11 +10,11 @@ public class Exam {
 	private String name;
 	private Subject subject;
 	private String note;
-	private Date date;
+	private CustomDate date;
 	private int time;
 	private QuestionSet questions;
 
-	public Exam(String id, String name, Subject subject, String note, Date date, int time, QuestionSet questions) {
+	public Exam(String id, String name, Subject subject, String note, CustomDate date, int time, QuestionSet questions) {
 		this.id = id;
 		this.name = name;
 		this.subject = subject;
@@ -56,11 +56,11 @@ public class Exam {
 		this.note = description;
 	}
 
-	public Date getDate() {
+	public CustomDate getDate() {
 		return date;
 	}
 
-	public void setDate(Date date) {
+	public void setDate(CustomDate date) {
 		this.date = date;
 	}
 
