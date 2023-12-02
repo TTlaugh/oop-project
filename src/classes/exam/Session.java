@@ -73,6 +73,7 @@ public class Session {
 
 			long endTime = System.nanoTime();
 			timeTaken = (int) ((endTime - startTime) / 1000000000);
+			timeTaken /= 60;
 
 			if (timeTaken > timeLimit) {
 				System.out.println("The time for submitting your exam has expired.\nYour exam will not be scored.");
