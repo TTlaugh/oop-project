@@ -19,7 +19,7 @@ public class ExamRecordRepository extends FileHandling {
 	private Date date;
 
 	public ExamRecordRepository(String baseDir, Subject subject, String clazz, Date date) {
-		super(baseDir + "/" + subject.getId() + "/" + clazz + "/" + date);
+		super(baseDir + "/" + subject.getId() + "/" + clazz + "/" + date + "/");
 		this.baseDir = baseDir;
 		this.subject = subject;
 		this.clazz = clazz;
@@ -90,7 +90,7 @@ public class ExamRecordRepository extends FileHandling {
 				Scanner scanner = new Scanner(fileEntry);
 				int count = 0;
 				String data;
-				while ((data = scanner.nextLine()) != null && count++ != 2)
+				while ((data = scanner.nextLine()) != null && count++ != 3)
 					System.out.print(data + " ");
 				System.out.println();
 				scanner.close();
