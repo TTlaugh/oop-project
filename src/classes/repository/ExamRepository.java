@@ -40,7 +40,7 @@ public class ExamRepository extends FileHandling {
 			for (int j = 0; j < examsPerId; j++) {
 				exam.setId(String.valueOf(i));
 				exam.getQuestions().shuffleQuestionSet();
-				String fileName = getPath() + "exam" + String.format("%03d", count++);
+				String fileName = getPath() + "exam" + String.format("%03d", 1 + count++);
 				createFile(fileName, fileName + "_old");
 				try {
 					FileWriter writer = new FileWriter(fileName);
