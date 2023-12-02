@@ -22,10 +22,10 @@ public class Session {
 
 	private static void printResult(double score, int timeTaken) {
 		String text = ""
-			+ "\t╔════════════════════════╗\n"
-			+ "\t      SCORE: %.2f         \n"
-			+ "\t      Time taken: %d      \n"
-			+ "\t╚════════════════════════╝\n";
+				+ "\t╔════════════════════════╗\n"
+				+ "\t      SCORE: %.2f         \n"
+				+ "\t      Time taken: %d      \n"
+				+ "\t╚════════════════════════╝\n";
 		System.out.printf(text, score, timeTaken);
 	}
 
@@ -49,7 +49,7 @@ public class Session {
 				System.out.println("=( Question List )=====================================");
 				while (scFile.hasNextLine()) {
 					correctAnswer.add(Integer.parseInt(scFile.nextLine()));
-					System.out.println("Question " + 1 + (numOfQuestions++) + ":" + scFile.nextLine());
+					System.out.println("Question " + (1 + (numOfQuestions++)) + ":" + scFile.nextLine());
 					System.out.println("[1]. " + scFile.nextLine());
 					System.out.println("[2]. " + scFile.nextLine());
 					System.out.println("[3]. " + scFile.nextLine());
@@ -91,7 +91,7 @@ public class Session {
 				marks = null;
 				marks = new ArrayList<Double>(Collections.nCopies(numOfQuestions, 0.0));
 			}
-			
+
 			printResult(score, timeTaken);
 
 			resultDestination.addExamRecord(new ExamRecord(examId, studentId, score, timeTaken, marks), examName);
