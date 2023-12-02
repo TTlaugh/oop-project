@@ -16,10 +16,11 @@ import classes.util.Constant;
 public class GeneralFunction {
 
 	public static boolean createDataDir() {
-		File dir = new File(Constant.dataPath.data_BaseDir);
-		if (!dir.exists())
-			return dir.mkdirs();
-		return false;
+		File baseDir = new File(Constant.dataPath.data_BaseDir);
+		File questionBanksDir = new File(Constant.dataPath.QuestionBanks_Dir);
+		File examsDir = new File(Constant.dataPath.Exams_Dir);
+		File examRecordsDir = new File(Constant.dataPath.ExamRecords_Dir);
+		return baseDir.mkdirs() && questionBanksDir.mkdirs() && examsDir.mkdirs() && examRecordsDir.mkdirs();
 	}
 
 	public static Account signIn(Scanner userInput) {
