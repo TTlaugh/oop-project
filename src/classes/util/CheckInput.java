@@ -1,8 +1,22 @@
 package classes.util;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.regex.Pattern;
 
 public class CheckInput {
+
+	public static String toDateFormat(String dateStr) {
+		DateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+		sdf.setLenient(false);
+		try {
+			sdf.parse(dateStr);
+		} catch (ParseException e) {
+			return dateStr;
+		}
+		return null;
+	}
 
 	public static String toStrInteger(String str) {
 		Pattern pattern = Pattern.compile("-?\\d+");

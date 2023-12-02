@@ -23,8 +23,8 @@ public class Session {
 	private static void printResult(double score, int timeTaken) {
 		String text = ""
 			+ "\t╔════════════════════════╗\n"
-			+ "\t║     SCORE: %.2f        ║\n"
-			+ "\t║     Time taken: %d     ║\n"
+			+ "\t      SCORE: %.2f         \n"
+			+ "\t      Time taken: %d      \n"
 			+ "\t╚════════════════════════╝\n";
 		System.out.printf(text, score, timeTaken);
 	}
