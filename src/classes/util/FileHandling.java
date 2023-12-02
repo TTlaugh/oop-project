@@ -28,7 +28,7 @@ public class FileHandling {
 		File dir = new File(this.path);
 		if (!dir.exists())
 			return dir.mkdirs();
-		return false;
+		return true;
 	}
 
 	public static boolean createFile(String fileName, String newNameForOldFile) {
@@ -55,8 +55,8 @@ public class FileHandling {
 
 	protected void listFileInDir() {
 		final File folder = new File(this.path);
-		for (final File fileEntry : folder.listFiles()) {
-			System.out.println(fileEntry.getName());
+		for (final String fileEntry : folder.list()) {
+			System.out.println(fileEntry);
 		}
 	}
 
