@@ -51,13 +51,13 @@ public class AccountList {
 	}
 
 	public int findIndex(String username) {
-		for (int i = 0; i < arr.size(); i++)
-			if (arr.get(i).getUsername().equals(username))
+		for (int i = 0; i < this.arr.size(); i++)
+			if (this.arr.get(i).getUsername().equals(username))
 				return i;
 		return -1;
 	}
 
 	public boolean isAccountRegistered(Account acc) {
-		return findIndex(acc.getUsername()) != -1;
+		return findIndex(acc.getUsername()) >= 0;
 	}
 }
