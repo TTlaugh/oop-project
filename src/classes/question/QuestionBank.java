@@ -2,6 +2,7 @@ package classes.question;
 
 import java.util.ArrayList;
 
+import classes.subject.Subject;
 import classes.util.CustomList;
 
 public class QuestionBank implements CustomList {
@@ -12,7 +13,7 @@ public class QuestionBank implements CustomList {
 		this.arr = new ArrayList<Object>();
 	}
 
-	public QuestionBank(ArrayList<Object> arr) {
+	public QuestionBank(Subject subject, ArrayList<Object> arr) {
 		this.arr = arr;
 	}
 

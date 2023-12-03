@@ -1,28 +1,62 @@
 package classes.util;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.regex.Pattern;
+
 public class CheckInput {
 
 	public static String toDateFormat(String dateStr) {
-		InputValidator validator = new dateValidator("dd-MM-yyyy");
-		return validator.isValid(dateStr) ? dateStr : null;
+		DateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+		sdf.setLenient(false);
+		try {
+			sdf.parse(dateStr);
+		} catch (ParseException e) {
+			return dateStr;
+		}
+		return null;
 	}
 
 	public static String toStrInteger(String str) {
-		InputValidator validator = new regexValidator("-?\\d+");
-		return validator.isValid(str) ? str : null;
+		Pattern pattern = Pattern.compile("-?\\d+");
+		if (pattern.matcher(str).matches())
+			return str;
+		return null;
+	}
+
+	public static Integer toIntNumeric(String str) {
+		Pattern pattern = Pattern.compile("\\d+");
+		if (pattern.matcher(str).matches()) {
+			return Integer.parseInt(str);
+		}
+		return -1;
 	}
 
 	public static String toStrNumberic(String str) {
-		InputValidator validator = new regexValidator("-?\\d+(\\.\\d+)?");
-		return validator.isValid(str) ? str : null;
+		Pattern pattern = Pattern.compile("-?\\d+(\\.\\d+)?");
+		if (pattern.matcher(str).matches())
+			return str;
+		return null;
 	}
 
 	public static String toStrNumberic(String str, int low, int high) {
-		InputValidator validator = new regexValidator("-?\\d+(\\.\\d+)?");
-		if (validator.isValid(str))
+		Pattern pattern = Pattern.compile("-?\\d+(\\.\\d+)?");
+		if (pattern.matcher(str).matches())
 			if (Integer.parseInt(str) >= low && Integer.parseInt(str) <= high)
 				return str;
 		return null;
+	}
+
+	public static Integer toIntNumeric(String str, int low, int high) {
+		Pattern pattern = Pattern.compile("\\d+");
+		if (pattern.matcher(str).matches()) {
+			int intValue = Integer.parseInt(str);
+			if (intValue >= low && intValue <= high) {
+				return intValue;
+			}
+		}
+		return -1;
 	}
 
 	public static boolean toYesNo(String yn) {
@@ -32,21 +66,23 @@ public class CheckInput {
 	}
 
 	public static String toRole(String username) {
-		InputValidator adminValidator = new regexValidator("^[aA][dD][mM][iI][nN]$");
-		InputValidator professorValidator = new regexValidator("^IT\\d{3}\\d{3}$");
-		InputValidator studentValidator = new regexValidator("^IT\\d{4}\\d\\d{3}$");
-		if (adminValidator.isValid(username))
+		Pattern admin = Pattern.compile("\\badmin\\b", Pattern.CASE_INSENSITIVE);
+		Pattern professor = Pattern.compile("\\bIT\\d{3}\\d{3}\\b");
+		Pattern student = Pattern.compile("\\bIT\\d{4}\\d\\d{3}\\b");
+		if (admin.matcher(username).matches())
 			return "admin";
-		else if (professorValidator.isValid(username))
+		else if (professor.matcher(username).matches())
 			return "professor";
-		else if (studentValidator.isValid(username))
+		else if (student.matcher(username).matches())
 			return "student";
 		return null;
 	}
 
 	public static String toFullName(String fullName) {
-		InputValidator validator = new regexValidator("^[a-zA-Z_]{4,}$");
-		return validator.isValid(fullName) ? fullName : null;
+		Pattern pattern = Pattern.compile("^[a-zA-Z_]{4,}$");
+		if (pattern.matcher(fullName).matches())
+			return fullName;
+		return null;
 	}
 
 	public static String toGender(String gender) {
@@ -58,7 +94,9 @@ public class CheckInput {
 	}
 
 	public static String toPhoneNumber(String phoneNumber) {
-		InputValidator validator = new regexValidator("(84|0[3|5|7|8|9])+([0-9]{8})\\b");
-		return validator.isValid(phoneNumber) ? phoneNumber : null;
+		Pattern pattern = Pattern.compile("(84|0[3|5|7|8|9])+([0-9]{8})\\b");
+		if (pattern.matcher(phoneNumber).matches())
+			return phoneNumber;
+		return null;
 	}
 }
