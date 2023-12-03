@@ -1,8 +1,5 @@
 package classes.util;
 
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.regex.Pattern;
 
 public class CheckInput {
@@ -19,14 +16,6 @@ public class CheckInput {
 		return null;
 	}
 
-	public static Integer toIntNumeric(String str) {
-		Pattern pattern = Pattern.compile("\\d+");
-		if (pattern.matcher(str).matches()) {
-			return Integer.parseInt(str);
-		}
-		return -1;
-	}
-
 	public static String toStrNumberic(String str) {
 		Pattern pattern = Pattern.compile("-?\\d+(\\.\\d+)?");
 		if (pattern.matcher(str).matches())
@@ -40,17 +29,6 @@ public class CheckInput {
 			if (Integer.parseInt(str) >= low && Integer.parseInt(str) <= high)
 				return str;
 		return null;
-	}
-
-	public static Integer toIntNumeric(String str, int low, int high) {
-		Pattern pattern = Pattern.compile("\\d+");
-		if (pattern.matcher(str).matches()) {
-			int intValue = Integer.parseInt(str);
-			if (intValue >= low && intValue <= high) {
-				return intValue;
-			}
-		}
-		return -1;
 	}
 
 	public static boolean toYesNo(String yn) {
@@ -89,4 +67,24 @@ public class CheckInput {
 		InputValidator validator = new regexValidator("(84|0[3|5|7|8|9])+([0-9]{8})\\b");
 		return validator.isValid(phoneNumber) ? phoneNumber : null;
 	}
+
+	public static Integer toIntNumeric(String str) {
+		Pattern pattern = Pattern.compile("\\d+");
+		if (pattern.matcher(str).matches()) {
+			return Integer.parseInt(str);
+		}
+		return -1;
+	}
+
+	public static Integer toIntNumeric(String str, int low, int high) {
+		Pattern pattern = Pattern.compile("\\d+");
+		if (pattern.matcher(str).matches()) {
+			int intValue = Integer.parseInt(str);
+			if (intValue >= low && intValue <= high) {
+				return intValue;
+			}
+		}
+		return -1;
+	}
+
 }
