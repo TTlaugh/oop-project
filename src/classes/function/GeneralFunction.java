@@ -16,10 +16,11 @@ import classes.util.Constant;
 public class GeneralFunction {
 
 	public static boolean createDataDir() {
-		File dir = new File(Constant.dataPath.data_BaseDir);
-		if (!dir.exists())
-			return dir.mkdirs();
-		return false;
+		File baseDir = new File(Constant.dataPath.data_BaseDir);
+		File questionBanksDir = new File(Constant.dataPath.QuestionBanks_Dir);
+		File examsDir = new File(Constant.dataPath.Exams_Dir);
+		File examRecordsDir = new File(Constant.dataPath.ExamRecords_Dir);
+		return baseDir.mkdirs() && questionBanksDir.mkdirs() && examsDir.mkdirs() && examRecordsDir.mkdirs();
 	}
 
 	public static Account signIn(Scanner userInput) {
@@ -63,7 +64,6 @@ public class GeneralFunction {
 			if (role == null)
 				System.out.println("This ID is invalid");
 		} while (role == null);
-
 		System.out.println("Create a password");
 		System.out.print(" ");
 		password = userInput.nextLine();
@@ -74,7 +74,6 @@ public class GeneralFunction {
 			if (info.getFullName() == null)
 				System.out.println("You entered the name in the wrong format");
 		} while (info.getFullName() == null);
-
 		do {
 			System.out.println("Enter your year of birth");
 			System.out.print(" ");
@@ -83,7 +82,6 @@ public class GeneralFunction {
 			if (info.getYearOfBirth() == -1)
 				System.out.println("Invalid year");
 		} while (info.getYearOfBirth() == -1);
-
 		System.out.println("Male or Female or Other?");
 		System.out.print(" ");
 		info.setGender(CheckInput.toGender(userInput.nextLine()));
@@ -96,17 +94,17 @@ public class GeneralFunction {
 		} while (info.getPhoneNumber() == null);
 
 		switch (role) {
-			case "admin":
-				newAccount = new Admin();
-				break;
-			case "professor":
-				newAccount = new Professor();
-				break;
-			case "student":
-				newAccount = new Student();
-				break;
-			default:
-				break;
+		case "admin":
+			newAccount = new Admin();
+			break;
+		case "professor":
+			newAccount = new Professor();
+			break;
+		case "student":
+			newAccount = new Student();
+			break;
+		default:
+			break;
 		}
 		newAccount.setUsername(username);
 		newAccount.setPassword(password);
@@ -121,8 +119,4 @@ public class GeneralFunction {
 		return null;
 	}
 
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		GeneralFunction.signUp(sc);
-	}
 }

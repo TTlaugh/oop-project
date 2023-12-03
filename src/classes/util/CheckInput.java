@@ -8,14 +8,8 @@ import java.util.regex.Pattern;
 public class CheckInput {
 
 	public static String toDateFormat(String dateStr) {
-		DateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
-		sdf.setLenient(false);
-		try {
-			sdf.parse(dateStr);
-		} catch (ParseException e) {
-			return dateStr;
-		}
-		return null;
+		InputValidator validator = new dateValidator("dd-MM-yyyy");
+		return validator.isValid(dateStr) ? dateStr : null;
 	}
 
 	public static String toStrInteger(String str) {
@@ -66,23 +60,21 @@ public class CheckInput {
 	}
 
 	public static String toRole(String username) {
-		Pattern admin = Pattern.compile("\\badmin\\b", Pattern.CASE_INSENSITIVE);
-		Pattern professor = Pattern.compile("\\bIT\\d{3}\\d{3}\\b");
-		Pattern student = Pattern.compile("\\bIT\\d{4}\\d\\d{3}\\b");
-		if (admin.matcher(username).matches())
+		InputValidator adminValidator = new regexValidator("^[aA][dD][mM][iI][nN]$");
+		InputValidator professorValidator = new regexValidator("^IT\\d{3}\\d{3}$");
+		InputValidator studentValidator = new regexValidator("^IT\\d{4}\\d\\d{3}$");
+		if (adminValidator.isValid(username))
 			return "admin";
-		else if (professor.matcher(username).matches())
+		else if (professorValidator.isValid(username))
 			return "professor";
-		else if (student.matcher(username).matches())
+		else if (studentValidator.isValid(username))
 			return "student";
 		return null;
 	}
 
 	public static String toFullName(String fullName) {
-		Pattern pattern = Pattern.compile("^[a-zA-Z_]{4,}$");
-		if (pattern.matcher(fullName).matches())
-			return fullName;
-		return null;
+		InputValidator validator = new regexValidator("^[a-zA-Z_]{4,}$");
+		return validator.isValid(fullName) ? fullName : null;
 	}
 
 	public static String toGender(String gender) {
@@ -94,9 +86,7 @@ public class CheckInput {
 	}
 
 	public static String toPhoneNumber(String phoneNumber) {
-		Pattern pattern = Pattern.compile("(84|0[3|5|7|8|9])+([0-9]{8})\\b");
-		if (pattern.matcher(phoneNumber).matches())
-			return phoneNumber;
-		return null;
+		InputValidator validator = new regexValidator("(84|0[3|5|7|8|9])+([0-9]{8})\\b");
+		return validator.isValid(phoneNumber) ? phoneNumber : null;
 	}
 }
