@@ -9,16 +9,16 @@ import java.util.Scanner;
 
 import classes.question.Question;
 import classes.question.QuestionBank;
+import classes.util.CustomList;
 import classes.util.FileHandling;
-import classes.util.FileListHandling;
 
-public class QuestionRepository implements FileListHandling {
+public class QuestionRepository {
 
-	private QuestionBank quesbank;
+	private CustomList quesbank;
 	private String filepath;
 
 	public QuestionRepository(String filepath) {
-		this.quesbank = new QuestionBank(filepath);
+		this.quesbank = new QuestionBank();
 		this.filepath = filepath;
 		if (!FileHandling.createFile(filepath) || !loadList()) {
 			this.quesbank = null;
@@ -26,7 +26,6 @@ public class QuestionRepository implements FileListHandling {
 		}
 	}
 
-	@Override
 	public boolean readFile() {
 		try {
 			File repofile = new File(this.filepath);
@@ -53,14 +52,14 @@ public class QuestionRepository implements FileListHandling {
 		return true;
 	}
 
-	@Override
 	public boolean writeFile() {
 		try {
 			FileWriter writer = new FileWriter(this.filepath);
-			for (Question ques : this.quesbank.getQuesList()) {
-				writer.write(ques.getChapter() + " " + ques.getDifficulty() + " " + ques.getCorrectAnswer() + "\n"
-						+ ques.getContent() + "\n" + ques.getAnswer()[0] + "\n" + ques.getAnswer()[1] + "\n"
-						+ ques.getAnswer()[2] + "\n" + ques.getAnswer()[3] + "\n");
+			for (Object ques : this.quesbank.getArr()) {
+				writer.write(((Question) ques).getChapter() + " " + ((Question) ques).getDifficulty() + " "
+						+ ((Question) ques).getCorrectAnswer() + "\n" + ((Question) ques).getContent() + "\n"
+						+ ((Question) ques).getAnswer()[0] + "\n" + ((Question) ques).getAnswer()[1] + "\n"
+						+ ((Question) ques).getAnswer()[2] + "\n" + ((Question) ques).getAnswer()[3] + "\n");
 			}
 			writer.close();
 		} catch (IOException e) {
@@ -69,18 +68,16 @@ public class QuestionRepository implements FileListHandling {
 		return true;
 	}
 
-	@Override
 	public boolean loadList() {
 		return readFile();
 	}
 
-	@Override
 	public boolean saveList() {
 		return writeFile();
 	}
 
 	public boolean addQuestion(Question ques) {
-		if (quesbank.isQuestionAdded(ques))
+		if (quesbank.isObjectAdded(ques))
 			return false;
 		this.quesbank.add(ques);
 		return saveList();
@@ -98,49 +95,49 @@ public class QuestionRepository implements FileListHandling {
 
 	public ArrayList<Integer> indexSearchQuestionByContent(String questionContent) {
 		ArrayList<Integer> arrOfIndex = new ArrayList<Integer>();
-		for (Question ques : this.quesbank.getQuesList())
-			if (ques.getContent().contains(questionContent))
+		for (Object ques : this.quesbank.getArr())
+			if (((Question) ques).getContent().contains(questionContent))
 				arrOfIndex.add(this.quesbank.findIndex(ques));
 		return arrOfIndex;
 	}
 
 	public ArrayList<Integer> indexSearchQuestionByChapter(int chapter) {
 		ArrayList<Integer> arrOfIndex = new ArrayList<Integer>();
-		for (Question ques : this.quesbank.getQuesList())
-			if (ques.getChapter() == chapter)
+		for (Object ques : this.quesbank.getArr())
+			if (((Question) ques).getChapter() == chapter)
 				arrOfIndex.add(this.quesbank.findIndex(ques));
 		return arrOfIndex;
 	}
 
 	public ArrayList<Integer> indexSearchQuestionByDiffi(int difficulty) {
 		ArrayList<Integer> arrOfIndex = new ArrayList<Integer>();
-		for (Question ques : this.quesbank.getQuesList())
-			if (ques.getDifficulty() == difficulty)
+		for (Object ques : this.quesbank.getArr())
+			if (((Question) ques).getDifficulty() == difficulty)
 				arrOfIndex.add(this.quesbank.findIndex(ques));
 		return arrOfIndex;
 	}
 
 	public ArrayList<Question> searchQuestionByContent(String questionContent) {
 		ArrayList<Question> arrOfQuestion = new ArrayList<Question>();
-		for (Question ques : this.quesbank.getQuesList())
-			if (ques.getContent().contains(questionContent))
-				arrOfQuestion.add(ques);
+		for (Object ques : this.quesbank.getArr())
+			if (((Question) ques).getContent().contains(questionContent))
+				arrOfQuestion.add((Question) ques);
 		return arrOfQuestion;
 	}
 
 	public ArrayList<Question> searchQuestionByChapter(int chapter) {
 		ArrayList<Question> arrOfQuestion = new ArrayList<Question>();
-		for (Question ques : this.quesbank.getQuesList())
-			if (ques.getChapter() == chapter)
-				arrOfQuestion.add(ques);
+		for (Object ques : this.quesbank.getArr())
+			if (((Question) ques).getChapter() == chapter)
+				arrOfQuestion.add((Question) ques);
 		return arrOfQuestion;
 	}
 
 	public ArrayList<Question> searchQuestionByDiffi(int difficulty) {
 		ArrayList<Question> arrOfQuestion = new ArrayList<Question>();
-		for (Question ques : this.quesbank.getQuesList())
-			if (ques.getDifficulty() == difficulty)
-				arrOfQuestion.add(ques);
+		for (Object ques : this.quesbank.getArr())
+			if (((Question) ques).getDifficulty() == difficulty)
+				arrOfQuestion.add((Question) ques);
 		return arrOfQuestion;
 	}
 
@@ -153,7 +150,7 @@ public class QuestionRepository implements FileListHandling {
 	}
 
 	public QuestionBank getQuesbank() {
-		return quesbank;
+		return (QuestionBank) quesbank;
 	}
 
 	public void setQuesbank(QuestionBank quesbank) {

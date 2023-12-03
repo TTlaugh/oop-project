@@ -12,12 +12,12 @@ import classes.user.Admin;
 import classes.user.Professor;
 import classes.user.Student;
 import classes.user.UserInfo;
+import classes.util.CustomList;
 import classes.util.FileHandling;
-import classes.util.FileListHandling;
 
-public class AccountRepository implements FileListHandling {
+public class AccountRepository {
 
-	private AccountList acclist;
+	private CustomList acclist;
 	private String filepath;
 
 	public AccountRepository(String filepath) {
@@ -29,7 +29,6 @@ public class AccountRepository implements FileListHandling {
 		}
 	}
 
-	@Override
 	public boolean readFile() {
 		try {
 			File repofile = new File(this.filepath);
@@ -62,14 +61,14 @@ public class AccountRepository implements FileListHandling {
 		return true;
 	}
 
-	@Override
 	public boolean writeFile() {
 		try {
 			FileWriter writer = new FileWriter(this.filepath);
-			for (Account acc : this.acclist.getArr()) {
-				writer.write(acc.getUsername() + " " + acc.getPassword() + " " + acc.getRole() + " "
-						+ acc.getInfo().getFullName() + " " + acc.getInfo().getYearOfBirth() + " "
-						+ acc.getInfo().getGender() + " " + acc.getInfo().getPhoneNumber() + "\n");
+			for (Object acc : this.acclist.getArr()) {
+				writer.write(((Account) acc).getUsername() + " " + ((Account) acc).getPassword() + " "
+						+ ((Account) acc).getRole() + " " + ((Account) acc).getInfo().getFullName() + " "
+						+ ((Account) acc).getInfo().getYearOfBirth() + " " + ((Account) acc).getInfo().getGender() + " "
+						+ ((Account) acc).getInfo().getPhoneNumber() + "\n");
 			}
 			writer.close();
 		} catch (IOException e) {
@@ -78,18 +77,16 @@ public class AccountRepository implements FileListHandling {
 		return true;
 	}
 
-	@Override
 	public boolean loadList() {
 		return readFile();
 	}
 
-	@Override
 	public boolean saveList() {
 		return writeFile();
 	}
 
 	public boolean addUser(Account acc) {
-		if (acclist.isAccountRegistered(acc))
+		if (acclist.isObjectAdded(acc))
 			return false;
 		if (acc instanceof Admin)
 			this.acclist.add(new Admin((Admin) acc));
@@ -120,11 +117,11 @@ public class AccountRepository implements FileListHandling {
 		int index = acclist.findIndex(username);
 		if (index == -1)
 			return null;
-		return acclist.get(index);
+		return (Account) acclist.get(index);
 	}
 
 	public AccountList getAcclist() {
-		return acclist;
+		return (AccountList) acclist;
 	}
 
 	public void setAcclist(AccountList acclist) {

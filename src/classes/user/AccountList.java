@@ -2,62 +2,73 @@ package classes.user;
 
 import java.util.ArrayList;
 
-public class AccountList {
+import classes.util.CustomList;
 
-	private ArrayList<Account> arr;
+public class AccountList implements CustomList {
+
+	private ArrayList<Object> arr;
 
 	public AccountList() {
-		this.arr = new ArrayList<Account>();
+		this.arr = new ArrayList<Object>();
 	}
 
-	public AccountList(ArrayList<Account> acclist) {
+	public AccountList(ArrayList<Object> acclist) {
 		this.arr = acclist;
 	}
 
-	public ArrayList<Account> getArr() {
+	public ArrayList<Object> getArr() {
 		return arr;
 	}
 
-	public void setArr(ArrayList<Account> acclist) {
+	public void setArr(ArrayList<Object> acclist) {
 		this.arr = acclist;
 	}
 
-	public void add(Account acc) {
-		this.arr.add(acc);
+	@Override
+	public void add(Object acc) {
+		this.arr.add((Account) acc);
 	}
 
+	@Override
 	public void remove(int index) {
 		this.arr.remove(index);
 	}
 
-	public Account get(int index) {
+	@Override
+	public Object get(int index) {
 		return this.arr.get(index);
 	}
 
-	public void set(int index, Account acc) {
-		this.arr.set(index, acc);
+	@Override
+	public void set(int index, Object acc) {
+		this.arr.set(index, (Account) acc);
 	}
 
+	@Override
 	public void clear() {
 		this.arr.clear();
 	}
 
+	@Override
 	public int size() {
 		return this.arr.size();
 	}
 
-	public int findIndex(Account acc) {
-		return this.arr.indexOf(acc);
+	@Override
+	public int findIndex(Object acc) {
+		return this.arr.indexOf((Account) acc);
 	}
 
+	@Override
 	public int findIndex(String username) {
 		for (int i = 0; i < this.arr.size(); i++)
-			if (this.arr.get(i).getUsername().equals(username))
+			if (((Account) this.arr.get(i)).getUsername().equals(username))
 				return i;
 		return -1;
 	}
 
-	public boolean isAccountRegistered(Account acc) {
-		return findIndex(acc.getUsername()) >= 0;
+	@Override
+	public boolean isObjectAdded(Object acc) {
+		return findIndex(((Account) acc).getUsername()) >= 0;
 	}
 }

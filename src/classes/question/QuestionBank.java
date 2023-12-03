@@ -1,74 +1,78 @@
 package classes.question;
 
-import classes.subject.*;
-
 import java.util.ArrayList;
 
-public class QuestionBank {
+import classes.subject.Subject;
+import classes.util.CustomList;
 
-	private Subject subject;
-	private ArrayList<Question> arr;
+public class QuestionBank implements CustomList {
 
-	public QuestionBank(String subjectId) {
-		this.subject = new Subject(subjectId);
-		this.arr = new ArrayList<Question>();
+	private ArrayList<Object> arr;
+
+	public QuestionBank() {
+		this.arr = new ArrayList<Object>();
 	}
 
-	public QuestionBank(Subject subject, ArrayList<Question> arr) {
-		this.subject = subject;
+	public QuestionBank(Subject subject, ArrayList<Object> arr) {
 		this.arr = arr;
 	}
 
-	public QuestionBank() {
-		this.subject = new Subject();
-		this.arr = new ArrayList<Question>();
-	}
-
-	public Subject getSubject() {
-		return subject;
-	}
-
-	public void setSubject(Subject subject) {
-		this.subject = subject;
-	}
-
-	public ArrayList<Question> getQuesList() {
+	@Override
+	public ArrayList<Object> getArr() {
 		return arr;
 	}
 
-	public void setQuesList(ArrayList<Question> arr) {
+	@Override
+	public void setArr(ArrayList<Object> arr) {
 		this.arr = arr;
 	}
-	
-	public void add(Question ques) {
-		this.arr.add(ques);
+
+	@Override
+	public void add(Object ques) {
+		this.arr.add((Question) ques);
 	}
+
+	@Override
 	public void remove(int index) {
 		this.arr.remove(index);
 	}
-	public Question get(int index) {
+
+	@Override
+	public Object get(int index) {
 		return this.arr.get(index);
 	}
-	public void set(int index, Question ques) {
-		this.arr.set(index, ques);
+
+	@Override
+	public void set(int index, Object ques) {
+		this.arr.set(index, (Question) ques);
 	}
+
+	@Override
 	public void clear() {
 		this.arr.clear();
 	}
+
+	@Override
 	public int size() {
 		return this.arr.size();
 	}
-	public int findIndex(Question ques) {
-		return this.arr.indexOf(ques);
+
+	@Override
+	public int findIndex(Object ques) {
+		return this.arr.indexOf((Question) ques);
 	}
+
+	@Override
 	public int findIndex(String question) {
 		for (int i = 0; i < arr.size(); i++)
-			if (arr.get(i).getContent().equals(question))
+			if (((Question) arr.get(i)).getContent().equals(question))
 				return i;
-		return -1; 	
+		return -1;
 	}
-	public boolean isQuestionAdded(Question ques) {
-		return this.arr.contains(ques);
+
+	@Override
+	public boolean isObjectAdded(Object ques) {
+		return this.arr.contains((Question) ques);
 	}
 
 }
