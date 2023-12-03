@@ -452,9 +452,15 @@ public class ProfessorFunction {
         date.setYear(newYear);
 
         ExamRepository examRepository = new ExamRepository(Constant.dataPath.Exams_Dir, subject, clazz, date);
-        System.out.println("Enter exam's id:");
-        String examId = sc.nextLine();
+        String examId;
+        do {
+            System.out.println("nhap id exam:");
+            examId = CheckInput.toStrNumberic(sc.nextLine(), 0, 999);
+            if (examId == null)
+                System.out.println("Please re-enter");
+        } while (examId == null);
         System.out.println("Enter exam's name:");
+
         String examName = sc.nextLine();
         System.out.println("Enter your note:");
         String examNote = sc.nextLine();
