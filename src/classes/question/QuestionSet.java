@@ -24,18 +24,24 @@ public class QuestionSet {
 		this.questionCountDetail = questionCountDetail;
 		this.quesRepo = new QuestionRepository(Constant.dataPath.QuestionBanks_Dir + subject.getId());
 		this.quesSet = new ArrayList<Question>();
-		createQuestionSet();
+		if (!createQuestionSet()) {
+			quesSet = null;
+		}
 	}
 
-	private void createQuestionSet() {
+	private boolean createQuestionSet() {
 		for (QuestionCountDetail detail : questionCountDetail) {
 			ArrayList<Question> questionsOfChapter = quesRepo.searchQuestionByChapter(detail.getChapter());
+			if (questionsOfChapter.size() == 0)
+				return false;
 			for (int i = 0; i < detail.getDifficultyCountDetail().size(); i++) {
 				ArrayList<Question> questionsOfDifficulty = QuestionRepository.searchQuestionByDiffi(questionsOfChapter,
 						i);
+				int quesCountOfDiffi = detail.getDifficultyCountDetail().get(i);
+				if (questionsOfDifficulty.size() == 0 || questionsOfDifficulty.size() < quesCountOfDiffi)
+					return false;
 				Random randNum = new Random();
 				Set<Integer> set = new LinkedHashSet<Integer>();
-				int quesCountOfDiffi = detail.getDifficultyCountDetail().get(i);
 				while (set.size() < quesCountOfDiffi) {
 					int next = randNum.nextInt(questionsOfDifficulty.size());
 					if (set.add(next))
@@ -43,6 +49,7 @@ public class QuestionSet {
 				}
 			}
 		}
+		return true;
 	}
 
 	public void shuffleQuestionSet() {
