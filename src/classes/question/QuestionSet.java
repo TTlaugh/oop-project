@@ -38,8 +38,8 @@ public class QuestionSet {
 				ArrayList<Question> questionsOfDifficulty = QuestionRepository.searchQuestionByDiffi(questionsOfChapter,
 						i);
 				int quesCountOfDiffi = detail.getDifficultyCountDetail().get(i);
-				if (questionsOfDifficulty.size() == 0 || questionsOfDifficulty.size() < quesCountOfDiffi)
-					return false;
+//				if (questionsOfDifficulty.size() == 0 || questionsOfDifficulty.size() < quesCountOfDiffi)
+//					return false;
 				Random randNum = new Random();
 				Set<Integer> set = new LinkedHashSet<Integer>();
 				while (set.size() < quesCountOfDiffi) {

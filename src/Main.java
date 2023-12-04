@@ -41,9 +41,10 @@ public class Main {
 			default:
 				System.out.println("Exiting...");
 				inSession = false;
+				currentAccount = null;
 			}
 
-			while (inSession) {
+			while (currentAccount != null) {
 				if (currentAccount instanceof Admin) {
 					String choice = Menu.adminDashboard(userInput);
 					if (choice.equals("exit"))

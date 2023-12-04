@@ -39,7 +39,7 @@ public class ExamRecordRepository extends FileHandling {
 			FileWriter writer = new FileWriter(getPath() + examRecordFileName);
 			writer.write(examRecord.header());
 			for (int i = 0; i < examRecord.getMarks().size(); i++) {
-				writer.write((i + 1) + "\t" + examRecord.getMarks().get(i) + "\n");
+				writer.write((i + 1) + "\t\t" + examRecord.getMarks().get(i) + "\n");
 			}
 			writer.close();
 		} catch (IOException e) {
