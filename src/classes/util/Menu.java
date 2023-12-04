@@ -40,7 +40,7 @@ public class Menu {
 				    + "\t[2] Edit user infor\n"
 				    + "\t[3] Delete user\n"
 				    + "\n"
-				    + "Please choose 1 of the 3 options above or enter other content to exit\n"
+				    + "Please choose 1 of the 3 options above or enter other content to logout\n"
 				    + " ";
 		System.out.print(text);
 		String chosen = CheckInput.toStrNumberic(input.nextLine(), 1, 3);
@@ -92,7 +92,7 @@ public class Menu {
 				    + "\n"
 				    + "\t[1] Question menu     	[2] Exam menu\n"
 				    + "\n"
-				    + "Please choose 1 of the 2 options above or enter other content to exit\n"
+				    + "Please choose 1 of the 2 options above or enter other content to logout\n"
 				    + " ";
 		System.out.print(text);
 		String chosen = CheckInput.toStrNumberic(input.nextLine(), 1, 2);
@@ -123,7 +123,7 @@ public class Menu {
 				    + "\t[3] Add exam           [4] Delete exam\n"
 				    + "\t[5] Transcript         [6] View exam record\n"
 				    + "\n"
-				    + "Please choose 1 of the 4 options above or enter other content to exit\n"
+				    + "Please choose 1 of the 6 options above or enter other content to exit\n"
 				    + " ";
 		System.out.print(text);
 		String chosen = CheckInput.toStrNumberic(input.nextLine(), 1, 6);
@@ -157,7 +157,7 @@ public class Menu {
 				    + "\n"
 				    + "\t[1] Do exam       [2] View Result\n"
 				    + "\n"
-				    + "Please choose 1 of the 2 options above or enter other content to exit\n"
+				    + "Please choose 1 of the 2 options above or enter other content to logout\n"
 				    + " ";
 	System.out.print(text);
 	String chosen = CheckInput.toStrNumberic(input.nextLine(), 1, 2);

@@ -15,6 +15,14 @@ import classes.util.Constant;
 
 public class GeneralFunction {
 
+	public static void pressAnyKeyToContinue() {
+		System.out.println("Press Enter key to continue...");
+		try {
+			System.in.read();
+		} catch (Exception e) {
+		}
+	}
+
 	public static boolean createDataDir() {
 		File baseDir = new File(Constant.dataPath.data_BaseDir);
 		File questionBanksDir = new File(Constant.dataPath.QuestionBanks_Dir);
@@ -25,6 +33,15 @@ public class GeneralFunction {
 		examsDir.mkdirs();
 		examRecordsDir.mkdirs();
 		return baseDir.exists() && questionBanksDir.exists() && examsDir.exists() && examRecordsDir.exists();
+	}
+
+	public static boolean canReadSubjectData() {
+		File file = new File(Constant.dataPath.SubjectList_File);
+		if (!file.exists())
+			return false;
+		else if (file.length() == 0)
+			return false;
+		return true;
 	}
 
 	public static Account signIn(Scanner userInput) {
@@ -81,7 +98,8 @@ public class GeneralFunction {
 		do {
 			System.out.println("Enter your year of birth");
 			System.out.print(" ");
-			String year = CheckInput.toStrNumberic(userInput.nextLine(), Year.now().getValue() - 70, Year.now().getValue() - 18);
+			String year = CheckInput.toStrNumberic(userInput.nextLine(), Year.now().getValue() - 70,
+					Year.now().getValue() - 18);
 			info.setYearOfBirth(year == null ? -1 : Integer.parseInt(year));
 			if (info.getYearOfBirth() == -1)
 				System.out.println("Invalid year");
@@ -99,21 +117,17 @@ public class GeneralFunction {
 
 		switch (role) {
 		case "admin":
-			newAccount = new Admin();
+			newAccount = new Admin(username, password, role, info);
 			break;
 		case "professor":
-			newAccount = new Professor();
+			newAccount = new Professor(username, password, role, info);
 			break;
 		case "student":
-			newAccount = new Student();
+			newAccount = new Student(username, password, role, info);
 			break;
 		default:
 			break;
 		}
-		newAccount.setUsername(username);
-		newAccount.setPassword(password);
-		newAccount.setRole(role);
-		newAccount.setInfo(info);
 
 		if (accountRepository.addUser(newAccount)) {
 			System.out.println("Registration successful!");

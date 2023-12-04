@@ -31,7 +31,7 @@ public class Subject {
 		try (Scanner sc = new Scanner(file)) {
 			while (sc.hasNextLine()) {
 				String id = sc.next();
-				String name = sc.next();
+				String name = sc.nextLine();
 				if (id.equals(this.id))
 					this.name = name;
 			}

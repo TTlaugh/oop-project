@@ -68,11 +68,14 @@ public class FileHandling {
 		return true;
 	}
 
-	protected void listFileInDir() {
+	public boolean listFileInDir() {
 		final File folder = new File(this.path);
+		if (folder.list() == null)
+			return false;
 		for (final String fileEntry : folder.list()) {
 			System.out.println(fileEntry);
 		}
+		return true;
 	}
 
 	protected boolean removeFile(String examFileName) {

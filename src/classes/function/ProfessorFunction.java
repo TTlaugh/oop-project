@@ -15,13 +15,14 @@ import classes.user.Professor;
 import classes.util.CheckInput;
 import classes.util.Constant;
 import classes.util.CustomDate;
+import classes.util.FileHandling;
 import classes.util.Menu;
 
-
 public class ProfessorFunction {
-	
+
 	public static boolean questionManager(Scanner userInput, Professor professor, String choice) {
-		QuestionRepository questionRepository = new QuestionRepository(Constant.dataPath.QuestionBanks_Dir + professor.getSubject().getId());
+		QuestionRepository questionRepository = new QuestionRepository(
+				Constant.dataPath.QuestionBanks_Dir + professor.getSubject().getId());
 		switch (choice) {
 		case "1":
 			showQuestionBank(questionRepository);
@@ -35,10 +36,10 @@ public class ProfessorFunction {
 		default:
 			break;
 		}
-		
+
 		return true;
 	}
-	
+
 	public static boolean examManager(Scanner userInput, Professor professor, String choice) {
 		switch (choice) {
 		case "1":
@@ -69,10 +70,10 @@ public class ProfessorFunction {
 		System.out.println("Question List:");
 		// questionRepository.getQuesbank().setSubject(subject);
 		for (Object ques : questionRepository.getQuesbank().getArr()) {
-			System.out.println((Question)ques);
+			System.out.println((Question) ques);
 		}
 	}
-	
+
 	public static void searchQuestion(Scanner userInput, QuestionRepository questionRepository) {
 		ArrayList<Integer> arrOfIndex = new ArrayList<Integer>();
 		switch (Menu.searchQuestion(userInput)) {
@@ -83,12 +84,14 @@ public class ProfessorFunction {
 		case "2":
 			System.out.println("Search here (chapter)");
 			String strChapter = CheckInput.toStrNumberic(userInput.nextLine());
-			arrOfIndex = questionRepository.indexSearchQuestionByChapter(strChapter==null?-1:Integer.parseInt(strChapter));
+			arrOfIndex = questionRepository
+					.indexSearchQuestionByChapter(strChapter == null ? -1 : Integer.parseInt(strChapter));
 			break;
 		case "3":
 			System.out.println("Search here (difficulty: 0 - 2)");
 			String strDiff = CheckInput.toStrNumberic(userInput.nextLine(), 0, 2);
-			arrOfIndex = questionRepository.indexSearchQuestionByDiffi(strDiff==null?-1:Integer.parseInt(strDiff));
+			arrOfIndex = questionRepository
+					.indexSearchQuestionByDiffi(strDiff == null ? -1 : Integer.parseInt(strDiff));
 			break;
 		default:
 			break;
@@ -105,19 +108,21 @@ public class ProfessorFunction {
 			System.out.println("[1] Edit question");
 			System.out.println("[2] Remove question");
 			String choice = CheckInput.toStrNumberic(userInput.nextLine());
-			choice = choice==null?"":choice;
-			String strIndex=null;
+			choice = choice == null ? "" : choice;
+			String strIndex = null;
 			switch (choice) {
 			case "1":
 				System.out.print("Enter the index you want to edit: ");
 				strIndex = CheckInput.toStrNumberic(userInput.nextLine());
-				if (strIndex==null) break;
+				if (strIndex == null)
+					break;
 				modifyQuestionAtIndex(userInput, questionRepository, Integer.parseInt(strIndex));
 				break;
 			case "2":
 				System.out.print("Enter the index you want to remove: ");
 				strIndex = CheckInput.toStrNumberic(userInput.nextLine());
-				if (strIndex==null) break;
+				if (strIndex == null)
+					break;
 				questionRepository.removeQuestion(0);
 				break;
 			default:
@@ -155,11 +160,11 @@ public class ProfessorFunction {
 		} while (correctAnswer == -1);
 
 		Question newQuestion = new Question(chapter, difficulty, content, answer, correctAnswer);
-		if(questionRepository.addQuestion(newQuestion))
+		if (questionRepository.addQuestion(newQuestion))
 			System.out.println("Question has been added.");
-		else System.out.println("Fail to add the question");
+		else
+			System.out.println("Fail to add the question");
 	}
-
 
 	public static void modifyQuestionAtIndex(Scanner userInput, QuestionRepository questionRepository, int index) {
 
@@ -192,24 +197,25 @@ public class ProfessorFunction {
 
 		// Modify the question
 		Question modifiedQuestion = new Question(newChapter, newDifficulty, newContent, newAnswer, newCorrectAnswer);
-		if(questionRepository.modifyQuestion(index, modifiedQuestion))
+		if (questionRepository.modifyQuestion(index, modifiedQuestion))
 			System.out.println("Question modified.");
-		else System.out.println("Fail to modify this question");
+		else
+			System.out.println("Fail to modify this question");
 	}
 
 	public static void createExam(Scanner userInput, Subject subject) {
 
-		String clazz=null;
+		String clazz = null;
 		do {
 			System.out.println("Enter class Name (number:[1-9]):");
 			clazz = CheckInput.toStrNumberic(userInput.nextLine(), 1, 9);
-		} while (clazz==null);
+		} while (clazz == null);
 
 		String inputDate;
 		do {
 			System.out.println("Enter exam day (dd-mm-yyyy): ");
 			inputDate = CheckInput.toDateFormat(userInput.nextLine());
-			if (inputDate==null)
+			if (inputDate == null)
 				System.out.println("Invalid day-month-year");
 		} while (inputDate == null);
 
@@ -248,19 +254,19 @@ public class ProfessorFunction {
 				int chapter = userInput.nextInt();
 				ArrayList<Integer> difficultyCountDetail = new ArrayList<Integer>();
 
-				int numOfType=0;
+				int numOfType = 0;
 				System.out.print("Number of easy: ");
 				numOfType = CheckInput.toIntNumeric(userInput.nextLine());
-				difficultyCountDetail.add(numOfType==-1?0:numOfType);
-				count += (numOfType==-1?0:numOfType);
+				difficultyCountDetail.add(numOfType == -1 ? 0 : numOfType);
+				count += (numOfType == -1 ? 0 : numOfType);
 				System.out.print("Number of medium: ");
 				numOfType = CheckInput.toIntNumeric(userInput.nextLine());
-				difficultyCountDetail.add(numOfType==-1?0:numOfType);
-				count += (numOfType==-1?0:numOfType);
+				difficultyCountDetail.add(numOfType == -1 ? 0 : numOfType);
+				count += (numOfType == -1 ? 0 : numOfType);
 				System.out.print("Number of hard: ");
 				numOfType = CheckInput.toIntNumeric(userInput.nextLine());
-				difficultyCountDetail.add(numOfType==-1?0:numOfType);
-				count += (numOfType==-1?0:numOfType);
+				difficultyCountDetail.add(numOfType == -1 ? 0 : numOfType);
+				count += (numOfType == -1 ? 0 : numOfType);
 
 				countDetail = new QuestionCountDetail(chapter, difficultyCountDetail);
 
@@ -269,12 +275,11 @@ public class ProfessorFunction {
 			}
 
 			questionSet = new QuestionSet(subject, totalQuestions, questionCountDetails);
-			if (questionSet.getQuesSet()==null)
+			if (questionSet.getQuesSet() == null)
 				System.out.println("The number of questions is incorrect,"
 						+ "\npossibly due to entering more than the number of questions in the bank"
-						+ "\nor entering an invalid value"
-						+ "\nPlease Enter Again");
-		} while (questionSet.getQuesSet()==null);
+						+ "\nor entering an invalid value" + "\nPlease Enter Again");
+		} while (questionSet.getQuesSet() == null);
 
 		Exam exam = new Exam(" ", examName, subject, examNote, date, examTime, questionSet);
 
@@ -303,17 +308,23 @@ public class ProfessorFunction {
 	}
 
 	public static void previewExam(Scanner userInput, Subject subject) {
-		String clazz=null;
+		String clazz = null;
 		do {
 			System.out.println("Enter class Name (number:[1-9]):");
 			clazz = CheckInput.toStrNumberic(userInput.nextLine(), 1, 9);
-		} while (clazz==null);
+		} while (clazz == null);
 
+		System.out.println("Available exam day:");
+		FileHandling examday = new FileHandling(Constant.dataPath.Exams_Dir + subject.getId() + "/" + clazz + "/");
+		if (!examday.listFileInDir()) {
+			System.out.println("Nothing to show...\nDoes not have any exam created");
+			return;
+		}
 		String inputDate;
 		do {
 			System.out.println("Enter exam day (dd-mm-yyyy): ");
 			inputDate = CheckInput.toDateFormat(userInput.nextLine());
-			if (inputDate==null)
+			if (inputDate == null)
 				System.out.println("Invalid day-month-year");
 		} while (inputDate == null);
 		CustomDate date = new CustomDate(inputDate);
@@ -322,23 +333,23 @@ public class ProfessorFunction {
 		examRepository.listAllExamsCreated();
 		System.out.println("Enter exam name:");
 		String examname = userInput.nextLine();
-		if(!examRepository.previewExam(examname)) {
+		if (!examRepository.previewExam(examname)) {
 			System.out.println("Wrong exam name!");
 		}
 	}
 
 	public static void deleteExam(Scanner userInput, Subject subject) {
-		String clazz=null;
+		String clazz = null;
 		do {
 			System.out.println("Enter class Name (number:[1-9]):");
 			clazz = CheckInput.toStrNumberic(userInput.nextLine(), 1, 9);
-		} while (clazz==null);
+		} while (clazz == null);
 
 		String inputDate;
 		do {
 			System.out.println("Enter exam day (dd-mm-yyyy): ");
 			inputDate = CheckInput.toDateFormat(userInput.nextLine());
-			if (inputDate==null)
+			if (inputDate == null)
 				System.out.println("Invalid day-month-year");
 		} while (inputDate == null);
 		CustomDate date = new CustomDate(inputDate);
@@ -356,17 +367,17 @@ public class ProfessorFunction {
 	}
 
 	public static void addExam(Scanner userInput, Subject subject) {
-		String clazz=null;
+		String clazz = null;
 		do {
 			System.out.println("Enter class Name (number:[1-9]):");
 			clazz = CheckInput.toStrNumberic(userInput.nextLine(), 1, 9);
-		} while (clazz==null);
+		} while (clazz == null);
 
 		String inputDate;
 		do {
 			System.out.println("Enter exam day (dd-mm-yyyy): ");
 			inputDate = CheckInput.toDateFormat(userInput.nextLine());
-			if (inputDate==null)
+			if (inputDate == null)
 				System.out.println("Invalid day-month-year");
 		} while (inputDate == null);
 		CustomDate date = new CustomDate(inputDate);
@@ -407,19 +418,19 @@ public class ProfessorFunction {
 			int chapter = userInput.nextInt();
 			ArrayList<Integer> difficultyCountDetail = new ArrayList<Integer>();
 
-			int numOfType=0;
+			int numOfType = 0;
 			System.out.print("Number of easy: ");
 			numOfType = CheckInput.toIntNumeric(userInput.nextLine());
-			difficultyCountDetail.add(numOfType==-1?0:numOfType);
-			count += (numOfType==-1?0:numOfType);
+			difficultyCountDetail.add(numOfType == -1 ? 0 : numOfType);
+			count += (numOfType == -1 ? 0 : numOfType);
 			System.out.print("Number of medium: ");
 			numOfType = CheckInput.toIntNumeric(userInput.nextLine());
-			difficultyCountDetail.add(numOfType==-1?0:numOfType);
-			count += (numOfType==-1?0:numOfType);
+			difficultyCountDetail.add(numOfType == -1 ? 0 : numOfType);
+			count += (numOfType == -1 ? 0 : numOfType);
 			System.out.print("Number of hard: ");
 			numOfType = CheckInput.toIntNumeric(userInput.nextLine());
-			difficultyCountDetail.add(numOfType==-1?0:numOfType);
-			count += (numOfType==-1?0:numOfType);
+			difficultyCountDetail.add(numOfType == -1 ? 0 : numOfType);
+			count += (numOfType == -1 ? 0 : numOfType);
 
 			countDetail = new QuestionCountDetail(chapter, difficultyCountDetail);
 
@@ -444,44 +455,46 @@ public class ProfessorFunction {
 
 	public static void displayListResult(Scanner userInput, Subject subject) {
 
-		String clazz=null;
+		String clazz = null;
 		do {
 			System.out.println("Enter class Name (number:[1-9]):");
 			clazz = CheckInput.toStrNumberic(userInput.nextLine(), 1, 9);
-		} while (clazz==null);
+		} while (clazz == null);
 
 		String inputDate;
 		do {
 			System.out.println("Enter exam day (dd-mm-yyyy): ");
 			inputDate = CheckInput.toDateFormat(userInput.nextLine());
-			if (inputDate==null)
+			if (inputDate == null)
 				System.out.println("Invalid day-month-year");
 		} while (inputDate == null);
 		CustomDate date = new CustomDate(inputDate);
 
-		ExamRecordRepository examRecordRepository = new ExamRecordRepository(Constant.dataPath.ExamRecords_Dir, subject, clazz, date);
+		ExamRecordRepository examRecordRepository = new ExamRecordRepository(Constant.dataPath.ExamRecords_Dir, subject,
+				clazz, date);
 		System.out.println("Exam result transcript:");
 		examRecordRepository.displaySummaryResults();
 	}
 
 	public static void displayExamRecordContent(Scanner userInput, Subject subject) {
 
-		String clazz=null;
+		String clazz = null;
 		do {
 			System.out.println("Enter class Name (number:[1-9]):");
 			clazz = CheckInput.toStrNumberic(userInput.nextLine(), 1, 9);
-		} while (clazz==null);
+		} while (clazz == null);
 
 		String inputDate;
 		do {
 			System.out.println("Enter exam day (dd-mm-yyyy): ");
 			inputDate = CheckInput.toDateFormat(userInput.nextLine());
-			if (inputDate==null)
+			if (inputDate == null)
 				System.out.println("Invalid day-month-year");
 		} while (inputDate == null);
 		CustomDate date = new CustomDate(inputDate);
 
-		ExamRecordRepository examRecordRepository = new ExamRecordRepository(Constant.dataPath.ExamRecords_Dir, subject, clazz, date);
+		ExamRecordRepository examRecordRepository = new ExamRecordRepository(Constant.dataPath.ExamRecords_Dir, subject,
+				clazz, date);
 
 		System.out.println("Exams List");
 		examRecordRepository.listAllExamRecordsCreated();
