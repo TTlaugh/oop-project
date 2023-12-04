@@ -18,7 +18,10 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		GeneralFunction.createDataDir();
+		if(!GeneralFunction.createDataDir()) {
+			System.out.println("Fail to generate data folder");
+			return;
+		}
 
 		switch (Menu.welcome(userInput)) {
 		case "1":

@@ -20,7 +20,11 @@ public class GeneralFunction {
 		File questionBanksDir = new File(Constant.dataPath.QuestionBanks_Dir);
 		File examsDir = new File(Constant.dataPath.Exams_Dir);
 		File examRecordsDir = new File(Constant.dataPath.ExamRecords_Dir);
-		return baseDir.mkdirs() && questionBanksDir.mkdirs() && examsDir.mkdirs() && examRecordsDir.mkdirs();
+		baseDir.mkdirs();
+		questionBanksDir.mkdirs();
+		examsDir.mkdirs();
+		examRecordsDir.mkdirs();
+		return baseDir.exists() && questionBanksDir.exists() && examsDir.exists() && examRecordsDir.exists();
 	}
 
 	public static Account signIn(Scanner userInput) {
