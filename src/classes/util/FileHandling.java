@@ -9,7 +9,22 @@ public class FileHandling {
 
 	private String path;
 
-	protected boolean displayContent(String fileName) {
+	public boolean displayContent() {
+		try {
+			final File file = new File(this.path);
+			try (Scanner scanner = new Scanner(file)) {
+				while (scanner.hasNextLine()) {
+					String data = scanner.nextLine();
+					System.out.println(data);
+				}
+			}
+		} catch (FileNotFoundException e) {
+			return false;
+		}
+		return true;
+	}
+
+	public boolean displayContent(String fileName) {
 		try {
 			final File file = new File(this.path + fileName);
 			try (Scanner scanner = new Scanner(file)) {

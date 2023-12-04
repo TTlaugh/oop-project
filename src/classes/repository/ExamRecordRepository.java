@@ -57,7 +57,7 @@ public class ExamRecordRepository extends FileHandling {
 	}
 
 	@Override
-	protected boolean displayContent(String fileName) {
+	public boolean displayContent(String fileName) {
 		try {
 			final File file = new File(getPath() + fileName);
 			if (!file.exists())

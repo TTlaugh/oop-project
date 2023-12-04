@@ -25,6 +25,21 @@ public class CheckInput {
 		return null;
 	}
 
+	public static Integer toIntNumeric(String str) {
+		InputValidator validator = new regexValidator("-?\\d+");
+		return validator.isValid(str) ? Integer.parseInt(str) : -1;
+	}
+
+	public static Integer toIntNumeric(String str, int low, int high) {
+		InputValidator validator = new regexValidator("-?\\d+");
+		if (validator.isValid(str)) {
+			int intValue = Integer.parseInt(str);
+			if (intValue >= low && intValue <= high)
+				return intValue;
+		}
+		return -1;
+	}
+
 	public static boolean toYesNo(String yn) {
 		if (yn.equalsIgnoreCase("yes") || yn.equalsIgnoreCase("y") || yn.equalsIgnoreCase(""))
 			return true;
@@ -61,4 +76,5 @@ public class CheckInput {
 		InputValidator validator = new regexValidator("(84|0[3|5|7|8|9])+([0-9]{8})\\b");
 		return validator.isValid(phoneNumber) ? phoneNumber : null;
 	}
+
 }

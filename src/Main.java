@@ -1,7 +1,13 @@
 import java.util.Scanner;
 
+import classes.function.AdminFunction;
 import classes.function.GeneralFunction;
+import classes.function.ProfessorFunction;
+import classes.function.StudentFunction;
 import classes.user.Account;
+import classes.user.Admin;
+import classes.user.Professor;
+import classes.user.Student;
 import classes.util.Menu;
 
 public class Main {
@@ -28,34 +34,31 @@ public class Main {
 			break;
 		}
 
-//		if (currentAccount instanceof Admin) {
-//			switch (Menu.adminDashboard()) {
-//			case "plapla":
-//				AdminFunction.AccountManagement();
-//				break;
-//			case "haha":
-//				// Other functions
-//				break;
-//			}
-//		} else if (currentAccount instanceof Professor) {
-//			switch (Menu.professorDashboard()) {
-//			case "hehe":
-//				ProfessorFunction.QuestionManagement();
-//				break;
-//			case "hihi":
-//				ProfessorFunction.ExamManagement();
-//				break;
-//			}
-//		} else {
-//			switch (Menu.studentDashboard()) {
-//			case "huhu":
-//				StudenFunction.takeExam();
-//				break;
-//			case "hihi":
-//				ProfessorFunction.viewResult();
-//				break;
-//			}
-//		}
+		if (currentAccount instanceof Admin) {
+			String choice = Menu.adminDashboard(userInput);
+			AdminFunction.accountManager(userInput, choice);
+		} else if (currentAccount instanceof Professor) {
+			String choice;
+			switch (Menu.professorDashboard(userInput)) {
+			case "1":
+				choice = Menu.questionManager(userInput);
+				ProfessorFunction.questionManager(userInput, (Professor) currentAccount, choice);
+				break;
+			case "2":
+				choice = Menu.examManager(userInput);
+				ProfessorFunction.examManager(userInput, (Professor) currentAccount, choice);
+				break;
+			}
+		} else {
+			switch (Menu.studentDashboard(userInput)) {
+			case "1":
+				StudentFunction.takeExam(userInput, (Student) currentAccount);
+				break;
+			case "2":
+				StudentFunction.viewResult(userInput, (Student) currentAccount);
+				break;
+			}
+		}
 	}
 
 }
