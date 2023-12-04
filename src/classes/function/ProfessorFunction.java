@@ -170,7 +170,7 @@ public class ProfessorFunction {
 
 		int newChapter;
 		do {
-			System.out.println("Enter new difficulty: :");
+			System.out.println("Enter new chapter: ");
 			newChapter = CheckInput.toIntNumeric(userInput.nextLine());
 		} while (newChapter == -1);
 
@@ -253,27 +253,25 @@ public class ProfessorFunction {
 				int chapter = CheckInput.toIntNumeric(userInput.nextLine());
 				ArrayList<Integer> difficultyCountDetail = new ArrayList<Integer>();
 
-//				int numOfType = 0;
-//				System.out.print("Number of easy: ");
-//				numOfType = CheckInput.toIntNumeric(userInput.nextLine());
-//				difficultyCountDetail.add(numOfType == -1 ? 0 : numOfType);
-//				count += (numOfType == -1 ? 0 : numOfType);
-//				System.out.print("Number of medium: ");
-//				numOfType = CheckInput.toIntNumeric(userInput.nextLine());
-//				difficultyCountDetail.add(numOfType == -1 ? 0 : numOfType);
-//				count += (numOfType == -1 ? 0 : numOfType);
-//				System.out.print("Number of hard: ");
-//				numOfType = CheckInput.toIntNumeric(userInput.nextLine());
-//				difficultyCountDetail.add(numOfType == -1 ? 0 : numOfType);
-//				count += (numOfType == -1 ? 0 : numOfType);
-
-				for (int i = 0; i < 3; i++) {
-					System.out.print("Enter the number of questions for difficulty level " + (i) + ": ");
-					int difficultyCount = CheckInput.toIntNumeric(userInput.nextLine());
-					difficultyCount = difficultyCount == -1 ? 0 : difficultyCount;
-					difficultyCountDetail.add(difficultyCount);
-					count = count + difficultyCount;
-				}
+				int numOfType = 0;
+				System.out.print("Number of easy: ");
+				numOfType = CheckInput.toIntNumeric(userInput.nextLine());
+				numOfType = numOfType == -1 ? 0 : numOfType;
+				if (numOfType != 0)
+					difficultyCountDetail.add(numOfType);
+				count += (numOfType == -1 ? 0 : numOfType);
+				System.out.print("Number of medium: ");
+				numOfType = CheckInput.toIntNumeric(userInput.nextLine());
+				numOfType = numOfType == -1 ? 0 : numOfType;
+				if (numOfType != 0)
+					difficultyCountDetail.add(numOfType);
+				count += (numOfType == -1 ? 0 : numOfType);
+				System.out.print("Number of hard: ");
+				numOfType = CheckInput.toIntNumeric(userInput.nextLine());
+				numOfType = numOfType == -1 ? 0 : numOfType;
+				if (numOfType != 0)
+					difficultyCountDetail.add(numOfType);
+				count += (numOfType == -1 ? 0 : numOfType);
 
 				countDetail = new QuestionCountDetail(chapter, difficultyCountDetail);
 
@@ -425,15 +423,21 @@ public class ProfessorFunction {
 			int numOfType = 0;
 			System.out.print("Number of easy: ");
 			numOfType = CheckInput.toIntNumeric(userInput.nextLine());
-			difficultyCountDetail.add(numOfType == -1 ? 0 : numOfType);
+			numOfType = numOfType == -1 ? 0 : numOfType;
+			if (numOfType != 0)
+				difficultyCountDetail.add(numOfType);
 			count += (numOfType == -1 ? 0 : numOfType);
 			System.out.print("Number of medium: ");
 			numOfType = CheckInput.toIntNumeric(userInput.nextLine());
-			difficultyCountDetail.add(numOfType == -1 ? 0 : numOfType);
+			numOfType = numOfType == -1 ? 0 : numOfType;
+			if (numOfType != 0)
+				difficultyCountDetail.add(numOfType);
 			count += (numOfType == -1 ? 0 : numOfType);
 			System.out.print("Number of hard: ");
 			numOfType = CheckInput.toIntNumeric(userInput.nextLine());
-			difficultyCountDetail.add(numOfType == -1 ? 0 : numOfType);
+			numOfType = numOfType == -1 ? 0 : numOfType;
+			if (numOfType != 0)
+				difficultyCountDetail.add(numOfType);
 			count += (numOfType == -1 ? 0 : numOfType);
 
 			countDetail = new QuestionCountDetail(chapter, difficultyCountDetail);

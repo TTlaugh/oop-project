@@ -29,14 +29,17 @@ public class Main {
 		}
 
 		do {
+			GeneralFunction.clearScreen();
 			switch (Menu.welcome(userInput)) {
 			case "1":
 				Menu.signIn();
 				currentAccount = GeneralFunction.signIn(userInput);
+				GeneralFunction.pressAnyKeyToContinue();
 				break;
 			case "2":
 				Menu.signUp();
 				currentAccount = GeneralFunction.signUp(userInput);
+				GeneralFunction.pressAnyKeyToContinue();
 				break;
 			default:
 				System.out.println("Exiting...");
@@ -45,6 +48,7 @@ public class Main {
 			}
 
 			while (currentAccount != null) {
+				GeneralFunction.clearScreen();
 				if (currentAccount instanceof Admin) {
 					String choice = Menu.adminDashboard(userInput);
 					if (choice.equals("exit"))
