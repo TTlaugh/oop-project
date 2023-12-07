@@ -19,24 +19,24 @@ public class StudentFunction {
 		FileHandling subjectFile = new FileHandling(Constant.dataPath.SubjectList_File);
 		System.out.println("Subject List:");
 		subjectFile.displayContent();
-		Subject subject=null;
+		Subject subject = null;
 		do {
-			System.out.print("Enter the subject's ID: ");
+			System.out.print("Enter the subject ID: ");
 			subject = new Subject(sc.nextLine());
-			if (subject.getName()==null)
-				System.out.println("Invalid subject's ID");
-		} while (subject.getName()==null);
+			if (subject.getName() == null)
+				System.out.println("Invalid subject ID");
+		} while (subject.getName() == null);
 
 		String inputDate;
 		do {
-			System.out.println("Enter exam's day (dd-mm-yyyy): ");
+			System.out.println("Enter exam day (dd-mm-yyyy): ");
 			inputDate = CheckInput.toDateFormat(sc.nextLine());
-			if (inputDate==null)
+			if (inputDate == null)
 				System.out.println("Invalid day-month-year");
 		} while (inputDate == null);
 
 		CustomDate date = new CustomDate(inputDate);
-		
+
 		ExamRepository examRepository = new ExamRepository(Constant.dataPath.Exams_Dir, subject, student.getClazz(),
 				date);
 
@@ -65,19 +65,19 @@ public class StudentFunction {
 		FileHandling subjectFile = new FileHandling(Constant.dataPath.SubjectList_File);
 		System.out.println("Subject List:");
 		subjectFile.displayContent();
-		Subject subject=null;
+		Subject subject = null;
 		do {
-			System.out.print("Enter the subject's ID: ");
+			System.out.print("Enter the subject ID: ");
 			subject = new Subject(sc.nextLine());
-			if (subject.getName()==null)
-				System.out.println("Invalid subject's ID");
-		} while (subject.getName()==null);
+			if (subject.getName() == null)
+				System.out.println("Invalid subject ID");
+		} while (subject.getName() == null);
 
 		String inputDate;
 		do {
-			System.out.println("Enter exam's day (dd-mm-yyyy): ");
+			System.out.println("Enter exam day (dd-mm-yyyy): ");
 			inputDate = CheckInput.toDateFormat(sc.nextLine());
-			if (inputDate==null)
+			if (inputDate == null)
 				System.out.println("Invalid day-month-year");
 		} while (inputDate == null);
 

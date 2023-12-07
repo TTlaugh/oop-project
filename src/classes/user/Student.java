@@ -5,7 +5,7 @@ public class Student extends Account {
 	private String faculty;
 	private int yearCourse;
 	private String clazz;
-	private String ornum;
+	private String serial;
 
 	public Student() {
 		super();
@@ -23,7 +23,7 @@ public class Student extends Account {
 		char tmp[] = (username.replaceAll("[^0-9]", "")).toCharArray();
 		this.yearCourse = Integer.parseInt(String.copyValueOf(tmp, 0, 4));
 		this.clazz = String.valueOf(tmp[4]);
-		this.ornum = String.copyValueOf(tmp, 5, 3);
+		this.serial = String.copyValueOf(tmp, 5, 3);
 	}
 
 	public Student(Student student) {
@@ -58,17 +58,17 @@ public class Student extends Account {
 	}
 
 	public String getOrnum() {
-		return ornum;
+		return serial;
 	}
 
 	public void setOrnum(String ornum) {
-		this.ornum = ornum;
+		this.serial = ornum;
 	}
 
 	@Override
 	public String toString() {
-		return super.toString() + "\nStudentInfo [faculty=" + faculty + ", yearCourse=" + yearCourse + ", class="
-				+ clazz + ", ornum=" + ornum;
+		return super.toString() + "\n\tStudentInfo [faculty:" + faculty + ", yearCourse:" + yearCourse + ", class:"
+				+ clazz + ", serial:" + serial + "]";
 	}
 
 }

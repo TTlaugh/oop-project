@@ -13,9 +13,8 @@ import classes.util.Menu;
 public class Main {
 
 	static Scanner userInput = new Scanner(System.in);
-	static String role = null;
 	static Account currentAccount = null;
-	static boolean inSession = true;
+	static boolean loginSession = true;
 
 	public static void main(String[] args) {
 
@@ -43,7 +42,7 @@ public class Main {
 				break;
 			default:
 				System.out.println("Exiting...");
-				inSession = false;
+				loginSession = false;
 				currentAccount = null;
 			}
 
@@ -85,7 +84,7 @@ public class Main {
 				System.out.println();
 				GeneralFunction.pressAnyKeyToContinue();
 			}
-		} while (inSession);
+		} while (loginSession);
 	}
 
 }

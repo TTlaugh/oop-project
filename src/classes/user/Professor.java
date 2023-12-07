@@ -1,33 +1,34 @@
 package classes.user;
 
-import classes.subject.*;
+import classes.subject.Subject;
 
 public class Professor extends Account {
 
 	private String faculty;
 	private Subject subject;
-	private int ornum;
-	
+	private int serial;
+
 	public Professor() {
 		super();
 		this.subject = new Subject();
 	}
+
 	public Professor(String username, String password, String role, UserInfo info) {
 		super(username, password, role, info);
 		/*
-		 * Professor: <faculty><subjectId><count>
-		 * Example: IT001001 -> IT, 001, 001
+		 * Professor: <faculty><subjectId><count> Example: IT001001 -> IT, 001, 001
 		 */
 		this.faculty = username.replaceAll("[^A-Za-z]+", "");
 		char tmp[] = (username.replaceAll("[^0-9]", "")).toCharArray();
 		this.subject = new Subject(String.copyValueOf(tmp, 0, 3));
-		this.ornum = Integer.parseInt(String.copyValueOf(tmp, 3, 3));
+		this.serial = Integer.parseInt(String.copyValueOf(tmp, 3, 3));
 	}
+
 	public Professor(Professor professor) {
 		super(professor.getUsername(), professor.getPassword(), professor.getRole(), professor.getInfo());
 		this.faculty = professor.getFaculty();
 		this.subject = professor.getSubject();
-		this.ornum = professor.getOrnum();
+		this.serial = professor.getOrnum();
 	}
 
 	public String getFaculty() {
@@ -47,16 +48,17 @@ public class Professor extends Account {
 	}
 
 	public int getOrnum() {
-		return ornum;
+		return serial;
 	}
 
 	public void setOrnum(int ornum) {
-		this.ornum = ornum;
+		this.serial = ornum;
 	}
 
 	@Override
 	public String toString() {
-		return super.toString() + "\nProfessorInfo [faculty=" + faculty + ", subject=" + subject + ", ornum=" + ornum;
+		return super.toString() + "\n\tProfessorInfo [faculty:" + faculty + ", subject" + subject + ", serial:" + serial
+				+ "]";
 	}
 
 }
