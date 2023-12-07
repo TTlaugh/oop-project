@@ -1,0 +1,120 @@
+1 0 4
+Khi lưu trữ cây nhị phân dưới dạng mảng, nếu vị trí của nút cha trong mảng là 3 thì vị trí tương ứng của nút con phải sẽ bao nhiêu trong các phương án sau?
+2
+4
+6
+7
+1 0 3
+Giải thuật đệ quy là:
+Trong giải thuật của nó có lời gọi tới chính nó
+Trong giải thuật của nó có lời gọi tới chính nó nhưng với phạm vi lớn hơn
+Trong giải thuật của nó có lời gọi tới chính nó nhưng với phạm vi nhỏ hơn
+Trong giải thuật của nó có lời gọi tới một giải thuật khác đã biết kết quả
+1 0 4
+Đặc điểm của giải thuật đệ quy:
+một trường hợp đặc biệt, trường hợp suy biến Khi trường hợp này xảy ra thì bài toán còn lại sẽ được giải quyết theo một cách khác
+Trong thủ tục đệ quy có lời gọi đến chính thủ tục đó
+Sau mỗi lần có lời gọi đệ quy thì kích thước của bài toán được thu nhỏ hơn trước
+Tất cả đều đúng
+2 1 3
+Danh sách tuyến tính là:
+Danh sách dạng được lưu dưới dạng mảng
+Danh sách tuyến tính là một danh sách rỗng
+Danh sách mà quan hệ lân cận giữa các phần tử được xác định
+Danh sách tuyến tính là một danh sách có dạng (a1, a2, ..., an)
+2 2 3
+Ưu điểm của việc cài đặt danh sách bằng mảng:
+thể thay đổi số lượng phần tử theo ý muốn của người dùng
+thể bổ sung hoặc xóa một phần tử bất kỳ trong mảng
+Việc truy nhập vào phần tử của mảng được thực hiện trực tiếp dựa vào địa chỉ tính được (chỉ số), nên tốc độ nhanh và đồng đều đối với mọi phần tử
+Tất cả các ý trên đều đúng
+2 1 4
+Danh sách tuyến tính dạng ngăn xếp là:
+Là một danh sách tuyến tính trong đó phép bổ sung sung một phần tử vào ngăn xếp được thực hiện ở một đầu, Và phép loại bỏ không thực hiện được
+Là một danh sách tuyến tính trong đó phép bổ sung một phần tử vào ngăn xếp được thực hiện ở một đầu , và phép loại bỏ được thực hiện ở đầu kia
+Là một danh sách tuyến tính trong đó phép bổ sung một phần tử vào ngăn xếp và phép loại bỏ một phần tử khỏi ngăn xếp luôn luôn thực hiện ở tại một vị trí bất kì trong danh sách
+Là một danh sách tuyến tính trong đó phép bổ sung một phần tử vào ngăn xếp và phép loại bỏ một phần tử khỏi ngăn xếp luôn luôn thực hiện ở một đầu gọi là đỉnh
+3 0 3
+Định nghĩa danh sách tuyến tính Hàng đợi (Queue):
+Hàng đợi là kiểu danh sách tuyến tính trong đó, phép bổ sung một phần tử được thực hiện ở một đầu, gọi là lối sau (rear) hay lối trước (front). Phép loại bỏ không thực hiện được
+Là một danh sách tuyến tính trong đó phép bổ sung một phần tử và phép loại bỏ một phần tử được thực hiện ở tại một vị trí bất kì trong danh sách
+Hàng đợi là kiểu danh sách tuyến tính trong đó, phép bổ sung phần tử ở một đầu, gọi là lối sau (rear) và phép loại bỏ phần tử được thực hiện ở đầu kia, gọi là lối trước (front)
+Hàng đợi là kiểu danh sách tuyến tính trong đó, phép bổ sung một phần tử hay loại bỏ được thực hiện ở một đầu danh sách gọi là đỉnh (Top)
+3 0 2
+Hàng đợi còn được gọi là danh sách kiểu:
+LOLO
+FIFO
+FILO
+LIFO
+3 1 2
+Cho dãy số {6 1 3 0 5 7 9 2 8 4}. áp dụng phương pháp sắp xếp lựa chọn (Select sort) sau lần lặp đầu tiên của giải thuật ta có kết quả: {0 1 3 6 5 7 9 2 8 4}. Dãy số thu được sau lần lặp thứ hai là:
+{0 1 2 6 5 7 9 3 8 4}
+{0 1 3 6 5 7 9 2 8 4}
+{0 1 2 3 4 5 6 7 8 9}
+{0 1 2 6 5 7 9 3 4 8}
+3 2 1
+Cho dãy số {6 1 3 0 5 7 9 2 8 4}. áp dụng phương pháp sắp xếp lựa chọn (Select sort) sau lần lặp đầu tiên của giải thuật ta có kết quả: {0 1 3 6 5 7 9 2 8 4}. Dãy số thu được sau lần lặp thứ ba là:
+{0 1 2 6 5 7 9 3 8 4}
+{0 1 2 6 5 7 9 3 4 8}
+{0 1 2 3 6 5 7 9 8 4}
+{0 1 2 3 4 5 6 7 8 9}
+4 1 4
+Cho dãy số {6 1 3 0 5 7 9 2 8 4}. áp dụng phương pháp sắp xếp lựa chọn (Select sort) sau lần lặp đầu tiên của giải thuật ta có kết quả: {0 1 3 6 5 7 9 2 8 4}. Dãy số thu được sau lần lặp thứ tư là:
+{0 1 2 3 6 5 7 9 8 4}
+{0 1 2 3 4 5 6 7 8 9}
+{0 1 2 3 5 7 9 4 8 6}
+{0 1 2 3 5 7 9 6 8 4}
+4 1 4
+Cho dãy số {6 1 3 0 5 7 9 2 8 4}. áp dụng phương pháp sắp xếp lựa chọn (Select sort) sau lần lặp đầu tiên của giải thuật ta có kết quả: {0 1 3 6 5 7 9 2 8 4}. Dãy số thu được sau lần lặp thứ năm là:
+{0 1 2 3 6 5 7 9 8 4}
+{0 1 2 3 5 7 9 4 8 6}
+{0 1 2 3 4 5 6 7 8 9}
+{0 1 2 3 4 7 9 6 8 5}
+4 2 4
+Cho dãy số {6 1 3 0 5 7 9 2 8 4}. áp dụng phương pháp sắp xếp lựa chọn (Select sort) sau lần lặp đầu tiên của giải thuật ta có kết quả: {0 1 3 6 5 7 9 2 8 4}. Dãy số thu được sau lần lặp thứ sáu là:
+{0 1 2 3 4 7 9 6 8 5}
+{0 1 2 3 4 5 6 9 8 7}
+{0 1 2 3 4 5 6 7 8 9}
+{0 1 2 3 4 5 9 6 8 7}
+4 0 2
+Cho dãy số {3 1 6 0 5 4 8 2 9 7}. áp dụng phương pháp sắp xếp nhanh (Quick sort) sau lần lặp đầu tiên của giải thuật ta có kết quả: {(0 1 2) 3 (5 4 8 6 9 7)}. Dãy số thu được sau lần lặp thứ bốn là:
+{(0) 1 (2 3) 4 (5 6) 7 (8 9)}
+{0 1 2 3 (5 4 8 6 9 7)}
+{(3) 1 (6 0) 5 (4 8) 2 (9 7)}
+{0 1 (2) 3 (5 4) 8 (6 9 7)}
+4 1 3
+Cho dãy số sau: 40 25 75 15 65 55 90 30 95 85. Áp dụng phương pháp sắp xếp lựa chọn, sau lượt 1 dãy sẽ được sắp xếp lại như thế nào?
+15 25 40 75 30 55 65 90 85 95
+40 25 75 15 30 65 55 90 85 95
+15 25 75 40 65 55 90 30 95 85
+15 40 25 30 75 65 55 85 90 95
+5 0 3
+Cho dãy số sau: 40 25 75 15 65 55 90 30 95 85. Áp dụng phương pháp sắp xếp lựa chọn, sau lượt 2 dãy sẽ được sắp xếp lại như thế nào?
+15 25 75 30 40 65 55 90 85 95
+15 40 25 75 30 55 65 90 85 95
+15 25 75 40 65 55 90 30 95 85
+15 40 25 30 75 65 55 85 90 95
+5 2 4
+Cho dãy số sau: 40 25 75 15 65 55 90 30 95 85. Áp dụng phương pháp sắp xếp hòa nhập (Merge_Sort) trực tiếp, sau lượt 1 dãy sẽ được sắp xếp lại như thế nào?
+[15 40] [30 25] [55 65] [75 85] [90 95]
+[40 25] [55 15] [30 65] [75 90] [85 95]
+[15 25] [40 75] [30 55] [65 90] [85 95]
+[25 40] [15 75] [55 65] [30 90] [85 95]
+5 2 3
+Cho dãy số sau: 14 32 10 43 57 87 55 36 97 11. Áp dụng phương pháp tìm kiếm tuần tự, sau bao nhiều lần thực hiện phép so sánh ta sẽ tìm thấy số 43?
+2 lần
+3 lần
+4 lần
+5 lần
+5 0 2
+Cho dãy số sau: 10 11 14 32 36 43 55 57 87 97 . Áp dụng phương pháp tìm kiếm nhị phân, sau bao nhiêu lần phân đoạn ta sẽ tìm thấy số 43?
+2 lần
+3 lần
+4 lần
+5 lần
+6 2 2
+Cho dãy số sau: 10 11 14 32 36 43 55 57 87 97. Áp dụng phương pháp tìm kiếm nhị phân, để tìm kiếm số 10, lần phân đoạn thứ nhất của dãy sẽ là:
+[14 32 10 43 57]
+[10 11 14 32 36]
+[87 55 36 97 11]
+[55 36 97 11]
