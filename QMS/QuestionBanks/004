@@ -1,0 +1,450 @@
+1 0 2
+Mô hình dữ liệu "Entity-Relationship" (ER) được sử dụng để:
+Mô tả quan hệ giữa các bảng trong cơ sở dữ liệu
+Mô tả quan hệ giữa các thực thể trong cơ sở dữ liệu 
+Mô tả quan hệ giữa dữ liệu và ứng dụng
+Mô tả quan hệ giữa người dùng và cơ sở dữ liệu
+1 0 4
+Trong mô hình ER, quan hệ "One-to-Many" (Một-nhiều) biểu thị:
+Một thực thể có quan hệ với nhiều thực thể khác
+Một thực thể có quan hệ với một thực thể khác
+Một thực thể có nhiều thuộc tính liên kết với một thực thể khác
+Một thực thể có nhiều bản ghi liên kết với một thực thể khác 
+1 0 1
+Mô hình dữ liệu "Relational" (Quan hệ) dựa trên khái niệm:
+Bảng và quan hệ giữa các bảng 
+Đồ thị và quan hệ giữa các đỉnh
+Cây và quan hệ giữa các nút
+Đồ thị và quan hệ giữa các cạnh
+1 0 4
+Mô hình dữ liệu "Hierarchical" (Phân cấp) dựa trên cấu trúc:
+Cây
+Đồ thị
+Bảng
+Đồ thị và cây 
+1 0 4
+Trong mô hình dữ liệu "Network" (Mạng), quan hệ "Many-to-Many" (Nhiều-nhiều) được biểu diễn bằng:
+Đồ thị
+Bảng
+Cây
+Đồ thị và cây 
+1 1 3
+Mô hình dữ liệu "Object-Oriented" (Hướng đối tượng) được sử dụng trong cơ sở dữ liệu để:
+Mô tả quan hệ giữa các bảng trong cơ sở dữ liệu
+Mô tả quan hệ giữa các thực thể trong cơ sở dữ liệu
+Mô tả quan hệ giữa đối tượng trong ứng dụng 
+Mô tả quan hệ giữa người dùng và cơ sở dữ liệu
+1 1 3
+Mô hình dữ liệu "NoSQL" là gì?
+Mô hình dữ liệu không có cấu trúc
+Mô hình dữ liệu cho phép truy vấn dữ liệu bằng ngôn ngữ SQL
+Mô hình dữ liệu không sử dụng quan hệ giữa các bảng 
+Mô hình dữ liệu dựa trên quan hệ giữa các bảng
+1 1 3
+Trong mô hình dữ liệu "Relational" (Quan hệ), quan hệ "Many-to-Many" (Nhiều-nhiều) được biểu diễn thông qua:
+Khóa ngoại
+Bảng liên kết
+Bảng trung gian 
+Bảng chính
+1 1 1
+Mô hình dữ liệu "Document" (Tài liệu) dựa trên:
+Cấu trúc phân cấp của tài liệu 
+Quan hệ giữa các bảng
+Cấu trúc cây của tài liệu
+Đồ thị và cây
+1 1 1
+Mô hình dữ liệu "Graph" (Đồ thị) được sử dụng khi:
+Cần mô hình hóa quan hệ phức tạp giữa các thực thể 
+Dữ liệu được tổ chức thành các bảng và quan hệ
+Dữ liệu được tổ chức dưới dạng tài liệu
+Cần mô hình hóa cấu trúc phân cấp của dữ liệu
+1 2 1
+Mô hình dữ liệu "Star Schema" (Xếp hạng sao) được sử dụng trong:
+Cơ sở dữ liệu quan hệ
+Cơ sở dữ liệu đồ thị
+Cơ sở dữ liệu không quan hệ
+Cơ sở dữ liệu hướng đối tượng
+1 2 4
+Mô hình dữ liệu "Dimensional" (Chiều) thường được sử dụng trong:
+Cơ sở dữ liệu đồ thị
+Cơ sở dữ liệu không quan hệ
+Cơ sở dữ liệu hướng đối tượng
+Cơ sở dữ liệu dạng hình chiều 
+1 2 4
+Trong mô hình dữ liệu "Hierarchical" (Phân cấp), quan hệ "Many-to-Many" (Nhiều-nhiều) được biểu diễn thông qua:
+Bảng trung gian
+Bảng liên kết
+Đồ thị
+Cây nhiều-cây 
+1 2 1
+Mô hình dữ liệu "Columnar" (Cột) được sử dụng để:
+Lưu trữ dữ liệu dạng cột thay vì dòng 
+Lưu trữ dữ liệu dạng dòng thay vì cột
+Lưu trữ dữ liệu dạng cây
+Lưu trữ dữ liệu dạng đồ thị
+1 2 4
+Mô hình dữ liệu "Key-Value" (Khóa-giá trị) thường được sử dụng trong:
+Cơ sở dữ liệu đồ thị
+Cơ sở dữ liệu không quan hệ
+Cơ sở dữ liệu hướng đối tượng
+Cơ sở dữ liệu dạng không cấu trúc 
+2 0 3
+Trong đại số quan hệ, phép toán SELECT được sử dụng để:
+Thêm bản ghi vào bảng
+Xóa bản ghi khỏi bảng
+Truy xuất dữ liệu từ bảng 
+Cập nhật dữ liệu trong bảng
+2 0 3
+Trong đại số quan hệ, phép toán PROJECT được sử dụng để:
+Thêm thuộc tính vào bảng
+Xóa thuộc tính khỏi bảng
+Truy xuất thuộc tính từ bảng 
+Cập nhật thuộc tính trong bảng
+2 0 4
+Trong đại số quan hệ, phép toán UNION được sử dụng để:
+Kết hợp các bảng thành một bảng mới
+Lấy các bản ghi chung của hai bảng
+Lấy các bản ghi duy nhất từ hai bảng
+Kết hợp các bản ghi của hai bảng 
+2 0 3
+Trong đại số quan hệ, phép toán JOIN được sử dụng để:
+Thêm bản ghi vào bảng
+Xóa bản ghi khỏi bảng
+Kết hợp các bảng dựa trên một điều kiện liên quan đến thuộc tính chung 
+Truy xuất dữ liệu từ bảng
+2 0 2
+Trong đại số quan hệ, phép toán INTERSECTION được sử dụng để:
+Kết hợp các bảng thành một bảng mới
+Lấy các bản ghi chung của hai bảng 
+Lấy các bản ghi duy nhất từ hai bảng
+Kết hợp các bản ghi của hai bảng
+2 1 4
+Trong đại số quan hệ, phép toán DIFFERENCE được sử dụng để:
+Kết hợp các bảng thành một bảng mới
+Lấy các bản ghi chung của hai bảng
+Lấy các bản ghi duy nhất từ hai bảng
+Lấy các bản ghi chỉ có trong bảng thứ nhất mà không có trong bảng thứ hai 
+2 1 4
+Trong đại số quan hệ, phép toán CARTESIAN PRODUCT (Tích Descartes) được sử dụng để:
+Kết hợp các bảng thành một bảng mới
+Lấy các bản ghi chung của hai bảng
+Lấy các bản ghi duy nhất từ hai bảng
+Tạo ra một bảng mới bằng cách kết hợp từng bản ghi của bảng thứ nhất với tất cả bản ghi của bảng thứ hai 
+2 1 3
+Trong đại số quan hệ, phép toán PROJECT được sử dụng để:
+Thêm thuộc tính vào bảng
+Xóa thuộc tính khỏi bảng
+Truy xuất thuộc tính từ bảng 
+Cập nhật thuộc tính trong bảng
+2 1 3
+Trong đại số quan hệ, phép toán JOIN được sử dụng để:
+Thêm bản ghi vào bảng
+Xóa bản ghi khỏi bảng
+Kết hợp các bảng dựa trên một điều kiện liên quan đến thuộc tính chung 
+Truy xuất dữ liệu từ bảng
+2 1 3
+Trong đại số quan hệ, phép toán AGGREGATE được sử dụng để:
+Thêm bản ghi vào bảng
+Xóa bản ghi khỏi bảng
+Tính toán giá trị tổng hợp (sum, count, avg, min, max) trên một tập hợp bản ghi 
+Truy xuất dữ liệu từ bảng
+2 2 4
+Trong đại số quan hệ, phép toán DIVISION được sử dụng để:
+Kết hợp các bảng thành một bảng mới
+Lấy các bản ghi chung của hai bảng
+Lấy các bản ghi duy nhất từ hai bảng
+Tìm các bản ghi trong bảng thứ nhất có mối quan hệ với tất cả các bản ghi trong bảng thứ hai 
+2 2 4
+Trong đại số quan hệ, phép toán JOIN có thể có các loại kết hợp sau, trừ:
+INNER JOIN
+LEFT JOIN
+RIGHT JOIN
+OUTER JOIN 
+2 2 3 
+Trong đại số quan hệ, phép toán RENAME được sử dụng để:
+Thêm thuộc tính vào bảng
+Xóa thuộc tính khỏi bảng
+Đổi tên thuộc tính trong bảng 
+Cập nhật thuộc tính trong bảng
+2 2 2
+Trong đại số quan hệ, phép toán INTERSECTION được sử dụng để:
+Kết hợp các bảng thành một bảng mới
+Lấy các bản ghi chung của hai bảng 
+Lấy các bản ghi duy nhất từ hai bảng
+Kết hợp các bản ghi của hai bảng
+2 2 3
+Trong đại số quan hệ, phép toán GROUP BY được sử dụng để:
+Thêm bản ghi vào bảng
+Xóa bản ghi khỏi bảng
+Nhóm các bản ghi dựa trên một hoặc nhiều thuộc tính và tính toán giá trị tổng hợp trên từng nhóm 
+Truy xuất dữ liệu từ bảng
+3 0 4 
+SELECT phép toán nào được sử dụng để truy xuất dữ liệu từ cơ sở dữ liệu?
+UPDATE
+DELETE
+INSERT
+SELECT 
+3 0 3
+SELECT  FROM table_name được sử dụng để làm gì?
+Thêm bản ghi vào bảng
+Xóa bản ghi khỏi bảng
+Truy xuất tất cả các thuộc tính và bản ghi từ bảng 
+Cập nhật dữ liệu trong bảng
+3 0 3
+SELECT DISTINCT được sử dụng để làm gì?
+Thêm bản ghi vào bảng
+Xóa bản ghi khỏi bảng
+Truy xuất các giá trị duy nhất từ một cột hoặc nhiều cột 
+Cập nhật dữ liệu trong bảng
+3 0 2
+SELECT COUNT FROM table_name được sử dụng để làm gì?
+Đếm số lượng cột trong bảng
+Đếm số lượng bản ghi trong bảng 
+Đếm số lượng thuộc tính trong bảng
+Đếm số lượng bảng trong cơ sở dữ liệu
+3 0 3
+SELECT column1, column2 FROM table_name WHERE condition được sử dụng để làm gì?
+Thêm bản ghi vào bảng
+Xóa bản ghi khỏi bảng
+Truy xuất các cột column1 và column2 từ bảng table_name dựa trên điều kiện condition 
+Cập nhật dữ liệu trong bảng
+3 1 1 
+SELECT phép toán nào được sử dụng để truy xuất dữ liệu duy nhất từ một bảng?
+SELECT DISTINCT 
+SELECT UNIQUE
+SELECT UNIQUE VALUES
+SELECT UNIQUE ROWS
+3 1 3
+SELECT COUNT(column_name) FROM table_name được sử dụng để làm gì?
+Đếm số lượng cột trong bảng
+Đếm số lượng bản ghi trong bảng
+Đếm số lượng giá trị không trống của cột column_name trong bảng 
+Đếm số lượng thuộc tính trong bảng
+3 1 1
+SELECT column1, column2 FROM table_name ORDER BY column1 ASC, column2 DESC được sử dụng để làm gì?
+Truy xuất các cột column1 và column2 từ bảng table_name và sắp xếp theo thứ tự tăng dần của column1 và giảm dần của column2 
+Truy xuất các cột column1 và column2 từ bảng table_name và sắp xếp theo thứ tự giảm dần của column1 và tăng dần của column2
+Truy xuất các cột column1 và column2 từ bảng table_name mà không có sắp xếp
+Truy xuất tất cả các cột từ bảng table_name và sắp xếp theo thứ tự tăng dần của column1 và giảm dần của column2
+3 1 2
+SELECT AVG(column_name) FROM table_name được sử dụng để làm gì?
+Tính tổng giá trị của cột column_name trong bảng
+Tính giá trị trung bình của cột column_name trong bảng 
+Tính giá trị lớn nhất của cột column_name trong bảng
+Tính số lượng bản ghi có giá trị không trống trong cột column_name của bảng
+3 1 3
+SELECT column1, COUNT(column2) FROM table_name GROUP BY column1 được sử dụng để làm gì?
+Truy xuất các cột column1 và column2 từ bảng table_name và nhóm chúng theo giá trị của column1
+Truy xuất các cột column1 và column2 từ bảng table_name và nhóm chúng theo giá trị của column2
+Truy xuất các cột column1 và column2 từ bảng table_name và tính tổng số lượng bản ghi có giá trị không trống của column2 cho từng giá trị của column1 
+Truy xuất tất cả các cột từ bảng table_name mà không có nhóm
+3 2 2
+SELECT phép toán nào được sử dụng để kết hợp dữ liệu từ hai bảng dựa trên một điều kiện?
+UNION
+JOIN 
+INTERSECT
+MINUS
+3 2 2
+SELECT MAX(column_name) FROM table_name được sử dụng để làm gì?
+Tính tổng giá trị của cột column_name trong bảng
+Tìm giá trị lớn nhất của cột column_name trong bảng 
+Tìm giá trị nhỏ nhất của cột column_name trong bảng
+Tính số lượng bản ghi có giá trị không trống trong cột column_name của bảng
+3 2 2
+SELECT column1, column2 FROM table_name WHERE column1 IN (SELECT column1 FROM table_name2) được sử dụng để làm gì?
+Truy xuất các cột column1 và column2 từ bảng table_name và bảng table_name2
+Truy xuất các cột column1 và column2 từ bảng table_name khi column1 có giá trị nằm trong danh sách giá trị từ cột column1 của bảng table_name2 
+Truy xuất tất cả các cột từ bảng table_name và bảng table_name2
+Truy xuất các cột column1 và column2 từ bảng table_name khi column1 có giá trị không nằm trong danh sách giá trị từ cột column1 của bảng table_name2
+3 2 2
+SELECT AVG(column_name) FROM table_name WHERE condition được sử dụng để làm gì?
+Tính tổng giá trị của cột column_name trong bảng
+Tính giá trị trung bình của cột column_name trong bảng khi điều kiện condition được thỏa mãn 
+Tính giá trị lớn nhất của cột column_name trong bảng
+Tính số lượng bản ghi có giá trị không trống trong cột column_name của bảng
+3 2 2
+SELECT column1, column2 FROM table_name1 UNION SELECT column1, column2 FROM table_name2 được sử dụng để làm gì?
+Kết hợp các cột column1 và column2 từ bảng table_name1 và bảng table_name2
+Truy xuất các cột column1 và column2 từ bảng table_name1 và bảng table_name2 khi có sự trùng lặp 
+Truy xuất tất cả các cột từ bảng table_name1 và bảng table_name2
+Truy xuất các cột column1 và column2 từ bảng table_name1 và bảng table_name2 mà không có sự trùng lặp
+4 0 2
+Phép tính quan hệ nào được sử dụng để kết hợp các bản ghi từ hai bảng dựa trên một điều kiện?
+UNION
+JOIN 
+INTERSECT
+MINUS
+4 0 4 
+Phép tính quan hệ nào được sử dụng để truy xuất các bản ghi chỉ xuất hiện trong bảng thứ nhất và không xuất hiện trong bảng thứ hai?
+UNION
+JOIN
+INTERSECT
+MINUS 
+4 0 3
+Phép tính quan hệ nào được sử dụng để truy xuất các bản ghi chung của hai bảng?
+UNION
+JOIN
+INTERSECT 
+MINUS
+4 0 1
+Phép tính quan hệ nào được sử dụng để truy xuất tất cả các bản ghi từ bảng thứ nhất và bảng thứ hai, bao gồm cả các bản ghi trùng nhau?
+UNION ALL 
+JOIN
+INTERSECT
+MINUS
+4 0 4
+Phép tính quan hệ nào được sử dụng để truy xuất các bản ghi từ bảng thứ nhất trừ đi các bản ghi chung với bảng thứ hai?
+UNION
+JOIN
+INTERSECT
+MINUS 
+4 1 1
+Phép tính quan hệ nào được sử dụng để kết hợp các bản ghi từ hai bảng dựa trên một điều kiện?
+JOIN 
+MERGE
+CONCATENATE
+SELECT
+4 1 4
+Phép tính quan hệ nào được sử dụng để truy xuất tất cả các bản ghi từ bảng thứ nhất và bảng thứ hai, loại bỏ các bản ghi trùng nhau?
+UNION
+INNER JOIN
+DISTINCT JOIN
+FULL JOIN 
+4 1 1
+Phép tính quan hệ nào được sử dụng để truy xuất các bản ghi chỉ xuất hiện trong bảng thứ nhất và không xuất hiện trong bảng thứ hai?
+LEFT JOIN 
+RIGHT JOIN
+OUTER JOIN
+CROSS JOIN
+4 1 2
+Phép tính quan hệ nào được sử dụng để truy xuất các bản ghi từ bảng thứ nhất và bảng thứ hai dựa trên một điều kiện, bao gồm cả các bản ghi không có giá trị tương ứng trong bảng kia?
+INNER JOIN
+OUTER JOIN 
+SELF JOIN
+NATURAL JOIN
+4 1 3
+Phép tính quan hệ nào được sử dụng để truy xuất các bản ghi chung của hai bảng?
+UNION
+INTERSECT
+INNER JOIN 
+MINUS
+4 2 1
+Phép tính quan hệ nào được sử dụng để truy xuất các bản ghi từ bảng thứ nhất mà không có giá trị tương ứng trong bảng thứ hai?
+LEFT JOIN 
+RIGHT JOIN
+OUTER JOIN
+INNER JOIN
+4 2 2
+Phép tính quan hệ nào được sử dụng để kết hợp các bản ghi từ hai bảng dựa trên một điều kiện, nhưng chỉ lấy các bản ghi duy nhất từ bảng thứ nhất?
+INNER JOIN
+LEFT JOIN 
+RIGHT JOIN
+FULL JOIN
+4 2 1
+Phép tính quan hệ nào được sử dụng để truy xuất các bản ghi từ bảng thứ nhất và bảng thứ hai dựa trên một điều kiện, nhưng chỉ lấy các bản ghi không trùng nhau?
+INNER JOIN 
+LEFT JOIN
+RIGHT JOIN
+FULL JOIN
+4 2 1
+Phép tính quan hệ nào được sử dụng để truy xuất các bản ghi từ bảng thứ nhất và bảng thứ hai dựa trên một điều kiện, nhưng chỉ lấy các bản ghi có giá trị tương ứng trong cả hai bảng?
+INNER JOIN 
+LEFT JOIN
+RIGHT JOIN
+FULL JOIN
+4 2 4
+Phép tính quan hệ nào được sử dụng để kết hợp các bản ghi từ nhiều bảng dựa trên các điều kiện kết hợp phức tạp, bao gồm cả các phép kết hợp lồng nhau?
+CROSS JOIN
+NATURAL JOIN
+SELF JOIN
+COMPLEX JOIN 
+5 0 3
+Ràng buộc toàn vẹn nào đảm bảo rằng một cột không được để trống trong bảng?
+Ràng buộc PRIMARY KEY
+Ràng buộc FOREIGN KEY
+Ràng buộc NOT NULL 
+Ràng buộc CHECK
+5 0 4
+Ràng buộc toàn vẹn nào đảm bảo rằng một cặp cột trong bảng phải có giá trị khác nhau?
+Ràng buộc PRIMARY KEY
+Ràng buộc FOREIGN KEY
+Ràng buộc UNIQUE
+Ràng buộc CHECK 
+5 0 1
+Ràng buộc toàn vẹn nào đảm bảo rằng mỗi giá trị trong cột của bảng là duy nhất?
+Ràng buộc PRIMARY KEY 
+Ràng buộc FOREIGN KEY
+Ràng buộc UNIQUE
+Ràng buộc CHECK
+5 0 3
+Ràng buộc toàn vẹn nào đảm bảo rằng mỗi giá trị trong cột của bảng phải thuộc vào một tập giá trị đã xác định?
+Ràng buộc PRIMARY KEY
+Ràng buộc FOREIGN KEY
+Ràng buộc CHECK 
+Ràng buộc UNIQUE
+5 0 2
+Ràng buộc toàn vẹn nào đảm bảo rằng mỗi giá trị trong cột của bảng tham chiếu phải xuất hiện trong cột của bảng tham chiếu?
+Ràng buộc PRIMARY KEY
+Ràng buộc FOREIGN KEY 
+Ràng buộc CHECK
+Ràng buộc UNIQUE
+5 1 3
+Ràng buộc toàn vẹn nào đảm bảo rằng một cặp cột trong bảng phải có giá trị duy nhất và không được phép trùng lặp?
+Ràng buộc PRIMARY KEY
+Ràng buộc FOREIGN KEY
+Ràng buộc UNIQUE 
+Ràng buộc CHECK
+5 1 4
+Ràng buộc toàn vẹn nào đảm bảo rằng một cột trong bảng phải có giá trị duy nhất nhưng có thể để trống?
+Ràng buộc PRIMARY KEY
+Ràng buộc FOREIGN KEY
+Ràng buộc UNIQUE NULL
+Ràng buộc UNIQUE 
+5 1 3
+Ràng buộc toàn vẹn nào đảm bảo rằng một giá trị trong cột của bảng phải nằm trong một phạm vi giá trị đã xác định?
+Ràng buộc PRIMARY KEY
+Ràng buộc FOREIGN KEY
+Ràng buộc CHECK 
+Ràng buộc UNIQUE
+5 1 4
+Ràng buộc toàn vẹn nào đảm bảo rằng một cột trong bảng chỉ có thể có một giá trị duy nhất trong tất cả các bản ghi?
+Ràng buộc PRIMARY KEY
+Ràng buộc FOREIGN KEY
+Ràng buộc UNIQUE
+Ràng buộc CONSTRAINT 
+5 1 1
+Ràng buộc toàn vẹn nào đảm bảo rằng việc xóa hoặc cập nhật một bản ghi trong một bảng sẽ không gây ra sự mất mát dữ liệu hoặc phá vỡ ràng buộc của các bảng khác?
+Ràng buộc CASCADE 
+Ràng buộc PRIMARY KEY
+Ràng buộc FOREIGN KEY
+Ràng buộc UNIQUE
+5 2 2
+Ràng buộc toàn vẹn nào đảm bảo rằng một giá trị trong cột của bảng phụ thuộc vào một giá trị trong cột khác của bảng đó?
+Ràng buộc PRIMARY KEY
+Ràng buộc FOREIGN KEY 
+Ràng buộc UNIQUE
+Ràng buộc CHECK
+5 2 3
+Ràng buộc toàn vẹn nào đảm bảo rằng một cặp cột trong bảng phải có giá trị duy nhất khi được kết hợp với nhau?
+Ràng buộc PRIMARY KEY
+Ràng buộc FOREIGN KEY
+Ràng buộc UNIQUE 
+Ràng buộc CHECK
+5 2 4
+Ràng buộc toàn vẹn nào đảm bảo rằng một giá trị trong cột của bảng phải thỏa mãn một điều kiện logic?
+Ràng buộc PRIMARY KEY
+Ràng buộc FOREIGN KEY
+Ràng buộc UNIQUE
+Ràng buộc CHECK 
+5 2 4
+Ràng buộc toàn vẹn nào đảm bảo rằng giá trị trong cột của bảng phải thuộc vào một danh sách giá trị đã xác định?
+Ràng buộc PRIMARY KEY
+Ràng buộc FOREIGN KEY
+Ràng buộc CHECK
+Ràng buộc ENUM 
+5 2 4
+Ràng buộc toàn vẹn nào đảm bảo rằng một thuộc tính chỉ có thể có một giá trị duy nhất trong tất cả các bảng?
+Ràng buộc PRIMARY KEY
+Ràng buộc FOREIGN KEY
+Ràng buộc UNIQUE
+Ràng buộc DOMAIN 

@@ -1,0 +1,360 @@
+1 0 2
+Tính đóng gói trong OOP có ý nghĩa gì?
+Tạo ra các đối tượng mới
+Che giấu thông tin bên trong một đối tượng
+Kế thừa từ lớp khác
+Truy cập vào các thuộc tính bảo mật
+1 0 1
+Để che giấu thông tin bên trong một đối tượng, chúng ta thường sử dụng phương thức nào?
+Getter
+Setter
+Static
+Constructor
+1 0 1
+Phạm vi truy cập private trong OOP áp dụng cho đâu?
+Chỉ trong lớp hiện tại
+Trong lớp cha
+Trong lớp con
+Trong toàn bộ chương trình
+1 0 1
+Tính đóng gói trong OOP giúp đảm bảo điều gì?
+Tạo ra sự linh hoạt trong việc thay đổi thông tin bên trong một đối tượng
+Hiệu suất cao hơn của chương trình
+Tạo ra các đối tượng mới
+Sự nhất quán giữa các thành phần của một đối tượng
+1 0 1
+Sử dụng phương thức getter và setter trong OOP có tác dụng gì?
+Truy cập và cập nhật giá trị của thuộc tính
+Tạo ra các đối tượng mới
+Kế thừa tính năng từ lớp khác
+Truy cập vào các thuộc tính bảo mật
+1 1 2
+Trong OOP, phạm vi truy cập protected áp dụng cho đâu?
+Chỉ trong lớp hiện tại
+Trong lớp cha và lớp con
+Trong toàn bộ chương trình
+Trong lớp con
+1 1 3
+Các giao diện (interfaces) trong OOP được sử dụng như một phương thức nào để thực hiện tính đóng gói?
+Truy cập vào các thuộc tính bảo mật
+Tạo ra các đối tượng mới
+Che giấu thông tin bên trong một đối tượng
+Kế thừa từ lớp khác
+1 1 2
+Tính đóng gói trong OOP là gì?
+Quá trình tạo đối tượng từ lớp
+Bảo mật thông tin bên trong một đối tượng và chỉ tiết lộ giao diện công khai
+Kế thừa tính năng từ lớp cha
+Truy cập vào các thuộc tính bảo mật
+1 1 3
+Để thực hiện tính đóng gói trong OOP, chúng ta sử dụng phạm vi truy cập nào cho thuộc tính mà muốn che giấu?
+Public
+Protected
+Private
+Static
+1 1 1
+Trong OOP, phương thức setter được sử dụng để làm gì?
+Thiết lập giá trị cho thuộc tính
+Truy cập giá trị của thuộc tính
+Truy cập và thay đổi giá trị của thuộc tính
+Truy cập và thay đổi giá trị của thuộc tính bMức khó:
+1 2 2
+Trong OOP, tính đóng gói (encapsulation) có ý nghĩa gì?
+Quá trình tạo đối tượng từ lớp
+Bảo mật thông tin bên trong một đối tượng và chỉ tiết lộ giao diện công khai
+Kế thừa tính năng từ lớp cha
+Truy cập vào các thuộc tính bảo mật
+1 2 1
+Để che giấu thông tin bên trong một đối tượng, chúng ta thường sử dụng phương thức nào?
+Getter
+Setter
+Static
+Constructor
+1 2 1
+Phạm vi truy cập private trong OOP áp dụng cho đâu?
+Chỉ trong lớp hiện tại
+Trong lớp cha
+Trong lớp con
+Trong toàn bộ chương trình
+1 2 1
+Tính đóng gói trong OOP giúp đảm bảo điều gì?
+Sự linh hoạt trong việc thay đổi thông tin bên trong một đối tượng
+Hiệu suất cao hơn của chương trình
+Tạo ra các đối tượng mới
+Sự nhất quán giữa các thành phần của một đối tượng
+1 2 1
+Sử dụng phương thức getter và setter trong OOP có tác dụng gì?
+Truy cập và cập nhật giá trị của thuộc tính
+Tạo ra các đối tượng mới
+Kế thừa tính năng từ lớp khác
+Truy cập vào các thuộc tính bảo mật
+2 0 3
+Kế thừa trong OOP có tác dụng gì?
+Tăng tính đa hình của đối tượng.
+Tạo ra các đối tượng mới.
+Tái sử dụng mã nguồn.
+Tăng tính bao đóng của lớp.
+2 0 2
+Từ khóa "extends" trong OOP được sử dụng để làm gì?
+Khai báo một phương thức trong một lớp.
+Kế thừa các thuộc tính và phương thức từ một lớp cha.
+Truy cập các thuộc tính riêng tư trong một lớp.
+Tạo ra một đối tượng mới từ một lớp.
+2 0 1
+Một lớp con có thể kế thừa từ bao nhiêu lớp cha trong OOP?
+Chỉ từ một lớp cha.
+Từ nhiều lớp cha.
+Chỉ từ lớp Object.
+Từ lớp cha trực tiếp.
+2 0 3
+Khi một lớp con kế thừa từ một lớp cha, lớp con có thể sử dụng những gì?
+Chỉ sử dụng các thuộc tính của lớp cha.
+Chỉ sử dụng phương thức của lớp cha.
+Sử dụng cả thuộc tính và phương thức của lớp cha.
+Không thể sử dụng thuộc tính và phương thức của lớp cha.
+2 0 4
+Kế thừa trong OOP giúp thực hiện tính chất nào sau đây?
+Tính trừu tượng.
+Tính đa hình.
+Tính đóng gói.
+Tính kế thừa.
+2 1 2
+Trong OOP, khái niệm "kế thừa đa cấp" (multilevel inheritance) ám chỉ điều gì?
+Một lớp con kế thừa từ nhiều lớp cha.
+Một lớp con kế thừa từ một lớp cha trực tiếp và lớp cha cũng kế thừa từ một lớp cha khác.
+Một lớp con kế thừa từ một lớp cha, và lớp cha lại kế thừa từ một lớp cha khác.
+Một lớp con kế thừa từ một lớp cha và cũng có thể được kế thừa bởi một lớp con khác.
+2 1 2
+Trong OOP, khái niệm "giao diện" (interface) được sử dụng để làm gì?
+Kế thừa các thuộc tính và phương thức từ một lớp khác.
+Định nghĩa một hợp đồng giữa lớp và đối tượng sử dụng lớp đó.
+Tạo ra một đối tượng mới từ một lớp.
+Định nghĩa các thuộc tính và phương thức chung cho tất cả các lớp.
+2 1 2
+Trong OOP, khái niệm "phương thức ghi đè" (method overriding) ám chỉ điều gì?
+Kế thừa các phương thức từ một lớp cha và sử dụng chúng trong lớp con.
+Định nghĩa lại một phương thức trong lớp con có cùng tên và cùng tham số với phương thức trong lớp cha.
+Định nghĩa một phương thức trong lớp cha có thể được sử dụng trong lớp con.
+Định nghĩa một phương thức trong lớp con có khả năng thay thế phương thức trong lớp cha.
+2 1 3
+Trong OOP, khái niệm "lớp trừu tượng" (abstract class) được sử dụng để làm gì?
+Tạo ra một lớp con từ một lớp cha.
+Định nghĩa một lớp không thể được khởi tạo thành đối tượng.
+Định nghĩa các phương thức không có mã thực thi trong lớp.
+Kế thừa các thuộc tính và phương thức từ một lớp khác.
+2 1 3
+Trong OOP, khái niệm "superclass" có nghĩa là gì?
+Lớp có nhiều phương thức và thuộc tính nhất trong hệ thống.
+Lớp con kế thừa từ lớp này.
+Lớp ở cấp cao hơn trong cây kế thừa.
+Lớp có tính đa hình cao nhất trong hệ thống.
+2 2 2
+Trong OOP, khái niệm "kế thừa đa hình" (polymorphic inheritance) ám chỉ điều gì?
+Một lớp con kế thừa từ nhiều lớp cha và có thể thay đổi cách thức thực hiện của các phương thức kế thừa.
+Một lớp con kế thừa từ một lớp cha và có thể thay đổi cách thức thực hiện của các phương thức kế thừa.
+Một lớp con kế thừa từ nhiều lớp cha và có thể thay đổi cách thức thực hiện của các thuộc tính kế thừa.
+Một lớp con kế thừa từ một lớp cha và có thể thay đổi cách thức thực hiện của các thuộc tính kế thừa.
+2 2 1
+Trong OOP, khái niệm "phương thức trừu tượng" (abstract method) có ý nghĩa gì?
+Một phương thức trong lớp cha không có mã thực thi, và lớp con phải định nghĩa lại phương thức này.
+Một phương thức trong lớp con không có mã thực thi, và lớp cha phải định nghĩa phương thức này.
+Một phương thức trong lớp cha và lớp con đều không có mã thực thi.
+Một phương thức trong lớp cha và lớp con đều có mã thực thi.
+2 2 2
+Trong OOP, khái niệm "kế thừa đa hình động" (dynamic polymorphic inheritance) ám chỉ điều gì?
+Một lớp con kế thừa từ nhiều lớp cha và có thể tùy chỉnh cách thức thực hiện của các phương thức kế thừa trong thời gian chạy.
+Một lớp con kế thừa từ một lớp cha và có thể tùy chỉnh cách thức thực hiện của các phương thức kế thừa trong thời gian chạy.
+Một lớp con kế thừa từ nhiều lớp cha và có thể tùy chỉnh cách thức thực hiện của các thuộc tính kế thừa trong thời gian chạy.
+Một lớp con kế thừa từ một lớp cha và có thể tùy chỉnh cách thức thực hiện của các thuộc tính kế thừa trong thời gian chạy.
+2 2 2
+Trong OOP, khái niệm "super" được sử dụng để làm gì?
+Gọi một phương thức từ lớp con trong phạm vi lớp cha.
+Gọi một phương thức từlớp cha trong phạm vi lớp con.
+Gọi một phương thức từ một lớp khác không liên quan trong cùng một chương trình.
+Gọi một phương thức từ một lớp cha không có quan hệ kế thừa với lớp con.
+2 2 4
+Trong OOP, khái niệm "kế thừa đóng gói" (encapsulation inheritance) ám chỉ điều gì?
+Một lớp con kế thừa tất cả các thuộc tính và phương thức từ lớp cha và có thể truy cập vào chúng.
+Một lớp con kế thừa tất cả các thuộc tính từ lớp cha và có thể truy cập vào chúng.
+Một lớp con kế thừa tất cả các phương thức từ lớp cha và có thể truy cập vào chúng.
+Một lớp con kế thừa một phần thuộc tính và phương thức từ lớp cha và có thể truy cập vào chúng.
+3 0 3
+Tính đa hình trong OOP ám chỉ điều gì?
+Khả năng một đối tượng có thể thuộc nhiều lớp khác nhau.
+Khả năng một đối tượng có thể thay đổi kiểu dữ liệu của nó.
+Khả năng một phương thức có thể thực hiện nhiều tác vụ khác nhau.
+Khả năng một lớp có thể kế thừa từ nhiều lớp khác nhau.
+3 0 1
+Trong OOP, tính đa hình có thể được thực hiện thông qua cơ chế nào?
+Kế thừa.
+Đóng gói.
+Trừu tượng.
+Giao diện.
+3 0 1
+Đa hình tĩnh (static polymorphism) trong OOP được thực hiện thông qua cơ chế nào?
+Overloading.
+Overriding.
+Upcasting.
+Downcasting.
+3 0 2
+Đa hình động (dynamic polymorphism) trong OOP được thực hiện thông qua cơ chế nào?
+Overloading.
+Overriding.
+Upcasting.
+Downcasting.
+3 0 1
+Trong OOP, khái niệm "upcasting" ám chỉ điều gì?
+Chuyển đổi một đối tượng từ lớp con sang lớp cha.
+Chuyển đổi một đối tượng từ lớp cha sang lớp con.
+Chuyển đổi một đối tượng từ một lớp không liên quan sang lớp cha.
+Chuyển đổi một đối tượng từ một lớp không liên quan sang lớp con.
+3 1 1
+Trong OOP, khái niệm "overloading" ám chỉ điều gì?
+Một phương thức trong lớp con có thể có cùng tên nhưng khác nhau về số lượng và kiểu dữ liệu của các tham số đầu vào.
+Một phương thức trong lớp con có thể có cùng tên nhưng khác nhau về cách thức thực hiện so với phương thức trong lớp cha.
+Một lớp con có thể kế thừa các phương thức từ lớp cha và thay đổi cách thức thực hiện của chúng.
+Một phương thức trong lớp con có thể gọi đến một phương thức trong lớp cha có cùng tên.
+3 1 2
+Trong OOP, khái niệm "override" ám chỉ điều gì?
+Một lớp con có thể kế thừa các thuộc tính từ lớp cha và thay đổi giá trị của chúng.
+Một phương thức trong lớp con có thể có cùng tên và cùng số lượng tham số nhưng khác cách thức thực hiện so với phương thức trong lớp cha.
+Một lớp con có thể kế thừa các phương thức từ lớp cha và thay đổi cách thức thực hiện của chúng.
+Một phương thức trong lớp con có thể gọi đến một phương thức trong lớp cha có cùng tên.
+3 1 2
+Trong OOP, khái niệm "downcasting" ám chỉ điều gì?
+Chuyển đổi một đối tượng từ lớp con sang lớp cha.
+Chuyển đổi một đối tượng từ lớp cha sang lớp con.
+Chuyển đổi một đối tượng từ một lớp không liên quan sang lớp cha.
+Chuyển đổi một đối tượng từ một lớp không liên quan sang lớp con.
+3 1 3
+Trong OOP, khái niệm "dynamic binding" ám chỉ điều gì?
+Quá trình gom nhóm các đối tượng cùng kiểu dữ liệu vào trong một mảng.
+Quá trình gán giá trị của thuộc tính trong lớp con cho thuộc tính có cùng tên trong lớp cha.
+Quá trình gọi phương thức của một đối tượng dựa trên kiểu dữ liệu của đối tượng thực tế đang tham chiếu đến (runtime type).
+Quá trình tạo ra một lớp mới từ việc kế thừa các thuộc tính và phương thức của một lớp đã có.
+3 1 1
+Trong OOP, khái niệm "abstract class" ám chỉ điều gì?
+Một lớp có thể được kế thừa bởi các lớp con, nhưng không thể tạo ra các đối tượng từ lớp này.
+Một lớp chỉ chứa các thuộc tính mà không có phương thức.
+Một lớp chỉ chứa các phương thức mà không có thuộc tính.
+Một lớp có thể được kế thừa hoặc tạo ra các đối tượng từ lớp này.
+3 2 3
+Trong OOP, khái niệm "virtual function" được sử dụng để đạt được tính đa hình động bằng cách sử dụng cơ chế nào?
+Kế thừa đa cấp (multiple inheritance).
+Đóng gói (encapsulation).
+Ghi đè (overriding).
+Trừu tượng (abstraction).
+3 2 3
+Trong OOP, khái niệm "pure virtual function" ám chỉ điều gì?
+Một phương thức trong lớp cha có thể có cùng tên và cùng số lượng tham số nhưng khác cách thức thực hiện so với phương thức trong lớp con.
+Một phương thức trong lớp con có thể có cùng tên nhưng khác nhau về số lượng và kiểu dữ liệu của các tham số đầu vào.
+Một phương thức trong lớp cha không có cài đặt, và các lớp con phải ghi đè phương thức này.
+Một phương thức trong lớp con có thể gọi đến một phương thức trong lớp cha có cùng tên.
+3 2 4
+Trong OOP, khái niệm "interface" ám chỉ điều gì?
+Một lớp có thể được kế thừa bởi các lớp con, nhưng không thể tạo ra các đối tượng từ lớp này.
+Một lớp chỉ chứa các thuộc tính mà không có phương thức.
+Một lớp chỉ chứa các phương thức mà không có thuộc tính.
+Một tập hợp các phương thức trừu tượng mà các lớp khác có thể triển khai.
+3 2 3
+Trong OOP, khái niệm "polymorphic class" ám chỉ điều gì?
+Một lớp có thể kế thừa từ nhiều lớp khác nhau.
+Một lớp có thể có các phương thức có cùng tên nhưng khác nhau về cách thức thực hiện.
+Một lớp có thể được sử dụng để tạo ra các đối tượng của lớp khác thông qua giao diện chung.
+Một lớp có thể có các thuộc tính có cùng tên nhưng khác nhau về kiểu dữ liệu.
+3 2 2
+Trong OOP, khái niệm "vtable" (bảng ảo) được sử dụng để thực hiện tính đa hình động trong ngôn ngữ lập trình nào?
+Java.
+C++.
+Python.
+C#.
+4 0 2
+Tính trừu tượng trong lập trình hướng đối tượng (OOP) ám chỉ điều gì?
+Tạo ra các đối tượng từ lớp.
+Ẩn thông tin chi tiết về cài đặt bên trong một đối tượng.
+Kế thừa các thuộc tính và phương thức từ lớp khác.
+Gom nhóm các đối tượng có cùng tính chất lại thành một lớp.
+4 0 4
+Trong OOP, khái niệm "abstract class" ám chỉ điều gì?
+Một lớp không thể tạo ra các đối tượng từ lớp này.
+Một lớp chỉ chứa các thuộc tính mà không có phương thức.
+Một lớp chỉ chứa các phương thức mà không có thuộc tính.
+Một lớp chứa các phương thức trừu tượng mà các lớp con phải triển khai.
+4 0 3
+Trong OOP, khái niệm "interface" ám chỉ điều gì?
+Một lớp chỉ chứa các thuộc tính mà không có phương thức.
+Một lớp chỉ chứa các phương thức mà không có thuộc tính.
+Một tập hợp các phương thức trừu tượng mà các lớp khác có thể triển khai.
+Một lớp có thể được kế thừa bởi các lớp con, nhưng không thể tạo ra các đối tượng từ lớp này.
+4 0 4
+Trong OOP, khái niệm "encapsulation" ám chỉ điều gì?
+Tạo ra các đối tượng từ lớp.
+Gom nhóm các đối tượng có cùng tính chất lại thành một lớp.
+Kế thừa các thuộc tính và phương thức từ lớp khác.
+Ẩn thông tin chi tiết về cài đặt bên trong một đối tượng.
+4 0 4 
+Trong OOP, khái niệm "polymorphism" ám chỉ điều gì?
+Tạo ra các đối tượng từ lớp.
+Gom nhóm các đối tượng có cùng tính chất lại thành một lớp.
+Kế thừa các thuộc tính và phương thức từ lớp khác.
+Các đối tượng cùng kiểu có thể được xử lý theo cách khác nhau.
+4 1 3
+Trong lập trình hướng đối tượng, khái niệm "polymorphism" ám chỉ điều gì?
+Khả năng một lớp kế thừa từ nhiều lớp khác nhau.
+Khả năng một đối tượng có thể thay đổi kiểu dữ liệu của nó.
+Khả năng một phương thức có thể được triển khai theo nhiều cách khác nhau trong các lớp con.
+Khả năng một lớp có thể tự tạo ra các đối tượng từ chính nó.
+4 1 3
+Trong lập trình hướng đối tượng, khái niệm "abstract class" và "interface" có điểm khác nhau gì?
+Abstract class có thể chứa cả thuộc tính và phương thức, trong khi interface chỉ chứa phương thức.
+Abstract class có thể tạo ra các đối tượng, trong khi interface không thể.
+Abstract class có thể triển khai phương thức, trong khi interface chỉ định các phương thức mà lớp con phải triển khai.
+Abstract class có thể có các phương thức thông thường, còn interface chỉ có thể có các phương thức trừu tượng.
+4 1 2
+Trong lập trình hướng đối tượng, khái niệm "inheritance" (kế thừa) ám chỉ điều gì?
+Quá trình tạo ra các đối tượng từ một lớp.
+Quá trình một lớp kế thừa thuộc tính và phương thức từ một lớp khác.
+Quá trình gom nhóm các đối tượng có cùng tính chất lại thành một lớp.
+Quá trình ẩn thông tin chi tiết về cài đặt bên trong một đối tượng.
+4 1 1
+Trong lập trình hướng đối tượng, khái niệm "method overriding" (ghi đè phương thức) ám chỉ điều gì?
+Quá trình một lớp con triển khai một phương thức có cùng tên và cùng kiểu trả về nhưng khác cách thức thực hiện so với phương thức trong lớp cha.
+Quá trình một lớp con triển khai một phương thức có cùng tên nhưng khác nhau về số lượng và kiểu dữ liệu của các tham số đầu vào so với phương thức trong lớp cha.
+Quá trình một lớp con triển khai một phương thức trừu tượng trong lớp cha.
+Quá trình một lớp con có thể kế thừa từ nhiều lớp cha.
+4 1 3
+Trong lập trình hướng đối tượng, khái niệm "abstraction" (trừu tượng) ám chỉ điều gì?
+Quá trình tạo ra các đối tượng từ một lớp.
+Quá trình kế thừa thuộc tính và phương thức từ một lớp khác.
+Quá trình ẩn thông tin chi tiết về cài đặt bên trong một đối tượng.
+Quá trình gom nhóm các đối tượng có cùng tính chất lại thành một lớp.
+4 2 1 
+Trong lập trình hướng đối tượng, khái niệm "interface" và "abstract class" có điểm khác nhau gì?
+Interface chỉ chứa phương thức trừu tượng, trong khi abstract class có thể chứa cả phương thức trừu tượng và phương thức thông thường.
+Interface không thể được triển khai, còn abstract class có thể được triển khai.
+Interface có thể kế thừa từ nhiều interface khác nhau, trong khi abstract class chỉ có thể kế thừa từ một lớp cha.
+Interface chỉ có thể có các thuộc tính trừu tượng, còn abstract class có thể có cả thuộc tính trừu tượng và thuộc tính thông thường.
+4 2 4
+Trong lập trình hướng đối tượng, khái niệm "dependency inversion" (đảo ngược phụ thuộc) ám chỉ điều gì?
+Quá trình một lớp cha kế thừa từ nhiều lớp con.
+Quá trình một lớp con triển khai một phương thức trừu tượng trong lớp cha.
+Quá trình ẩn thông tin chi tiết về cài đặt bên trong một đối tượng.
+Quá trình các lớp không phụ thuộc trực tiếp vào nhau mà thông qua giao diện hoặc lớp trung gian.
+4 2 4
+Trong lập trình hướng đối tượng, khái niệm "composition" (tạo thành) ám chỉ điều gì?
+Quá trình một lớp con có thể kế thừa từ nhiều lớp cha.
+Quá trình một lớp con triển khai một phương thức có cùng tên và cùng kiểu trả về nhưng khác cách thức thực hiện so với phương thức trong lớp cha.
+Quá trình tạo ra các đối tượng từ một lớp.
+Quá trình một đối tượng chứa các đối tượng khác là thành phần của nó.
+4 2 2
+Trong lập trình hướng đối tượng, khái niệm "static binding" (ràng buộc tĩnh) và "dynamic binding" (ràng buộc động) ám chỉ điều gì?
+Static binding xảy ra tại thời điểm biên dịch, dynamic binding xảy ra tại thời điểm chạy.
+Static binding xảy ra khi một phương thức được gọi dựa trên kiểu biến đối tượng, dynamic binding xảy ra khi một phương thức được gọi dựa trên kiểu thực tế của đối tượng.
+Static binding xảy ra khi một lớp con kế thừa từ một lớp cha, dynamic binding xảy ra khi một phương thức được gọi thông qua một đối tượng.
+Static binding xảy ra khi một lớp con kế thừa từ một lớp cha, dynamic binding xảy ra khi một phương thức được gọi thông qua một đối tượng.
+4 2 2
+Trong lập trình hướng đối tượng, khái niệm "encapsulation" (đóng gói) ám chỉ điều gì?
+Quá trình kế thừa thuộc tính và phương thức từ một lớp cha.
+Quá trình ẩn thông tin chi tiết về cài đặt bên trong một đối tượng.
+Quá trình một lớp con có thể kế thừa từ nhiều lớp cha.
+Quá trình tạo ra các đối tượng từ một lớp.
