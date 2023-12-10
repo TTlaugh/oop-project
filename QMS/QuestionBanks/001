@@ -1,120 +1,540 @@
-1 0 4
-Khi lưu trữ cây nhị phân dưới dạng mảng, nếu vị trí của nút cha trong mảng là 3 thì vị trí tương ứng của nút con phải sẽ bao nhiêu trong các phương án sau?
-2
-4
-6
-7
+1 0 1
+Để khai báo một mảng có 5 phần tử kiểu int trong C++, chúng ta sử dụng cú pháp nào?
+int array[5];
+array<int> arr(5);
+array<int, 5> arr;
+int[] array = new int[5];
+1 0 1
+Để truy cập vào phần tử thứ 3 trong mảng arr, chúng ta sử dụng cú pháp nào?
+arr[2];
+arr[3];
+arr(2);
+arr(3);
 1 0 3
-Giải thuật đệ quy là:
-Trong giải thuật của nó có lời gọi tới chính nó
-Trong giải thuật của nó có lời gọi tới chính nó nhưng với phạm vi lớn hơn
-Trong giải thuật của nó có lời gọi tới chính nó nhưng với phạm vi nhỏ hơn
-Trong giải thuật của nó có lời gọi tới một giải thuật khác đã biết kết quả
-1 0 4
-Đặc điểm của giải thuật đệ quy:
-một trường hợp đặc biệt, trường hợp suy biến Khi trường hợp này xảy ra thì bài toán còn lại sẽ được giải quyết theo một cách khác
-Trong thủ tục đệ quy có lời gọi đến chính thủ tục đó
-Sau mỗi lần có lời gọi đệ quy thì kích thước của bài toán được thu nhỏ hơn trước
-Tất cả đều đúng
+Để lấy độ dài của mảng arr trong C++, chúng ta sử dụng hàm nào?
+arr.size();
+arr.length();
+sizeof(arr);
+length(arr);
+1 0 3
+Để gán giá trị 10 cho phần tử thứ 2 trong mảng arr, chúng ta sử dụng cú pháp nào?
+arr[2] = 10;
+arr(1) = 10;
+arr[1] = 10;
+arr(2) = 10;
+1 0 1
+Để in ra tất cả các phần tử trong mảng arr trong C++, chúng ta sử dụng vòng lặp nào?
+Vòng lặp for
+Vòng lặp while
+Vòng lặp do-while
+Vòng lặp foreach
+1 1 2
+Để sao chép toàn bộ nội dung của một mảng source vào một mảng destination trong C++, chúng ta sử dụng hàm nào?
+copy_array()
+memcpy()
+copy()
+array_copy()
+1 1 1
+Để tìm giá trị lớn nhất trong một mảng arr trong C++, chúng ta sử dụng hàm nào?
+max_element()
+find_max()
+maximum()
+find_largest()
+1 1 1
+Để chèn một phần tử mới vào một mảng arr tại vị trí index trong C++, chúng ta sử dụng hàm nào?
+insert()
+add()
+push_back()
+emplace()
+1 1 2
+Để xóa một phần tử khỏi một mảng arr tại vị trí index trong C++, chúng ta sử dụng hàm nào?
+remove()
+erase()
+delete()
+pop()
+1 1 1
+Để kiểm tra xem một mảng arr có được sắp xếp tăng dần hay không trong C++, chúng ta sử dụng hàm nào?
+is_sorted()
+check_order()
+sorted()
+order_check()
+1 2 2
+Trong C++, để tạo một mảng đa chiều (mảng hai chiều) có kích thước 3x4, chúng ta sử dụng cú pháp nào?
+int arr[3, 4];
+int arr[3][4];
+int arr(3)(4);
+int arr{3, 4};
+1 2 4
+Để sắp xếp một mảng arr theo thứ tự tăng dần trong C++, chúng ta sử dụng thuật toán nào?
+Sắp xếp nổi bọt (Bubble sort)
+Sắp xếp chọn (Selection sort)
+Sắp xếp chèn (Insertion sort)
+Sắp xếp nhanh (Quick sort)
+1 2 4
+Trong C++, để khai báo một con trỏ ptr trỏ tới mảng arr, chúng ta sử dụng cú pháp nào?
+int* ptr = arr;
+int* ptr = &arr;
+int* ptr = *arr;
+int* ptr = &arr[0];
+1 2 3
+Trong C++, để tạo một mảng động (dynamic array) có kích thước được nhập từ bàn phím, chúng ta sử dụng cú pháp nào?
+int arr[] = new int[size];
+int* arr = allocate int[size];
+int* arr = new int[size];
+int arr[size];
+1 2 1
+Trong C++, để tìm kiếm một giá trị x trong mảng đã được sắp xếp tăng dần, chúng ta sử dụng thuật toán tìm kiếm nào để có hiệu suất tốt nhất?
+Tìm kiếm nhị phân (Binary search)
+Tìm kiếm tuyến tính (Linear search)
+Tìm kiếm nổi bọt (Bubble search)
+Tìm kiếm tương tự (Interpolation search)
+2 0 1
+Trong C++, để khai báo một cấu trúc (struct) Node để biểu diễn một nút trong danh sách liên kết, chúng ta sử dụng cú pháp nào?
+struct Node { int data; Node* next; };
+struct Node { Node* next; int data; };
+struct Node { Node* prev; int data; };
+struct Node { int data; Node prev; Node next; };
+2 0 4
+Trong danh sách liên kết, để thêm một phần tử có giá trị x vào cuối danh sách, chúng ta thực hiện các bước nào?
+Tạo một nút mới, gán giá trị x vào nút mới, sau đó gán con trỏ prev của nút cuối danh sách bằng nút mới.
+Tạo một nút mới, gán giá trị x vào nút mới, sau đó gán con trỏ next của nút cuối danh sách bằng con trỏ đầu danh sách.
+Tạo một nút mới, gán giá trị x vào nút mới, sau đó gán con trỏ next của nút cuối danh sách bằng nullptr.
+Tạo một nút mới, gán giá trị x vào nút mới, sau đó gán con trỏ next của nút cuối danh sách bằng nút mới.
+2 0 1
+Trong danh sách liên kết, để xóa phần tử cuối cùng, chúng ta thực hiện các bước nào?
+Gán con trỏ cuối danh sách bằng con trỏ prev của nút cuối danh sách.
+Gán con trỏ cuối danh sách bằng con trỏ next của nút cuối danh sách.
+Gán con trỏ cuối danh sách bằng nullptr.
+Gán con trỏ cuối danh sách bằng con trỏ đầu danh sách.
+2 0 1
+Trong danh sách liên kết, để tìm giá trị lớn nhất trong danh sách, chúng ta thực hiện các bước nào?
+Tạo một biến max và gán giá trị đầu tiên trong danh sách cho biến max. Duyệt qua tất cả các phần tử trong danh sách và so sánh giá trị của từng phần tử với max, nếu lớn hơn thì gán giá trị mới cho max.
+Tạo một biến max và gán giá trị 0 cho biến max. Duyệt qua tất cả các phần tử trong danh sách và so sánh giá trị của từng phần tử với max, nếu lớn hơn thì gán giá trị mới cho max.
+Tạo một biến max và gán giá trị 0 cho biến max. Duyệt qua tất cả các phần tử trong danh sách và so sánh giá trị của từng phần tử với max, nếu nhỏ hơn thì gán giá trị mới cho max.
+Tạo một biến max và gán giá trị đầu tiên trong danh sách cho biến max. Duyệt qua tất cả các phần tử trong danh sách và so sánh giá trị của từng phần tử với max, nếu lớn hơn thì gán giá trị mới cho max.
+2 0 3
+Trong danh sách liên kết, để chèn một phần tử có giá trị x vào vị trí thứ k, chúng ta thực hiện các bước nào?
+Tạo một nút mới, gán giá trị x vào nút mới. Duyệt đến vị trí thứ k trong danh sách và gán con trỏ prev của nút trước đó bằng nút mới, sau đó gán con trỏ next của nút mới bằng nút tại vị trí k.
+Tạo một nút mới, gán giá trị x vào nút mới. Duyệt đến vị trí thứ k trong danh sách và gán con trỏ next của nút tại vị trí k-1 bằng nút mới, sau đó gán con trỏ next của nút mới bằng nút tại vị trí k.
+Tạo một nút mới, gán giá trị x vào nút mới. Duyệt đến vị trí thứ k trong danh sách và gán con trỏ next của nút trước đó bằng nút mới, sau đó gán con trỏ next của nút mới bằng nút tại vị trí k.
+Tạo một nút mới, gán giá trị x vào nút mới. Duyệt đến vị trí thứ k trong danh sách và gán con trỏ next của nút tại vị trí k-1 bằng nút mới, sau đó gán con trỏ next của nút mới bằng nút tại vị trí k+1.
+2 1 1
+Trong danh sách liên kết đơn, con trỏ head được sử dụng để tham chiếu đến đâu?
+Đầu danh sách
+Cuối danh sách
+Phần tử trước đầu danh sách
+Phần tử sau cuối danh sách
+2 1 1
+Khi xóa một phần tử trong danh sách liên kết đơn, chúng ta cần thực hiện các bước nào?
+Gán con trỏ next của phần tử trước phần tử cần xóa bằng con trỏ next của phần tử cần xóa.
+Gán con trỏ prev của phần tử trước phần tử cần xóa bằng con trỏ next của phần tử cần xóa.
+Gán con trỏ next của phần tử trước phần tử cần xóa bằng con trỏ prev của phần tử cần xóa.
+Gán con trỏ next của phần tử sau phần tử cần xóa bằng con trỏ next của phần tử cần xóa.
 2 1 3
-Danh sách tuyến tính là:
-Danh sách dạng được lưu dưới dạng mảng
-Danh sách tuyến tính là một danh sách rỗng
-Danh sách mà quan hệ lân cận giữa các phần tử được xác định
-Danh sách tuyến tính là một danh sách có dạng (a1, a2, ..., an)
-2 2 3
-Ưu điểm của việc cài đặt danh sách bằng mảng:
-thể thay đổi số lượng phần tử theo ý muốn của người dùng
-thể bổ sung hoặc xóa một phần tử bất kỳ trong mảng
-Việc truy nhập vào phần tử của mảng được thực hiện trực tiếp dựa vào địa chỉ tính được (chỉ số), nên tốc độ nhanh và đồng đều đối với mọi phần tử
-Tất cả các ý trên đều đúng
+Trong danh sách liên kết kép (doubly linked list), mỗi nút (node) có thể tham chiếu đến các thành phần nào?
+Chỉ có thể tham chiếu đến phần tử trước nó.
+Chỉ có thể tham chiếu đến phần tử sau nó.
+Có thể tham chiếu đến cả phần tử trước và phần tử sau nó.
+Chỉ có thể tham chiếu đến phần tử trước nó hoặc phần tử sau nó tùy thuộc vào cấu trúc của danh sách.
+2 1 1
+Trong danh sách liên kết vòng (circular linked list), con trỏ next của nút cuối danh sách tham chiếu đến đâu?
+Đầu danh sách
+Cuối danh sách
+Nút trước đầu danh sách
+Nút sau cuối danh sách
 2 1 4
-Danh sách tuyến tính dạng ngăn xếp là:
-Là một danh sách tuyến tính trong đó phép bổ sung sung một phần tử vào ngăn xếp được thực hiện ở một đầu, Và phép loại bỏ không thực hiện được
-Là một danh sách tuyến tính trong đó phép bổ sung một phần tử vào ngăn xếp được thực hiện ở một đầu , và phép loại bỏ được thực hiện ở đầu kia
-Là một danh sách tuyến tính trong đó phép bổ sung một phần tử vào ngăn xếp và phép loại bỏ một phần tử khỏi ngăn xếp luôn luôn thực hiện ở tại một vị trí bất kì trong danh sách
-Là một danh sách tuyến tính trong đó phép bổ sung một phần tử vào ngăn xếp và phép loại bỏ một phần tử khỏi ngăn xếp luôn luôn thực hiện ở một đầu gọi là đỉnh
-3 0 3
-Định nghĩa danh sách tuyến tính Hàng đợi (Queue):
-Hàng đợi là kiểu danh sách tuyến tính trong đó, phép bổ sung một phần tử được thực hiện ở một đầu, gọi là lối sau (rear) hay lối trước (front). Phép loại bỏ không thực hiện được
-Là một danh sách tuyến tính trong đó phép bổ sung một phần tử và phép loại bỏ một phần tử được thực hiện ở tại một vị trí bất kì trong danh sách
-Hàng đợi là kiểu danh sách tuyến tính trong đó, phép bổ sung phần tử ở một đầu, gọi là lối sau (rear) và phép loại bỏ phần tử được thực hiện ở đầu kia, gọi là lối trước (front)
-Hàng đợi là kiểu danh sách tuyến tính trong đó, phép bổ sung một phần tử hay loại bỏ được thực hiện ở một đầu danh sách gọi là đỉnh (Top)
+Để tính độ dài (số phần tử) của danh sách liên kết, chúng ta cần thực hiện các bước nào?
+Duyệt qua danh sách từ cuối đến đầu và đếm số phần tử.
+Gán giá trị 0 cho biến đếm, sau đó duyệt qua danh sách từ đầu đến cuối và tăng biến đếm lên mỗi lần gặp một phần tử.
+Gán giá trị 0 cho biến đếm, sau đó duyệt qua danh sách từ cuối đến đầu và tăng biến đếm lên mỗi lần gặp một phần tử.
+Duyệt qua danh sách từ đầu đến cuối và đếm số phần tử.
+2 2 1
+Trong danh sách liên kết đôi (doubly linked list), để chèn một phần tử vào sau một nút đã cho, chúng ta cần thực hiện các bước nào?
+Gán con trỏ next của phần tử cần chèn bằng con trỏ next của nút đã cho và gán con trỏ prev của phần tử cần chèn bằng con trỏ prev của nút đã cho.
+Gán con trỏ next của phần tử cần chèn bằng con trỏ next của nút đã cho và gán con trỏ prev của phần tử cần chèn bằng nút đã cho.
+Gán con trỏ next của nút đã cho bằng con trỏ next của phần tử cần chèn và gán con trỏ prev của nút đã cho bằng con trỏ prev của phần tử cần chèn.
+Gán con trỏ next của nút đã cho bằng con trỏ prev của phần tử cần chèn và gán con trỏ prev của nút đã cho bằng con trỏ next của phần tử cần chèn.
+2 2 2
+Trong danh sách liên kết vòng (circular linked list), để xóa một phần tử ở cuối danh sách, chúng ta cần thực hiện các bước nào?
+Gán con trỏ next của nút trước nút cuối danh sách bằng nullptr và gán con trỏ next của nút cuối danh sách bằng nullptr.
+Gán con trỏ next của nút trước nút cuối danh sách bằng nullptr và gán con trỏ next của nút cuối danh sách bằng nút đầu danh sách.
+Gán con trỏ next của nút trước nút cuối danh sách bằng nút đầu danh sách và gán con trỏ next của nút cuối danh sách bằng nullptr.
+Gán con trỏ next của nút trước nút cuối danh sách bằng nút đầu danh sách và gán con trỏ next của nút cuối danh sách bằng nút trước nút đầu danh sách.
+2 2 1
+Trong danh sách liên kết đơn, để tìm phần tử có giá trị lớn nhất, chúng ta cần thực hiện các bước nào?
+Duyệt qua danh sách từ đầu đến cuối và so sánh giá trị của mỗi phần tử với giá trị lớn nhất hiện tại.
+Duyệt qua danh sách từ cuối đến đầu và so sánh giá trị của mỗi phần tử với giá trị lớn nhất hiện tại.
+Duyệt qua danh sách từ đầu đến cuối và so sánh giá trị của mỗi phần tử với giá trị nhỏ nhất hiện tại.
+Duyệt qua danh sách từ cuối đến đầu và so sánh giá trị của mỗi phần tử với giá trị nhỏ nhất hiện tại.
+2 2 2
+Trong danh sách liên kết đôi (doubly linked list), để xóa một phần tử ở giữa danh sách, chúng ta cần thực hiện các bước nào?
+Gán con trỏ next của phần tử trước phần tử cần xóa bằng con trỏ next của phần tử cần xóa và gán con trỏ prev của phần tử sau phần tử cần xóa bằng con trỏ prev của phần tử cần xóa.
+Gán con trỏ next của phần tử trước phần tử cần xóa bằng con trỏ next của phần tử sau phần tử cần xóa và gán con trỏ prev của phần tử sau phần tử cần xóa bằng con trỏ prev của phần tử trước phần tử cần xóa.
+Gán con trỏ next của phần tử trước phần tử cần xóa bằng con trỏ prev của phần tử cần xóa và gán con trỏ prev của phần tử sau phần tử cần xóa bằng con trỏ next của phần tử cần xóa.
+Gán con trỏ next của phần tử trước phần tử cần xóa bằng con trỏ prev của phần tử sau phần tử cần xóa và gán con trỏ prev của phần tử sau phần tử cần xóa bằng con trỏ next của phần tử trước phần tử cần xóa.
+2 2 3
+Trong danh sách liên kết đơn, để đảo ngược danh sách, chúng ta cần thực hiện các bước nào?
+Duyệt qua danh sách từ đầu đến cuối, lưu trữ các phần tử vào một cấu trúc dữ liệu tạm thời, sau đó tạo danh sách mới bằng cách chèn các phần tử từ cấu trúc tạm thời theo thứ tự ngược lại.
+Duyệt qua danh sách từ cuối đến đầu, lưu trữ các phần tử vào một cấu trúc dữ liệu tạm thời, sau đó tạo danh sách mới bằng cách chèn các phần tử từ cấu trúc tạm thời theo thứ tự ngược lại.
+Duyệt qua danh sách từ đầu đến cuối, sử dụng hai con trỏ để trỏ đến phần tử hiện tại, phần tử trước và phần tử sau, sau đó thay đổi các con trỏ để đảo ngược thứ tự các phần tử.
+Duyệt qua danh sách từ cuối đến đầu, sử dụng hai con trỏ để trỏ đến phần tử hiện tại, phần tử trước và phần tử sau, sau đó thay đổi các con trỏ để đảo ngược thứ tự các phần tử.
 3 0 2
-Hàng đợi còn được gọi là danh sách kiểu:
-LOLO
-FIFO
-FILO
-LIFO
+Trong C++, stack và queue là hai loại cấu trúc dữ liệu nào?
+Cấu trúc dữ liệu dạng danh sách liên kết.
+Cấu trúc dữ liệu dạng mảng.
+Cấu trúc dữ liệu dạng cây.
+Cấu trúc dữ liệu dạng đồ thị.
+3 0 1
+Trong stack (ngăn xếp), phần tử nào được truy cập và xóa gần nhất?
+Phần tử đầu tiên được chèn vào stack.
+Phần tử cuối cùng được chèn vào stack.
+Phần tử có giá trị nhỏ nhất trong stack.
+Phần tử có giá trị lớn nhất trong stack.
+3 0 1
+Trong queue (hàng đợi), phần tử nào được truy cập và xóa gần nhất?
+Phần tử đầu tiên được chèn vào queue.
+Phần tử cuối cùng được chèn vào queue.
+Phần tử có giá trị nhỏ nhất trong queue.
+Phần tử có giá trị lớn nhất trong queue.
+3 0 3
+Trong C++, để thêm một phần tử vào stack, ta sử dụng phương thức nào?
+push_back()
+insert()
+push()
+add()
+3 0 3
+Trong C++, để lấy phần tử đầu tiên ra khỏi queue, ta sử dụng phương thức nào?
+pop_front()
+remove()
+dequeue()
+pop()
 3 1 2
-Cho dãy số {6 1 3 0 5 7 9 2 8 4}. áp dụng phương pháp sắp xếp lựa chọn (Select sort) sau lần lặp đầu tiên của giải thuật ta có kết quả: {0 1 3 6 5 7 9 2 8 4}. Dãy số thu được sau lần lặp thứ hai là:
-{0 1 2 6 5 7 9 3 8 4}
-{0 1 3 6 5 7 9 2 8 4}
-{0 1 2 3 4 5 6 7 8 9}
-{0 1 2 6 5 7 9 3 4 8}
+Trong C++, stack và queue đều có thể được triển khai bằng cách sử dụng?
+Mảng (Array)
+Danh sách liên kết (Linked List)
+Cây (Tree)
+Đồ thị (Graph)
+3 1 1
+Trong stack (ngăn xếp), phép toán nào được sử dụng để truy cập phần tử ở đỉnh (top) mà không xóa nó?
+peek()
+pop()
+push()
+enqueue()
+3 1 1
+Trong queue (hàng đợi), phép toán nào được sử dụng để truy cập phần tử ở đầu hàng đợi (front) mà không xóa nó?
+peek()
+dequeue()
+enqueue()
+push()
+3 1 2
+Trong C++, để xóa phần tử khỏi stack, ta sử dụng phép toán nào?
+remove()
+pop()
+delete()
+erase()
+3 1 1
+Trong C++, để thêm một phần tử vào queue, ta sử dụng phép toán nào?
+enqueue()
+push()
+insert()
+add()
+3 2 3
+Trong C++, có thể triển khai stack hoặc queue bằng cách sử dụng cấu trúc dữ liệu nào?
+Heap (Cây nhị phân)
+Hash Table (Bảng băm)
+Doubly Linked List (Danh sách liên kết kép)
+AVL Tree (Cây cân bằng AVL)
 3 2 1
-Cho dãy số {6 1 3 0 5 7 9 2 8 4}. áp dụng phương pháp sắp xếp lựa chọn (Select sort) sau lần lặp đầu tiên của giải thuật ta có kết quả: {0 1 3 6 5 7 9 2 8 4}. Dãy số thu được sau lần lặp thứ ba là:
-{0 1 2 6 5 7 9 3 8 4}
-{0 1 2 6 5 7 9 3 4 8}
-{0 1 2 3 6 5 7 9 8 4}
-{0 1 2 3 4 5 6 7 8 9}
-4 1 4
-Cho dãy số {6 1 3 0 5 7 9 2 8 4}. áp dụng phương pháp sắp xếp lựa chọn (Select sort) sau lần lặp đầu tiên của giải thuật ta có kết quả: {0 1 3 6 5 7 9 2 8 4}. Dãy số thu được sau lần lặp thứ tư là:
-{0 1 2 3 6 5 7 9 8 4}
-{0 1 2 3 4 5 6 7 8 9}
-{0 1 2 3 5 7 9 4 8 6}
-{0 1 2 3 5 7 9 6 8 4}
-4 1 4
-Cho dãy số {6 1 3 0 5 7 9 2 8 4}. áp dụng phương pháp sắp xếp lựa chọn (Select sort) sau lần lặp đầu tiên của giải thuật ta có kết quả: {0 1 3 6 5 7 9 2 8 4}. Dãy số thu được sau lần lặp thứ năm là:
-{0 1 2 3 6 5 7 9 8 4}
-{0 1 2 3 5 7 9 4 8 6}
-{0 1 2 3 4 5 6 7 8 9}
-{0 1 2 3 4 7 9 6 8 5}
-4 2 4
-Cho dãy số {6 1 3 0 5 7 9 2 8 4}. áp dụng phương pháp sắp xếp lựa chọn (Select sort) sau lần lặp đầu tiên của giải thuật ta có kết quả: {0 1 3 6 5 7 9 2 8 4}. Dãy số thu được sau lần lặp thứ sáu là:
-{0 1 2 3 4 7 9 6 8 5}
-{0 1 2 3 4 5 6 9 8 7}
-{0 1 2 3 4 5 6 7 8 9}
-{0 1 2 3 4 5 9 6 8 7}
-4 0 2
-Cho dãy số {3 1 6 0 5 4 8 2 9 7}. áp dụng phương pháp sắp xếp nhanh (Quick sort) sau lần lặp đầu tiên của giải thuật ta có kết quả: {(0 1 2) 3 (5 4 8 6 9 7)}. Dãy số thu được sau lần lặp thứ bốn là:
-{(0) 1 (2 3) 4 (5 6) 7 (8 9)}
-{0 1 2 3 (5 4 8 6 9 7)}
-{(3) 1 (6 0) 5 (4 8) 2 (9 7)}
-{0 1 (2) 3 (5 4) 8 (6 9 7)}
+Trong stack (ngăn xếp), phép toán nào được sử dụng để kiểm tra xem stack có rỗng hay không?
+isEmpty()
+isFull()
+getSize()
+hasNext()
+3 2 1
+Trong queue (hàng đợi), phép toán nào được sử dụng để kiểm tra xem queue có rỗng hay không?
+isEmpty()
+isFull()
+getSize()
+hasNext()
+3 2 3
+Trong C++, để kiểm tra giá trị của phần tử ở đỉnh stack mà không xóa nó, ta sử dụng phép toán nào?
+top()
+front()
+peek()
+get()
+3 2 1
+Trong C++, để lấy phần tử đầu tiên ra khỏi queue, ta sử dụng phép toán nào?
+dequeue()
+pop()
+remove()
+erase()
+4 0 4
+Trong C++, cây và đồ thị là hai loại cấu trúc dữ liệu nào?
+Cấu trúc dữ liệu dạng danh sách liên kết.
+Cấu trúc dữ liệu dạng mảng.
+Cấu trúc dữ liệu dạng sao
+Cấu trúc dữ liệu dạng cây và đồ thị
+4 0 3
+Trong cây, phần tử nào được sử dụng để kết nối giữa các nút (node)?
+Gốc (root)
+Lá (leaf)
+Cành (branch)
+Đỉnh (vertex)
+4 0 4
+Trong đồ thị, phần tử nào được sử dụng để kết nối các đỉnh (vertex)?
+Gốc (root)
+Lá (leaf)
+Cành (branch)
+Cạnh (edge)
+4 0 1
+Trong C++, để duyệt cây theo thứ tự trước (preorder), ta sử dụng phương thức nào?
+preorder()
+inorder()
+postorder()
+traverse()
+4 0 3
+Trong C++, để duyệt đồ thị theo chiều rộng (breadth-first), ta sử dụng phương thức nào?
+depthFirst()
+traverse()
+breadthFirst()
+search()
+4 1 1
+Trong C++, để triển khai cây nhị phân, phương thức nào được sử dụng để chèn một phần tử mới vào cây?
+insert()
+add()
+push()
+enqueue()
+4 1 2
+Trong C++, để duyệt cây nhị phân theo thứ tự giữa (inorder traversal), phương thức nào được sử dụng?
+preorder()
+inorder()
+postorder()
+traverse()
+4 1 1
+Trong C++, để kiểm tra xem một đỉnh trong đồ thị có kề với đỉnh khác hay không, phương thức nào được sử dụng?
+isAdjacent()
+hasNeighbor()
+isConnected()
+hasEdge()
+4 1 1
+Trong C++, để duyệt đồ thị theo chiều sâu (depth-first), phương thức nào được sử dụng?
+depthFirst()
+traverse()
+breadthFirst()
+search()
 4 1 3
-Cho dãy số sau: 40 25 75 15 65 55 90 30 95 85. Áp dụng phương pháp sắp xếp lựa chọn, sau lượt 1 dãy sẽ được sắp xếp lại như thế nào?
-15 25 40 75 30 55 65 90 85 95
-40 25 75 15 30 65 55 90 85 95
-15 25 75 40 65 55 90 30 95 85
-15 40 25 30 75 65 55 85 90 95
+Trong C++, để tìm đường đi ngắn nhất giữa hai đỉnh trong đồ thị, phương thức nào được sử dụng?
+shortestPath()
+findPath()
+dijkstra()
+breadthFirst()
+4 2 1
+Trong C++, để xóa một phần tử khỏi cây nhị phân, phương thức nào được sử dụng?
+remove()
+delete()
+erase()
+pop()
+4 2 3
+Trong C++, để tìm đường đi ngắn nhất giữa hai đỉnh trong đồ thị có trọng số, phương thức nào được sử dụng?
+shortestPath()
+findPath()
+dijkstra()
+bellmanFord()
+4 2 1
+Trong C++, để kiểm tra xem một đồ thị có chu trình hay không, phương thức nào được sử dụng?
+hasCycle()
+detectCycle()
+isAcyclic()
+checkCycle()
+4 2 4
+Trong C++, để tìm cây bao trùm nhỏ nhất (minimum spanning tree) của một đồ thị có trọng số, phương thức nào được sử dụng?
+minimumSpanningTree()
+spanningTree()
+prim()
+kruskal()
+4 2 3
+Trong C++, để tìm đường đi ngắn nhất giữa tất cả các cặp đỉnh trong đồ thị có trọng số, phương thức nào được sử dụng?
+shortestPaths()
+allPairsShortest()
+floydWarshall()
+johnson()
+5 0 1
+Bảng băm (hash table) trong C++ được sử dụng để làm gì?
+Tìm kiếm và truy xuất dữ liệu
+Sắp xếp dữ liệu
+Lưu trữ dữ liệu theo thứ tự
+Xóa dữ liệu khỏi bộ nhớ
+5 0 1
+Trong bảng băm, phép toán nào được sử dụng để chuyển đổi khóa (key) thành chỉ số (index)?
+Hashing
+Sorting
+Searching
+Inserting
 5 0 3
-Cho dãy số sau: 40 25 75 15 65 55 90 30 95 85. Áp dụng phương pháp sắp xếp lựa chọn, sau lượt 2 dãy sẽ được sắp xếp lại như thế nào?
-15 25 75 30 40 65 55 90 85 95
-15 40 25 75 30 55 65 90 85 95
-15 25 75 40 65 55 90 30 95 85
-15 40 25 30 75 65 55 85 90 95
-5 2 4
-Cho dãy số sau: 40 25 75 15 65 55 90 30 95 85. Áp dụng phương pháp sắp xếp hòa nhập (Merge_Sort) trực tiếp, sau lượt 1 dãy sẽ được sắp xếp lại như thế nào?
-[15 40] [30 25] [55 65] [75 85] [90 95]
-[40 25] [55 15] [30 65] [75 90] [85 95]
-[15 25] [40 75] [30 55] [65 90] [85 95]
-[25 40] [15 75] [55 65] [30 90] [85 95]
-5 2 3
-Cho dãy số sau: 14 32 10 43 57 87 55 36 97 11. Áp dụng phương pháp tìm kiếm tuần tự, sau bao nhiều lần thực hiện phép so sánh ta sẽ tìm thấy số 43?
-2 lần
-3 lần
-4 lần
-5 lần
+Trong C++, để thêm một phần tử mới vào bảng băm, phương thức nào được sử dụng?
+add()
+insert()
+put()
+push()
+5 0 1
+Trong C++, để truy xuất một phần tử từ bảng băm, phương thức nào được sử dụng?
+get()
+retrieve()
+search()
+fetch()
 5 0 2
-Cho dãy số sau: 10 11 14 32 36 43 55 57 87 97 . Áp dụng phương pháp tìm kiếm nhị phân, sau bao nhiêu lần phân đoạn ta sẽ tìm thấy số 43?
-2 lần
-3 lần
-4 lần
-5 lần
+Trong bảng băm, để xóa một phần tử, phương thức nào được sử dụng?
+delete()
+remove()
+erase()
+pop()
+5 1 2
+Trong bảng băm, collision (va chạm) xảy ra khi nào?
+Khi hai khóa có cùng giá trị
+Khi hai khóa có cùng chỉ số băm
+Khi một khóa không tồn tại trong bảng băm
+Khi một khóa có nhiều giá trị
+5 1 1
+Trong C++, để truy xuất một phần tử từ bảng băm, phương thức nào được sử dụng?
+get()
+retrieve()
+search()
+fetch()
+5 1 2
+Trong C++, để xóa một phần tử từ bảng băm, phương thức nào được sử dụng?
+delete()
+remove()
+erase()
+pop()
+5 1 3
+Trong bảng băm, phương pháp giải quyết collision nào sử dụng một danh sách liên kết để lưu trữ các phần tử có cùng chỉ số băm?
+Linear probing
+Quadratic probing
+Separate chaining
+Double hashing
+5 1 1
+Trong C++, để kiểm tra xem một phần tử có tồn tại trong bảng băm hay không, phương thức nào được sử dụng?
+contains()
+exists()
+find()
+search()
+5 2 4
+Trong bảng băm, phương pháp giải quyết collision nào sử dụng một hàm băm phụ để tìm vị trí mới cho phần tử khi xảy ra collision?
+Linear probing
+Quadratic probing
+Separate chaining
+Double hashing
+5 2 4
+Trong C++, để tăng kích thước của bảng băm khi nó đạt đến ngưỡng tải (load factor) nhất định, phương thức nào được sử dụng?
+increaseSize()
+resize()
+expand()
+rehash()
+5 2 1
+Trong bảng băm, thời gian truy xuất trung bình (average lookup time) của phương pháp giải quyết collision Separate chaining là bao nhiêu?
+O(1)
+O(log n)
+O(n)
+O(n^2)
+5 2 1
+Trong C++, để xóa toàn bộ phần tử trong bảng băm, phương thức nào được sử dụng?
+clear()
+removeAll()
+deleteAll()
+eraseAll()
+5 2 2
+Trong bảng băm, phương pháp giải quyết collision nào sử dụng một khoảng cách bước nhảy (jump distance) biến đổi dựa trên hàm băm phụ để tìm vị trí mới cho phần tử khi xảy ra collision?
+Linear probing
+Quadratic probing
+Separate chaining
+Double hashing
+6 0 2
+Phương pháp tìm kiếm nào được sử dụng để tìm một phần tử trong một mảng đã được sắp xếp?
+Tìm kiếm tuyến tính (linear search)
+Tìm kiếm nhị phân (binary search)
+Tìm kiếm nhanh (quick search)
+Tìm kiếm tuần tự (sequential search)
+6 0 3
+Phương pháp sắp xếp nào được sử dụng để sắp xếp một mảng từ bé đến lớn?
+Sắp xếp nổi bọt (bubble sort)
+Sắp xếp chọn (selection sort)
+Sắp xếp chèn (insertion sort)
+Sắp xếp nhanh (quick sort)
+6 0 2
+Trong C++, để sắp xếp một mảng theo thứ tự tăng dần, phương thức nào được sử dụng?
+sortAscending()
+sort()
+sortIncreasing()
+ascendingSort()
+6 0 1
+Trong C++, để tìm vị trí của một phần tử trong một mảng, phương thức nào được sử dụng?
+find()
+search()
+locate()
+getPosition()
+6 0 4
+Phương pháp sắp xếp nào có độ phức tạp trung bình nhanh nhất?
+Sắp xếp nổi bọt (bubble sort)
+Sắp xếp chọn (selection sort)
+Sắp xếp chèn (insertion sort)
+Sắp xếp nhanh (quick sort)
+6 1 1
+Trong C++, phương pháp tìm kiếm nào không yêu cầu mảng đã được sắp xếp?
+Tìm kiếm tuyến tính (linear search)
+Tìm kiếm nhị phân (binary search)
+Tìm kiếm tuần tự (sequential search)
+Tìm kiếm nhanh (quick search)
+6 1 1
+Trong C++, để sắp xếp một mảng theo thứ tự giảm dần, phương thức nào được sử dụng?
+sortDescending()
+sort()
+sortDecreasing()
+descendingSort()
+6 1 1
+Trong C++, để tìm kiếm một phần tử trong một danh sách liên kết, phương thức nào được sử dụng?
+find()
+search()
+locate()
+getPosition()
+6 1 4
+Trong sắp xếp nhanh (quick sort), phần tử chốt (pivot) được chọn như thế nào?
+Phần tử đầu tiên trong mảng
+Phần tử cuối cùng trong mảng
+Phần tử ở giữa mảng
+Phần tử ngẫu nhiên trong mảng
+6 1 1
+Trong tìm kiếm nhị phân (binary search), mảng cần được sắp xếp theo thứ tự nào?
+Tăng dần
+Giảm dần
+Không yêu cầu sắp xếp
+Tùy thuộc vào phương thức tìm kiếm
+6 2 4
+Trong thuật toán sắp xếp nhanh (quick sort), phần tử chốt (pivot) được chọn như thế nào để tối ưu hiệu suất sắp xếp?
+Phần tử đầu tiên trong mảng
+Phần tử cuối cùng trong mảng
+Phần tử ở giữa mảng
+Phần tử ngẫu nhiên trong mảng
 6 2 2
-Cho dãy số sau: 10 11 14 32 36 43 55 57 87 97. Áp dụng phương pháp tìm kiếm nhị phân, để tìm kiếm số 10, lần phân đoạn thứ nhất của dãy sẽ là:
-[14 32 10 43 57]
-[10 11 14 32 36]
-[87 55 36 97 11]
-[55 36 97 11]
+Trong tìm kiếm nhị phân (binary search), thời gian tìm kiếm là bao nhiêu trong trường hợp xấu nhất?
+O(1)
+O(log n)
+O(n)
+O(n^2)
+6 2 4
+Thuật toán sắp xếp nào có độ phức tạp thời gian trung bình nhanh nhất trong các thuật toán sắp xếp so sánh?
+Sắp xếp nổi bọt (bubble sort)
+Sắp xếp chọn (selection sort)
+Sắp xếp chèn (insertion sort)
+Sắp xếp nhanh (quick sort)
+6 2 1
+Trong C++, để tìm kiếm một phần tử trong một danh sách liên kết đơn, phương thức nào được sử dụng?
+Tìm kiếm tuyến tính (linear search)
+Tìm kiếm nhị phân (binary search)
+Tìm kiếm tuần tự (sequential search)
+Tìm kiếm theo chiều sâu (depth-first search)
+6 2 4
+Phương pháp sắp xếp nào không được xem là một thuật toán so sánh?
+Sắp xếp nổi bọt (bubble sort)
+Sắp xếp chọn (selection sort)
+Sắp xếp chèn (insertion sort)
+Sắp xếp đếm (counting sort)

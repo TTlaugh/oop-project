@@ -1,36 +1,360 @@
+1 0 4
+Con trỏ trong C++ là gì?
+Chỉ mục của một biến
+Địa chỉ của một biến
+Giá trị của một biến
+Biến chứa địa chỉ
+1 0 2
+Để khai báo một con trỏ, ta sử dụng cú pháp nào sau đây?
+int ptr;
+int *ptr;
+int &ptr;
+int #ptr;
+1 0 3
+Để truy cập giá trị của một biến thông qua con trỏ, ta sử dụng phép toán nào sau đây?
+&ptr;
+$ptr;
+*ptr;
+Không có đáp án đúng
+1 0 2
+Để gán địa chỉ của một biến cho một con trỏ, ta sử dụng phép toán nào sau đây?
+&
+=
+#
+Không có đáp án đúng
 1 0 1
-What is a correct syntax to output "Hello World" in Java?
-System.out.println("Hello World");
-Console.WriteLine("Hello World");
-echo("Hello World");
-print ("Hello World");
-1 0 1
-What is a correct syntax to output "Hello World" in Java?
-System.out.println("Hello World");
-Console.WriteLine("Hello World");
-echo("Hello World");
-print ("Hello World");
-2 0 3
-What is a correct syntax to output "Hello World" in Java?
-System.out.println("Hello World");
-Console.WriteLine("Hello World");
-echo("Hello World");
-print ("Hello World");
+Để truy cập địa chỉ của một biến, ta sử dụng phép toán nào sau đây?
+&a
+#a
+*a
+Không có đáp án đúng
+1 1 4
+Cách khai báo con trỏ nào là sai
+int *ptr;
+float* ptr;
+int * ptr;
+double ptr*;
+1 1 1
+Để khai báo một con trỏ hằng, ta sử dụng cú pháp nào sau đây?
+const int *ptr;
+int *const ptr;
+const int *const ptr;
+const int ptr;
+1 1 1
+Để tăng giá trị mà con trỏ đang trỏ tới, ta sử dụng phép toán nào sau đây?
+++
++=
+--
+-=
+1 1 4
+Để kiểm tra xem một con trỏ có trỏ tới một vùng nhớ hợp lệ hay không, ta sử dụng phép toán nào sau đây?
+==
+!=
+nullptr
+Không có đáp án đúng
 1 1 2
-What is a correct syntax to output "Hello World" in Java?
-System.out.println("Hello World");
-Console.WriteLine("Hello World");
-echo("Hello World");
-print ("Hello World");
-1 0 1
-What is a correct syntax to output "Hello World" in Java?
-System.out.println("Hello World");
-Console.WriteLine("Hello World");
-echo("Hello World");
-print ("Hello World");
+Để cấp phát động một vùng nhớ cho một con trỏ, ta sử dụng phép toán nào sau đây?
+malloc()
+new
+allocate()
+start
+1 2 2
+Để giải phóng vùng nhớ được cấp phát động cho một con trỏ, ta sử dụng phép toán nào sau đây?
+free()
+delete
+deallocate()
+new
 1 2 1
-What is a correct syntax to output "Hello World" in Java?
-System.out.println("Hello World");
-Console.WriteLine("Hello World");
-echo("Hello World");
-print ("Hello World");
+Để truy cập phần tử thứ i trong một mảng thông qua con trỏ, ta sử dụng cú pháp nào sau đây?
+ptr[i];
+*(ptr + i);
+i[ptr];
+ptr*[i];
+1 2 2
+Để truyền một con trỏ vào một hàm, ta sử dụng cú pháp nào sau đây?
+void functionName(int &ptr);
+void functionName(int *ptr);
+void functionName(int ptr);
+void functionName(int ptr*);
+1 2 3
+Để truyền một mảng vào một hàm thông qua con trỏ, ta sử dụng cú pháp nào sau đây?
+void functionName(int *ptr);
+void functionName(int ptr[]);
+void functionName(int *ptr[]);
+void functionName(int ptr[]*);
+1 2 4
+Để thay đổi giá trị của một biến thông qua con trỏ, ta sử dụng phép toán nào sau đây?
+&
+$
+#
+Không có đáp án đúng
+2 0 4
+Đệ quy là gì?
+Một phép tính toán
+Một câu lệnh điều kiện
+Một vòng lặp
+Một hàm gọi chính nó
+2 0 2
+Điều kiện dừng (base case) trong đệ quy dùng để làm gì?
+Gọi hàm khác
+Dừng quá trình đệ quy
+Thực hiện phép tính toán
+Kiểm tra điều kiện
+2 0 4
+Đệ quy có thể giải quyết được các bài toán nào sau đây?
+Tính tổng các phần tử trong một mảng
+Sắp xếp một mảng theo thứ tự tăng dần
+Tìm kiếm một phần tử trong một mảng
+Tất cả các phương án đều đúng
+2 0 3
+Khi sử dụng đệ quy, cần phải đảm bảo điều gì để tránh vòng lặp vô hạn?
+Gọi hàm khác
+Sử dụng câu lệnh điều kiện
+Kiểm tra điều kiện dừng (base case)
+Sử dụng vòng lặp thay vì đệ quy
+2 0 1
+Quá trình thực hiện đệ quy có thể được mô phỏng bằng cấu trúc dữ liệu nào sau đây?
+Stack (ngăn xếp)
+Queue (hàng đợi)
+Linked List (danh sách liên kết)
+Heap (bộ nhớ động)
+2 1 1
+Khi sử dụng đệ quy, chúng ta cần phải định nghĩa điều kiện dừng (base case) để làm gì?
+Đảm bảo vòng lặp không vô hạn
+Gọi hàm đệ quy khác
+Thực hiện phép tính toán
+Kiểm tra điều kiện đệ quy
+2 1 4
+Trong đệ quy, khi gọi hàm đệ quy, chúng ta cần làm gì?
+Sử dụng vòng lặp
+Thay đổi giá trị các biến đệ quy
+Kiểm tra điều kiện dừng (base case)
+Gọi hàm đệ quy với các tham số khác
+2 1 4
+Đệ quy có thể được sử dụng để giải quyết bài toán nào sau đây?
+Tính giai thừa của một số nguyên
+Tìm kiếm một phần tử trong một mảng sắp xếp
+Tính tổng các phần tử trong một danh sách liên kết
+Tất cả các phương án đều đúng
+2 1 1
+Trong đệ quy, stack (ngăn xếp) được sử dụng để làm gì?
+Lưu trữ các biến đệ quy
+Chứa các phần tử trong một mảng
+Thực hiện các phép tính toán
+Đảm bảo điều kiện dừng (base case)
+2 1 4
+Đệ quy có thể được thay thế bằng vòng lặp trong một số trường hợp. Tuy nhiên, điều gì làm cho đệ quy hữu ích trong một số bài toán?
+Tiết kiệm bộ nhớ
+Dễ hiểu và dễ triển khai
+Tính tường minh của quá trình
+Tính linh hoạt trong việc xử lý các bài toán phức tạp
+2 2 1
+Đệ quy tuyến tính (linear recursion) là gì?
+Một dạng đệ quy mà một hàm gọi chính nó một lần
+Một dạng đệ quy mà một hàm gọi chính nó nhiều lần
+Một dạng đệ quy mà hàm gọi chính nó và có thêm các hàm đệ quy khác
+Một dạng đệ quy mà hàm không gọi chính nó
+2 2 4
+Đệ quy nhị phân (binary recursion) là gì?
+Một dạng đệ quy mà một hàm gọi chính nó một lần
+Một dạng đệ quy mà một hàm gọi chính nó nhiều lần
+Một dạng đệ quy mà hàm gọi chính nó và có thêm các hàm đệ quy khác
+Một dạng đệ quy mà hàm chia nhỏ bài toán thành hai phần và gọi chính nó trên từng phần
+2 2 3
+Trong đệ quy, thuật toán Quicksort sử dụng phương pháp chia để trị (divide and conquer) bằng cách làm gì?
+Chia mảng thành các phần tử riêng lẻ
+Chia mảng thành hai phần và sắp xếp từng phần riêng lẻ
+Chia mảng thành hai phần và gọi chính nó trên từng phần đó
+Chia mảng thành nhiều phần và gọi chính nó trên từng phần đó
+2 2 1
+Đệ quy đuôi (tail recursion) là gì?
+Một dạng đệ quy mà hàm gọi chính nó ở cuối câu lệnh
+Một dạng đệ quy mà hàm gọi chính nó ở đầu câu lệnh
+Một dạng đệ quy mà hàm gọi chính nó và có thêm các hàm đệ quy khác
+Một dạng đệ quy mà hàm không gọi chính nó
+2 2 1
+Đệ quy đuôi có lợi thế gì so với đệ quy thông thường?
+Tiết kiệm bộ nhớ
+Dễ hiểu và dễ triển khai
+Tăng tốc độ thực thi
+Không có lợi thế so với đệ quy thông thường
+3 0 2
+Để đọc dữ liệu từ một file trong C++, chúng ta sử dụng hàm nào?
+read()
+Open()
+write()
+close()
+3 0 3
+Để ghi dữ liệu vào một file trong C++, chúng ta sử dụng hàm nào?
+read()
+open()
+write()
+close()
+3 0 4
+Để đóng một file trong C++, chúng ta sử dụng hàm nào?
+open()
+read()
+write()
+close()
+3 0 3
+Để kiểm tra xem việc đọc dữ liệu từ một file có thành công hay không, chúng ta kiểm tra điều kiện nào sau đây?
+Kiểm tra kích thước file
+Kiểm tra chuỗi đọc vào
+Kiểm tra trạng thái của file
+Kiểm tra số lượng ký tự đã đọc
+3 0 3
+Để kiểm tra xem việc ghi dữ liệu vào một file có thành công hay không, chúng ta kiểm tra điều kiện nào sau đây?
+Kiểm tra kích thước file
+Kiểm tra chuỗi ghi vào
+Kiểm tra trạng thái của file
+Kiểm tra số lượng ký tự đã ghi
+3 1 1
+Để mở một file trong C++, chúng ta sử dụng hàm nào?
+open()
+read()
+write()
+close()
+3 1 2
+Trong C++, để đọc dữ liệu từ một file, chúng ta sử dụng phương pháp nào sau đây?
+Đọc từng ký tự một
+Đọc từng dòng một
+Đọc theo định dạng cụ thể
+Đọc toàn bộ dữ liệu cùng một lúc
+3 1 4
+Trong C++, để ghi dữ liệu vào một file, chúng ta sử dụng phương pháp nào sau đây?
+Ghi từng ký tự một
+Ghi từng dòng một
+Ghi theo định dạng cụ thể
+Ghi toàn bộ dữ liệu cùng một lúc
+3 1 1
+Để kiểm tra xem một file có tồn tại hay không trong C++, chúng ta sử dụng hàm nào?
+open()
+read()
+write()
+exists()
+3 1 2
+Để xóa một file trong C++, chúng ta sử dụng hàm nào?
+delete()
+remove()
+erase()
+unlink()
+3 2 1
+Để di chuyển con trỏ đọc/ghi trong một file trong C++, chúng ta sử dụng hàm nào?
+seekg() và seekp()
+read() và write()
+getline() và putline()
+fopen() và fclose()
+3 2 3
+Khi ghi dữ liệu vào một file trong C++, chúng ta muốn ghi thêm nội dung vào cuối file thay vì ghi đè lên nội dung hiện có. Chúng ta sử dụng chế độ nào khi mở file?
+std::ios::out
+std::ios::in
+std::ios::app
+std::ios::binary
+3 2 2
+Khi mở một file trong C++ với chế độ std::ios::binary, dữ liệu được đọc và ghi theo cách nào?
+Dữ liệu được đọc và ghi dưới dạng chuỗi ký tự
+Dữ liệu được đọc và ghi dưới dạng nhị phân
+Dữ liệu được đọc và ghi theo định dạng cụ thể
+Dữ liệu được đọc và ghi theo định dạng văn bản
+3 2 1
+Để kiểm tra xem một file đã đến cuối hay chưa trong C++, chúng ta sử dụng hàm nào?
+eof()
+fail()
+good()
+bad()
+3 2 4
+Để đổi tên một file trong C++, chúng ta sử dụng hàm nào?
+rename()
+move()
+modify()
+replace()
+4 0 4
+Để khai báo một biến string trong C++, chúng ta sử dụng kiểu dữ liệu nào?
+char
+int
+float
+string
+4 0 1
+Để nối hai chuỗi string trong C++, chúng ta sử dụng toán tử nào sau đây?
++
+-
+*
+/
+4 0 2
+Để lấy độ dài của một chuỗi string trong C++, chúng ta sử dụng phương thức nào?
+length()
+size()
+count()
+getLength()
+4 0 4
+Để truy cập vào một ký tự trong chuỗi string theo chỉ số, chúng ta sử dụng toán tử nào?
++
+-
+*
+[ ]
+4 0 1
+Để so sánh hai chuỗi string trong C++, chúng ta sử dụng toán tử nào sau đây?
+==
+!=
+>
+<
+4 1 2
+Để chuyển đổi một chuỗi string thành một chuỗi ký tự (C-style string) trong C++, chúng ta sử dụng phương thức nào?
+str()
+c_str()
+toCString()
+convertToString()
+4 1 1
+Để tìm vị trí xuất hiện đầu tiên của một chuỗi con trong chuỗi string trong C++, chúng ta sử dụng phương thức nào?
+find()
+search()
+locate()
+indexOf()
+4 1 4
+Để thay thế một chuỗi con trong chuỗi string bằng một chuỗi khác trong C++, chúng ta sử dụng phương thức nào?
+substitute()
+update()
+modify()
+replace()
+4 1 1
+Để cắt một chuỗi string thành các phần tử con dựa trên một ký tự phân tách trong C++, chúng ta sử dụng hàm nào?
+split()
+divide()
+break()
+tokenizer()
+4 1 3
+Để kiểm tra xem một chuỗi string có rỗng hay không trong C++, chúng ta sử dụng phương thức nào?
+isNull()
+isBlank()
+empty()
+isVoid()
+4 2 1
+Để chuyển đổi một số nguyên thành một chuỗi string trong C++, chúng ta sử dụng hàm nào?
+to_string()
+convert_to_string()
+int_to_string()
+number_to_string()
+4 2 4
+Để thực hiện chuẩn hóa một chuỗi string trong C++, chúng ta sử dụng phương thức nào?
+normalize()
+standardize()
+regularize()
+normalize_unicode()
+4 2 1
+Để thực hiện việc chuyển đổi chữ hoa thành chữ thường và ngược lại trong chuỗi string trong C++, chúng ta sử dụng hàm nào?
+toupper() và tolower()
+convert_to_uppercase() và convert_to_lowercase()
+uppercase() và lowercase()
+to_uppercase() và to_lowercase()
+4 2 3
+Để tạo một chuỗi string mới bằng cách lặp lại một chuỗi con nhiều lần trong C++, chúng ta sử dụng hàm nào?
+repeat()
+duplicate()
+copy()
+multiply()
+4 2 4
+Để thực hiện định dạng chuỗi string theo một mẫu trong C++, chúng ta sử dụng hàm nào?
+format()
+template()
+regex()
+sprintf()

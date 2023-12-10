@@ -1,36 +1,360 @@
+1 0 2
+Trong C++, để thực hiện một phần code chỉ khi một điều kiện cụ thể được thỏa mãn, ta sử dụng câu lệnh nào?
+for
+if
+while
+switch
+1 0 4
+Câu lệnh "if-else" trong C++ cho phép thực hiện nhánh nào trong hai nhánh khả thi?
+Chỉ nhánh "if".
+Chỉ nhánh "else".
+Cả hai nhánh "if" và "else" khả thi.
+1 0 3
+Trong C++, để lặp một khối code cho đến khi một điều kiện sai, ta sử dụng câu lệnh nào?
+for
+if
+while
+switch
+1 0 2
+Để kiểm tra nhiều điều kiện khác nhau và thực hiện các hành động tương ứng, ta sử dụng câu lệnh nào trong C++?
+for
+if-else if-else
+while
+switch
 1 0 1
-What is a correct syntax to output "Hello World" in Java?
-System.out.println("Hello World");
-Console.WriteLine("Hello World");
-echo("Hello World");
-print ("Hello World");
-1 0 1
-What is a correct syntax to output "Hello World" in Java?
-System.out.println("Hello World");
-Console.WriteLine("Hello World");
-echo("Hello World");
-print ("Hello World");
-2 0 3
-What is a correct syntax to output "Hello World" in Java?
-System.out.println("Hello World");
-Console.WriteLine("Hello World");
-echo("Hello World");
-print ("Hello World");
+Trong C++, để thoát khỏi một vòng lặp mà không thực hiện các lệnh còn lại trong vòng lặp, ta sử dụng câu lệnh nào?
+break
+continue
+return
+exit
+1 1 1
+Trong C++, để lặp một khối code với một biểu thức điều kiện ban đầu, một biểu thức điều kiện sau mỗi vòng lặp và một biểu thức thay đổi sau mỗi vòng lặp, ta sử dụng câu lệnh nào?
+for
+if
+while
+switch
+1 1 4
+Trong C++, để thực hiện một hành động trong một danh sách các hành động khả thi, ta sử dụng câu lệnh nào?
+for
+if
+while
+switch
 1 1 2
-What is a correct syntax to output "Hello World" in Java?
-System.out.println("Hello World");
-Console.WriteLine("Hello World");
-echo("Hello World");
-print ("Hello World");
-1 0 1
-What is a correct syntax to output "Hello World" in Java?
-System.out.println("Hello World");
-Console.WriteLine("Hello World");
-echo("Hello World");
-print ("Hello World");
-1 2 1
-What is a correct syntax to output "Hello World" in Java?
-System.out.println("Hello World");
-Console.WriteLine("Hello World");
-echo("Hello World");
-print ("Hello World");
+Trong C++, để thực hiện một lệnh hoặc một khối lệnh nếu một điều kiện cụ thể được thỏa mãn, ta sử dụng câu lệnh nào?
+for
+if
+while
+switch
+1 1 1
+Trong C++, để lặp một khối code một số lần đã biết trước, ta sử dụng câu lệnh nào?
+for
+if
+while
+switch
+1 1 4
+Trong C++, để điều hướng các trường hợp khác nhau dựa trên giá trị của một biến hoặc biểu thức, ta sử dụng câu lệnh nào?
+for
+if
+while
+switch
+1 2 3
+Trong C++, để lặp một khối code cho đến khi một điều kiện cụ thể được thỏa mãn, ta sử dụng câu lệnh nào?
+for
+if
+while
+switch
+1 2 4
+Trong C++, để lặp một khối code ít nhất một lần và sau đó kiểm tra điều kiện để tiếp tục hoặc thoát khỏi vòng lặp, ta sử dụng câulệnh nào?
+for
+if
+while
+do-while
+1 2 2
+Trong C++, để thoát khỏi một vòng lặp và tiếp tục vòng lặp tiếp theo mà không thực hiện các lệnh còn lại trong vòng lặp, ta sử dụng câu lệnh nào?
+break
+continue
+return
+exit
+1 2 4
+Trong C++, để thực hiện một lệnh hoặc một khối lệnh nếu một trong nhiều điều kiện cụ thể được thỏa mãn, ta sử dụng câu lệnh nào?
+for
+if-else
+while
+switch
+1 2 4
+Trong C++, để thực hiện một khối code dựa trên giá trị của một biến hoặc biểu thức, ta sử dụng câu lệnh nào?
+for
+if
+while
+switch
+2 0 4
+Trong C++, để định nghĩa một hàm, ta sử dụng từ khóa nào?
+define
+function
+method
+void
+2 0 4
+Để gọi một hàm trong C++, ta sử dụng cú pháp nào sau đây?
+function_name;
+function_name();
+functionName;
+functionName();
+2 0 4
+Trong C++, để truyền một giá trị cho một tham số hình thức của một hàm, ta sử dụng cú pháp nào sau đây?
+function_name(value);
+function_name(value);
+function_name(value);
+function_name(value);
+2 0 1
+Trong C++, để trả về một giá trị từ một hàm, ta sử dụng từ khóa nào?
+return
+break
+continue
+exit
+2 0 4
+Trong C++, khi định nghĩa một hàm, ta cần chỉ định kiểu dữ liệu của giá trị trả về bằng cách sử dụng từ khóa nào?
+void
+int
+float
+Tất cả các phương án trên
+2 1 4
+Trong C++, để truyền một đối tượng theo tham chiếu vào một hàm, ta sử dụng cú pháp nào sau đây?
+function_name(&object);
+function_name(object);
+function_name(object);
+function_name(object);
+2 1 3
+Trong C++, để khai báo một hàm trước khi sử dụng, ta sử dụng từ khóa nào?
+declare
+define
+prototype
+implement
+2 1 3
+Trong C++, để sử dụng hàm từ một tệp mã nguồn khác, ta cần thực hiện điều gì?
+Chỉ cần gọi hàm bình thường.
+Chỉ cần định nghĩa lại hàm trong tệp mã nguồn hiện tại.
+Cần khai báo hàm bằng cách sử dụng từ khóa extern trước khi sử dụng.
+Cần đổi tên hàm trong tệp mã nguồn khác.
+2 1 4
+Trong C++, để truyền một mảng vào một hàm, ta sử dụng cú pháp nào sau đây?
+function_name(array);
+function_name(array);
+function_name(array[]);
+function_name(array[]);
+2 1 1
+Trong C++, để khai báo một hàm không trả về giá trị, ta sử dụng từ khóa nào?
+void
+int
+float
+None of the above
+2 2 3
+Trong C++, để truyền một tham số mặc định cho một hàm, ta cần đặt giá trị mặc định cho tham số đó ở đâu?
+Trước phần khai báo hàm.
+Sau phần khai báo hàm.
+Trong phần định nghĩa hàm.
+Tham số mặc định không được hỗ trợ trong C++.
+2 2 1
+Khi định nghĩa một hàm trong C++, chúng ta sử dụng từ khóa nào?
+define
+function
+method
+void
+2 2 4
+Để gọi một hàm trong C++, chúng ta sử dụng cú pháp nào sau đây?
+function_name;
+function_name();
+functionName;
+functionName();
+2 2 3
+Trong C++, để truyền một giá trị cho một tham số hình thức của một hàm, chúng ta sử dụng cú pháp nào sau đây?
+function_name(value);
+function_name(value);
+function_name(value);
+function_name(value);
+2 2 1
+Trong C++, để trả về một giá trị từ một hàm, chúng ta sử dụng từ khóa nào?
+return
+break
+continue
+exit
+3 0 2
+Trong C++, để khai báo một mảng, ta sử dụng cú pháp nào sau đây?
+int array[size];
+None of the above
+array[size];
+int[size] array;
+3 0 4
+Trong C++, để truy cập phần tử thứ i trong một mảng, ta sử dụng cú pháp nào sau đây?
+array[i];
+array(i);
+array{i};
+array[i];
+3 0 1
+Trong C++, để lấy số lượng phần tử của một mảng, ta sử dụng cú pháp nào sau đây?
+array.length;
+array.size;
+sizeof(array);
+None of the above
+3 0 4
+Trong C++, để khai báo một mảng ký tự (character array) để lưu trữ một chuỗi, ta sử dụng cú pháp nào sau đây?
+char str[];
+char str[];
+char str[size];
+char[] str;
+3 0 4
+Trong C++, để so sánh hai chuỗi ký tự (character strings), ta sử dụng hàm nào sau đây?
+strcmp()
+None of the above
+strlen()
+strcat()
+3 1 1
+Trong C++, để khởi tạo một mảng với giá trị ban đầu, ta sử dụng cú pháp nào sau đây?
+int array[size] = {value1, value2, ...};
+array[size] = {value1, value2, ...};
+int[size] array = {value1, value2, ...};
+None of the above
+3 1 2
+Trong C++, để sao chép nội dung của một mảng vào một mảng khác, ta sử dụng hàm nào sau đây?
+memcpy()
+strcpy()
+strncpy()
+None of the above
+3 1 1
+Trong C++, để chuyển một chuỗi ký tự thành một số nguyên (integer), ta sử dụng hàm nào sau đây?
+atoi()
+itoa()
+stoi()
+None of the above
+3 1 4
+Trong C++, để chuyển một số nguyên (integer) thành một chuỗi ký tự, ta sử dụng hàm nào sau đây?
+itoa()
+atoi()
+sprintf()
+None of the above
+3 1 4
+Trong C++, để kiểm tra xem một chuỗi ký tự có chứa một ký tự cụ thể hay không, ta sử dụng hàm nào sau đây?
+strchr()
+strstr()
+isalpha()
+None of the above
+3 2 1
+Trong C++, để nối (concatenate) hai chuỗi ký tự, ta sử dụng hàm nào sau đây?
+strcat()
+strcpy()
+strlen()
+None of the above
+3 2 2
+Trong C++, để tìm vị trí xuất hiện đầu tiên của một chuỗi con trong một chuỗi lớn hơn, ta sử dụng hàm nào sau đây?
+strchr()
+strstr()
+strcmp()
+None of the above
+3 2 1
+Trong C++, để lấy độ dài (số ký tự) của một chuỗi ký tự, ta sử dụnghàm nào sau đây?
+strlen()
+strchr()
+strcpy()
+isalpha()
+3 2 1
+Trong C++, để so sánh hai chuỗi ký tự, ta sử dụng hàm nào sau đây?
+strcmp()
+strcpy()
+strcat()
+None of the above
+3 2 3
+Trong C++, để chuyển một ký tự thành một chuỗi ký tự, ta sử dụng cú pháp nào sau đây?
+char str = 'a';
+char str[] = {'a', '\0'};
+char str[2]; str[0] = 'a'; str[1] = '\0';
+None of the above
+4 0 4
+Đâu là thuật toán sắp xếp đơn giản nhất?
+Bubble Sort
+Quick Sort
+Merge Sort
+Selection Sort
+4 0 3
+Thuật toán tìm kiếm nhị phân hoạt động trên dãy đã được sắp xếp theo thứ tự nào?
+Tăng dần
+Giảm dần
+Không yêu cầu dãy đã sắp xếp
+Yêu cầu dãy đã sắp xếp, nhưng không quan tâm thứ tự
+4 0 2
+Đâu là thuật toán tìm kiếm tuyến tính?
+Binary Search
+Linear Search
+Depth-First Search
+Breadth-First Search
+4 0 3
+Thuật toán nào được sử dụng để tìm đường đi ngắn nhất trong đồ thị có trọng số?
+Depth-First Search
+Breadth-First Search
+Dijkstra's Algorithm
+Bellman-Ford Algorithm
+4 0 2
+Thuật toán nào được sử dụng để tìm cây bao trùm nhỏ nhất trong đồ thị?
+Kruskal's Algorithm
+Prim's Algorithm
+Dijkstra's Algorithm
+Floyd-Warshall Algorithm
+4 1 2
+Đâu là thuật toán sắp xếp hiệu quả nhất cho dãy số lớn?
+Bubble Sort
+Quick Sort
+Merge Sort
+Insertion Sort
+4 1 4
+Thuật toán nào được sử dụng để tìm đường đi ngắn nhất giữa tất cả các cặp đỉnh trong đồ thị?
+Depth-First Search
+Breadth-First Search
+Dijkstra's Algorithm
+Floyd-Warshall Algorithm
+4 1 1
+Đâu là thuật toán tìm kiếm tuyến tính hiệu quả hơn so với Linear Search?
+Binary Search
+Interpolation Search
+Jump Search
+Exponential Search
+4 1 4
+Thuật toán nào được sử dụng để tìm kiếm trong cây nhị phân tìm kiếm?
+Binary Search
+Depth-First Search
+Breadth-First Search
+AVL Tree
+4 1 2
+Đâu là thuật toán sắp xếp ổn định?
+Quick Sort
+Merge Sort
+Selection Sort
+Heap Sort
+4 2 4
+Thuật toán nào được sử dụng để tìm kiếm trong cây Trie?
+Binary Search
+Depth-First Search
+Breadth-First Search
+Trie Search
+4 2 4
+Đâu là thuật toán sắp xếp phù hợp nhất cho mảng gần như đã sắp xếp?
+Bubble Sort
+Quick Sort
+Merge Sort
+Insertion Sort
+4 2 4
+Thuật toán nào được sử dụng để tìm kiếm trong cây đỏ-đen?
+Binary Search
+Depth-First Search
+Breadth-First Search
+Red-Black Tree Search
+4 2 2
+Đâu là thuật toán sắp xếp dựa trên phân hoạch?
+Bubble Sort
+Quick Sort
+Merge Sort
+Insertion Sort
+4 2 3
+Thuật toán nào được sử dụng để tìm đường đi ngắn nhất trong đồ thị có trọng số?
+Dijkstra's Algorithm
+Bellman-Ford Algorithm
+Floyd-Warshall Algorithm
+Prim's Algorithm
+
