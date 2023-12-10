@@ -27,6 +27,13 @@ public class StudentFunction {
 				System.out.println("Invalid subject ID");
 		} while (subject.getName() == null);
 
+		System.out.println("Available exam day:");
+		FileHandling examday = new FileHandling(
+				Constant.dataPath.Exams_Dir + subject.getId() + "/" + student.getClazz() + "/");
+		if (!examday.listFileInDir()) {
+			System.out.println("Nothing to show...\nDoes not have any exam record created");
+			return;
+		}
 		String inputDate;
 		do {
 			System.out.println("Enter exam day (dd-mm-yyyy): ");
@@ -61,7 +68,7 @@ public class StudentFunction {
 
 	}
 
-	public static void viewResult(Scanner sc, Student Student) {
+	public static void viewResult(Scanner sc, Student student) {
 		FileHandling subjectFile = new FileHandling(Constant.dataPath.SubjectList_File);
 		System.out.println("Subject List:");
 		subjectFile.displayContent();
@@ -73,6 +80,13 @@ public class StudentFunction {
 				System.out.println("Invalid subject ID");
 		} while (subject.getName() == null);
 
+		System.out.println("Available exam day:");
+		FileHandling examday = new FileHandling(
+				Constant.dataPath.ExamRecords_Dir + subject.getId() + "/" + student.getClazz() + "/");
+		if (!examday.listFileInDir()) {
+			System.out.println("Nothing to show...\nDoes not have any exam created");
+			return;
+		}
 		String inputDate;
 		do {
 			System.out.println("Enter exam day (dd-mm-yyyy): ");
@@ -84,8 +98,8 @@ public class StudentFunction {
 		CustomDate date = new CustomDate(inputDate);
 
 		ExamRecordRepository examRecordRepository = new ExamRecordRepository(Constant.dataPath.ExamRecords_Dir, subject,
-				Student.getClazz(), date);
-		examRecordRepository.displayExamRecord("exam" + Student.getOrnum());
+				student.getClazz(), date);
+		examRecordRepository.displayExamRecord("exam" + student.getOrnum());
 
 	}
 

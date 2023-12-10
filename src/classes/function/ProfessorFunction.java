@@ -347,6 +347,12 @@ public class ProfessorFunction {
 			clazz = CheckInput.toStrNumberic(userInput.nextLine(), 1, 9);
 		} while (clazz == null);
 
+		System.out.println("Available exam day:");
+		FileHandling examday = new FileHandling(Constant.dataPath.Exams_Dir + subject.getId() + "/" + clazz + "/");
+		if (!examday.listFileInDir()) {
+			System.out.println("Nothing to show...\nDoes not have any exam created");
+			return;
+		}
 		String inputDate;
 		do {
 			System.out.println("Enter exam day (dd-mm-yyyy): ");
@@ -469,6 +475,12 @@ public class ProfessorFunction {
 			clazz = CheckInput.toStrNumberic(userInput.nextLine(), 1, 9);
 		} while (clazz == null);
 
+		System.out.println("Available exam day:");
+		FileHandling examday = new FileHandling(Constant.dataPath.ExamRecords_Dir + subject.getId() + "/" + clazz + "/");
+		if (!examday.listFileInDir()) {
+			System.out.println("Nothing to show...\nDoes not have any exam record created");
+			return;
+		}
 		String inputDate;
 		do {
 			System.out.println("Enter exam day (dd-mm-yyyy): ");
@@ -492,6 +504,12 @@ public class ProfessorFunction {
 			clazz = CheckInput.toStrNumberic(userInput.nextLine(), 1, 9);
 		} while (clazz == null);
 
+		System.out.println("Available exam day:");
+		FileHandling examday = new FileHandling(Constant.dataPath.ExamRecords_Dir + subject.getId() + "/" + clazz + "/");
+		if (!examday.listFileInDir()) {
+			System.out.println("Nothing to show...\nDoes not have any exam record created");
+			return;
+		}
 		String inputDate;
 		do {
 			System.out.println("Enter exam day (dd-mm-yyyy): ");

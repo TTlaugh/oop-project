@@ -44,9 +44,9 @@ public class AdminFunction {
 			System.out.println("Enter the username of the user you want to edit:");
 			System.out.print(" ");
 			username = userInput.nextLine();
-			if (CheckInput.toRole(username)==null)
+			if (CheckInput.toRole(username) == null)
 				System.out.println("Invalid username");
-		} while (CheckInput.toRole(username)==null);
+		} while (CheckInput.toRole(username) == null);
 
 		Account userToEdit = accountRepository.findUserByUserName(username);
 
@@ -76,7 +76,8 @@ public class AdminFunction {
 				do {
 					System.out.println("Enter your year of birth");
 					System.out.print(" ");
-					String year = CheckInput.toStrNumberic(userInput.nextLine(), Year.now().getValue()-70, Year.now().getValue()-18);
+					String year = CheckInput.toStrNumberic(userInput.nextLine(), Year.now().getValue() - 70,
+							Year.now().getValue() - 18);
 					userInfoToEdit.setYearOfBirth(year == null ? -1 : Integer.parseInt(year));
 					if (userInfoToEdit.getYearOfBirth() == -1)
 						System.out.println("Invalid year");
@@ -118,9 +119,9 @@ public class AdminFunction {
 			System.out.println("Enter the username of the user you want to edit:");
 			System.out.print(" ");
 			username = userInput.nextLine();
-			if (CheckInput.toRole(username)==null)
+			if (CheckInput.toRole(username) == null)
 				System.out.println("Invalid username");
-		} while (CheckInput.toRole(username)==null);
+		} while (CheckInput.toRole(username) == null);
 
 		if (accountRepository.removeUser(username)) {
 			System.out.println("User has been delete from system!");

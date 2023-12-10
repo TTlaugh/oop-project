@@ -24,16 +24,18 @@ public class ExamRecordRepository extends FileHandling {
 		this.subject = subject;
 		this.clazz = clazz;
 		this.date = date;
-		if (!createDir()) {
-			this.baseDir = null;
-			this.subject = null;
-			this.clazz = null;
-			this.date = null;
-			super.setPath(null);
-		}
+//		if (!createDir()) {
+//			this.baseDir = null;
+//			this.subject = null;
+//			this.clazz = null;
+//			this.date = null;
+//			super.setPath(null);
+//		}
 	}
 
 	public boolean addExamRecord(ExamRecord examRecord, String examRecordFileName) {
+		if (!createDir())
+			return false;
 		createFile(getPath() + examRecordFileName, getPath() + examRecordFileName + "_old");
 		try {
 			FileWriter writer = new FileWriter(getPath() + examRecordFileName);

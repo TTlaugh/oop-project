@@ -22,16 +22,18 @@ public class ExamRepository extends FileHandling {
 		this.subject = subject;
 		this.clazz = clazz;
 		this.date = date;
-		if (!createDir()) {
-			this.baseDir = null;
-			this.subject = null;
-			this.clazz = null;
-			this.date = null;
-			super.setPath(null);
-		}
+//		if (!createDir()) {
+//			this.baseDir = null;
+//			this.subject = null;
+//			this.clazz = null;
+//			this.date = null;
+//			super.setPath(null);
+//		}
 	}
 
 	public boolean createExams(Exam exam, int numOfExams, int numOfExamId) {
+		if (!createDir())
+			return false;
 		int examsPerId = numOfExams / numOfExamId;
 		int count = 0;
 		for (int i = 1; i <= numOfExamId; i++) {
@@ -58,6 +60,8 @@ public class ExamRepository extends FileHandling {
 	}
 
 	public boolean addExam(Exam exam, String examFileName) {
+		if (!createDir())
+			return false;
 		createFile(getPath() + examFileName, getPath() + examFileName + "_old");
 		try {
 			FileWriter writer = new FileWriter(getPath() + examFileName);
