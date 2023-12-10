@@ -71,7 +71,7 @@ public class Question {
 
 	@Override
 	public String toString() {
-		String text = "Chap:" + chapter + " " + "Diff:" + difficulty + "Correct:" + correctAnswer + "\n"
+		String text = "Chap:" + chapter + " " + "Diff:" + difficulty + " "  + "Correct:" + correctAnswer + "\n"
 				+ "\t" + content + "\n"
 				+ "\t" + answer[0] + "\n"
 				+ "\t" + answer[1] + "\n"
