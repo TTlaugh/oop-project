@@ -33,12 +33,12 @@ public class Main {
 			case "1":
 				Menu.signIn();
 				currentAccount = GeneralFunction.signIn(userInput);
-				GeneralFunction.pressAnyKeyToContinue();
+				GeneralFunction.pressAnyKeyToContinue(userInput);
 				break;
 			case "2":
 				Menu.signUp();
 				currentAccount = GeneralFunction.signUp(userInput);
-				GeneralFunction.pressAnyKeyToContinue();
+				GeneralFunction.pressAnyKeyToContinue(userInput);
 				break;
 			default:
 				System.out.println("Exiting...");
@@ -82,7 +82,7 @@ public class Main {
 				}
 
 				System.out.println();
-				GeneralFunction.pressAnyKeyToContinue();
+				GeneralFunction.pressAnyKeyToContinue(userInput);
 			}
 		} while (loginSession);
 	}

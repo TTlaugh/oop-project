@@ -20,6 +20,11 @@ public class GeneralFunction {
 		System.out.flush();
 	}
 
+	public static void pressAnyKeyToContinue(Scanner readkey) {
+		System.out.println("\nPress Enter key to continue...");
+		readkey.nextLine();
+	}
+
 	public static void pressAnyKeyToContinue() {
 		System.out.println("\nPress Enter key to continue...");
 		try {
