@@ -66,7 +66,7 @@ public class Session {
 				score = 0;
 				marks.clear();
 				System.out.println(
-						"STUDENT ANSWERS\n(Please enter answers in the correct question order)\n Type here ");
+						"STUDENT ANSWERS\n(Please enter your answers in the correct order, with spaces between answers)\n Type here ");
 
 				for (int i = 0; i < numOfQuestions; i++) {
 					String studentChoice = CheckInput.toStrInteger(userInput.next());

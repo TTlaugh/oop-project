@@ -2,6 +2,7 @@ package classes.user;
 
 import java.util.ArrayList;
 
+import classes.util.CheckInput;
 import classes.util.CustomList;
 
 public class AccountList implements CustomList {
@@ -60,15 +61,22 @@ public class AccountList implements CustomList {
 	}
 
 	@Override
-	public int findIndex(String username) {
-		for (int i = 0; i < this.arr.size(); i++)
-			if (((Account) this.arr.get(i)).getUsername().equals(username))
-				return i;
+	public int findIndex(String str) {
+		if (CheckInput.toPhoneNumber(str) != null) {
+			for (int i = 0; i < this.arr.size(); i++)
+				if (((Account) this.arr.get(i)).getInfo().getPhoneNumber().equals(str))
+					return i;
+		} else {
+			for (int i = 0; i < this.arr.size(); i++)
+				if (((Account) this.arr.get(i)).getUsername().equals(str))
+					return i;
+		}
 		return -1;
 	}
 
 	@Override
 	public boolean isObjectAdded(Object acc) {
-		return findIndex(((Account) acc).getUsername()) >= 0;
+		return (findIndex(((Account) acc).getUsername()) >= 0)
+				|| (findIndex(((Account) acc).getInfo().getPhoneNumber()) >= 0);
 	}
 }

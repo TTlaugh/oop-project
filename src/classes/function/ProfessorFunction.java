@@ -423,7 +423,7 @@ public class ProfessorFunction {
 		int count = 0;
 		while (count < totalQuestions) {
 			System.out.print("Enter the chapter number:");
-			int chapter = userInput.nextInt();
+			int chapter = CheckInput.toIntNumeric(userInput.nextLine());
 			ArrayList<Integer> difficultyCountDetail = new ArrayList<Integer>();
 
 			int numOfType = 0;
@@ -476,7 +476,8 @@ public class ProfessorFunction {
 		} while (clazz == null);
 
 		System.out.println("Available exam day:");
-		FileHandling examday = new FileHandling(Constant.dataPath.ExamRecords_Dir + subject.getId() + "/" + clazz + "/");
+		FileHandling examday = new FileHandling(
+				Constant.dataPath.ExamRecords_Dir + subject.getId() + "/" + clazz + "/");
 		if (!examday.listFileInDir()) {
 			System.out.println("Nothing to show...\nDoes not have any exam record created");
 			return;
@@ -505,7 +506,8 @@ public class ProfessorFunction {
 		} while (clazz == null);
 
 		System.out.println("Available exam day:");
-		FileHandling examday = new FileHandling(Constant.dataPath.ExamRecords_Dir + subject.getId() + "/" + clazz + "/");
+		FileHandling examday = new FileHandling(
+				Constant.dataPath.ExamRecords_Dir + subject.getId() + "/" + clazz + "/");
 		if (!examday.listFileInDir()) {
 			System.out.println("Nothing to show...\nDoes not have any exam record created");
 			return;
